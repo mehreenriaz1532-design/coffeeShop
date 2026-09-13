@@ -844,25 +844,201 @@
     </div>
   </div>
 </section>
-<section class="pad reveal" id="about">
-  <div class="container about-grid">
-    <div class="about-text">
-      <p class="eyebrow"><svg viewBox="0 0 100 90"><use href="#butterfly-icon"></use></svg>From Bean to Butterfly</p>
-      <h2 class="section-heading">Our Story</h2>
-      <p>Papillon Brew began with a simple belief: that a single cup of coffee can turn an ordinary morning into something extraordinary. Just as a caterpillar becomes a butterfly, we believe every visit here should feel like a small <strong>metamorphosis</strong> — a pause, a breath, a moment of quiet wonder.</p>
-      <p>We partner with local farmers across Punjab for our beans, roasting each batch in small quantities to keep its character intact. Our teas are grown in the foothills we call home, and our pastries are baked fresh every morning using honey, herbs, and fruit from nearby gardens.</p>
-      <p>Sustainability isn't a footnote here — it's the soil we grow from. Compostable cups, reusable jars for our regulars, and a near zero-waste kitchen are just the beginning. "Papillon" is French for butterfly, and every choice we make asks the same quiet question: what would a butterfly do?</p>
+<style>
+  /* BUTTERFLY WRAPPER CONTAINER */
+  .butterfly-sanctuary {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .butterfly-fly-box {
+    position: absolute;
+    z-index: 10;
+    pointer-events: none;
+  }
+
+  .butterfly-svg {
+    filter: drop-shadow(0 3px 6px rgba(0,0,0,0.18));
+  }
+
+  .wing-left {
+    transform-origin: 25px 25px;
+    animation: flapWingLeft 0.3s ease-in-out infinite alternate;
+  }
+
+  .wing-right {
+    transform-origin: 25px 25px;
+    animation: flapWingRight 0.3s ease-in-out infinite alternate;
+  }
+
+  @keyframes flapWingLeft {
+    0% { transform: scaleX(1); }
+    100% { transform: scaleX(0.15); }
+  }
+
+  @keyframes flapWingRight {
+    0% { transform: scaleX(1); }
+    100% { transform: scaleX(0.15); }
+  }
+
+  /* INDIVIDUAL BUTTERFLY PATH ANIMATIONS (VARIED SPEEDS & POSITIONS) */
+  @keyframes floatPath1 {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(-25px, -30px) rotate(-12deg); }
+    100% { transform: translate(20px, -50px) rotate(10deg); }
+  }
+  @keyframes floatPath2 {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(30px, -20px) rotate(15deg); }
+    100% { transform: translate(-15px, -45px) rotate(-8deg); }
+  }
+  @keyframes floatPath3 {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(-18px, 25px) rotate(8deg); }
+    100% { transform: translate(25px, -20px) rotate(-15deg); }
+  }
+
+  /* 15+ BUTTERFLIES POSITIONS & ANIMATIONS */
+  .bf-1 { top: 5%; left: 8%; animation: floatPath1 6s ease-in-out infinite alternate; }
+  .bf-2 { top: 12%; left: 45%; animation: floatPath2 5.5s ease-in-out infinite alternate; }
+  .bf-3 { top: 8%; right: 12%; animation: floatPath3 7s ease-in-out infinite alternate; }
+  .bf-4 { top: 25%; left: 2%; animation: floatPath2 6.5s ease-in-out infinite alternate; }
+  .bf-5 { top: 30%; left: 35%; animation: floatPath1 5s ease-in-out infinite alternate; }
+  .bf-6 { top: 22%; right: 25%; animation: floatPath3 6s ease-in-out infinite alternate; }
+  .bf-7 { top: 40%; right: 5%; animation: floatPath1 7.5s ease-in-out infinite alternate; }
+  .bf-8 { top: 55%; left: 15%; animation: floatPath3 5.8s ease-in-out infinite alternate; }
+  .bf-9 { top: 50%; left: 48%; animation: floatPath2 6.2s ease-in-out infinite alternate; }
+  .bf-10 { top: 62%; right: 30%; animation: floatPath1 5.2s ease-in-out infinite alternate; }
+  .bf-11 { top: 75%; left: 5%; animation: floatPath3 6.8s ease-in-out infinite alternate; }
+  .bf-12 { top: 80%; left: 40%; animation: floatPath1 5.4s ease-in-out infinite alternate; }
+  .bf-13 { top: 72%; right: 12%; animation: floatPath2 7.2s ease-in-out infinite alternate; }
+  .bf-14 { top: 88%; left: 25%; animation: floatPath2 6s ease-in-out infinite alternate; }
+  .bf-15 { top: 85%; right: 3%; animation: floatPath3 5.6s ease-in-out infinite alternate; }
+
+  /* MOBILE RESPONSIVE ADJUSTMENTS */
+  @media (max-width: 768px) {
+    .about-art-wrapper {
+      margin-top: 25px;
+    }
+    .about-photo-card img {
+      height: 300px !important;
+    }
+  }
+</style>
+
+<section class="pad reveal butterfly-sanctuary" id="about" style="padding: 70px 0; background: linear-gradient(180deg, rgba(244, 248, 245, 0.4) 0%, #ffffff 100%);">
+  <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px; position: relative;">
+    
+    <!-- 15+ DYNAMIC ANIMATED BUTTERFLIES FLUTTERING ACROSS THE ENTIRE SECTION -->
+    <!-- Butterfly 1 (Gold) -->
+    <div class="butterfly-fly-box bf-1">
+      <svg class="butterfly-svg" viewBox="0 0 50 50" style="width: 32px; height: 32px;"><g class="wing-left"><path d="M25 25 C12 5, 2 15, 8 27 C12 33, 22 30, 25 25 Z" fill="#d4af37"/><path d="M25 25 C15 28, 8 36, 16 43 C22 47, 25 35, 25 25 Z" fill="#e5c158"/></g><g class="wing-right"><path d="M25 25 C38 5, 48 15, 42 27 C38 33, 28 30, 25 25 Z" fill="#d4af37"/><path d="M25 25 C35 28, 42 36, 34 43 C28 47, 25 35, 25 25 Z" fill="#e5c158"/></g><path d="M24 18 C24 18, 25 32, 25 32 C25 32, 26 18, 24 18 Z" fill="#1c2b1e"/></svg>
     </div>
-    <div class="about-art">
-      <svg viewBox="0 0 300 300">
-        <circle cx="150" cy="150" r="140" fill="var(--sage-pale)"/>
-        <path d="M150,60 C170,90 170,140 150,170 C130,140 130,90 150,60 Z" fill="var(--sage)" opacity="0.5"/>
-        <g transform="translate(95,110) scale(1.1)" style="color:var(--lavender-deep)"><use href="#butterfly-icon"></use></g>
-        <g transform="translate(160,170) scale(0.6) rotate(20)" style="color:var(--gold)"><use href="#butterfly-icon"></use></g>
-        <path d="M90,230 Q150,255 210,230" stroke="var(--sage-dark)" stroke-width="2" fill="none" stroke-linecap="round"/>
-        <use href="#leaf-icon" x="70" y="205" width="20" height="32" style="color:var(--sage-dark)"/>
-        <use href="#leaf-icon" x="205" y="205" width="20" height="32" transform="rotate(15 215 221)" style="color:var(--sage-dark)"/>
-      </svg>
+    <!-- Butterfly 2 (Sage Green) -->
+    <div class="butterfly-fly-box bf-2">
+      <svg class="butterfly-svg" viewBox="0 0 50 50" style="width: 28px; height: 28px;"><g class="wing-left"><path d="M25 25 C12 5, 2 15, 8 27 C12 33, 22 30, 25 25 Z" fill="#2e7d32"/><path d="M25 25 C15 28, 8 36, 16 43 C22 47, 25 35, 25 25 Z" fill="#4caf50"/></g><g class="wing-right"><path d="M25 25 C38 5, 48 15, 42 27 C38 33, 28 30, 25 25 Z" fill="#2e7d32"/><path d="M25 25 C35 28, 42 36, 34 43 C28 47, 25 35, 25 25 Z" fill="#4caf50"/></g><path d="M24 18 C24 18, 25 32, 25 32 C25 32, 26 18, 24 18 Z" fill="#1c2b1e"/></svg>
+    </div>
+    <!-- Butterfly 3 (Soft Coral/Gold) -->
+    <div class="butterfly-fly-box bf-3">
+      <svg class="butterfly-svg" viewBox="0 0 50 50" style="width: 36px; height: 36px;"><g class="wing-left"><path d="M25 25 C12 5, 2 15, 8 27 C12 33, 22 30, 25 25 Z" fill="#e0a96d"/><path d="M25 25 C15 28, 8 36, 16 43 C22 47, 25 35, 25 25 Z" fill="#f4e8c1"/></g><g class="wing-right"><path d="M25 25 C38 5, 48 15, 42 27 C38 33, 28 30, 25 25 Z" fill="#e0a96d"/><path d="M25 25 C35 28, 42 36, 34 43 C28 47, 25 35, 25 25 Z" fill="#f4e8c1"/></g><path d="M24 18 C24 18, 25 32, 25 32 C25 32, 26 18, 24 18 Z" fill="#1c2b1e"/></svg>
+    </div>
+    <!-- Butterfly 4 (Gold) -->
+    <div class="butterfly-fly-box bf-4">
+      <svg class="butterfly-svg" viewBox="0 0 50 50" style="width: 26px; height: 26px;"><g class="wing-left"><path d="M25 25 C12 5, 2 15, 8 27 C12 33, 22 30, 25 25 Z" fill="#d4af37"/><path d="M25 25 C15 28, 8 36, 16 43 C22 47, 25 35, 25 25 Z" fill="#e5c158"/></g><g class="wing-right"><path d="M25 25 C38 5, 48 15, 42 27 C38 33, 28 30, 25 25 Z" fill="#d4af37"/><path d="M25 25 C35 28, 42 36, 34 43 C28 47, 25 35, 25 25 Z" fill="#e5c158"/></g><path d="M24 18 C24 18, 25 32, 25 32 C25 32, 26 18, 24 18 Z" fill="#1c2b1e"/></svg>
+    </div>
+    <!-- Butterfly 5 (Green) -->
+    <div class="butterfly-fly-box bf-5">
+      <svg class="butterfly-svg" viewBox="0 0 50 50" style="width: 30px; height: 30px;"><g class="wing-left"><path d="M25 25 C12 5, 2 15, 8 27 C12 33, 22 30, 25 25 Z" fill="#4caf50"/><path d="M25 25 C15 28, 8 36, 16 43 C22 47, 25 35, 25 25 Z" fill="#a8c3a8"/></g><g class="wing-right"><path d="M25 25 C38 5, 48 15, 42 27 C38 33, 28 30, 25 25 Z" fill="#4caf50"/><path d="M25 25 C35 28, 42 36, 34 43 C28 47, 25 35, 25 25 Z" fill="#a8c3a8"/></g><path d="M24 18 C24 18, 25 32, 25 32 C25 32, 26 18, 24 18 Z" fill="#1c2b1e"/></svg>
+    </div>
+    <!-- Butterfly 6 (Gold) -->
+    <div class="butterfly-fly-box bf-6">
+      <svg class="butterfly-svg" viewBox="0 0 50 50" style="width: 35px; height: 35px;"><g class="wing-left"><path d="M25 25 C12 5, 2 15, 8 27 C12 33, 22 30, 25 25 Z" fill="#d4af37"/><path d="M25 25 C15 28, 8 36, 16 43 C22 47, 25 35, 25 25 Z" fill="#e5c158"/></g><g class="wing-right"><path d="M25 25 C38 5, 48 15, 42 27 C38 33, 28 30, 25 25 Z" fill="#d4af37"/><path d="M25 25 C35 28, 42 36, 34 43 C28 47, 25 35, 25 25 Z" fill="#e5c158"/></g><path d="M24 18 C24 18, 25 32, 25 32 C25 32, 26 18, 24 18 Z" fill="#1c2b1e"/></svg>
+    </div>
+    <!-- Butterfly 7 (Soft Amber) -->
+    <div class="butterfly-fly-box bf-7">
+      <svg class="butterfly-svg" viewBox="0 0 50 50" style="width: 25px; height: 25px;"><g class="wing-left"><path d="M25 25 C12 5, 2 15, 8 27 C12 33, 22 30, 25 25 Z" fill="#b8860b"/><path d="M25 25 C15 28, 8 36, 16 43 C22 47, 25 35, 25 25 Z" fill="#f4e8c1"/></g><g class="wing-right"><path d="M25 25 C38 5, 48 15, 42 27 C38 33, 28 30, 25 25 Z" fill="#b8860b"/><path d="M25 25 C35 28, 42 36, 34 43 C28 47, 25 35, 25 25 Z" fill="#f4e8c1"/></g><path d="M24 18 C24 18, 25 32, 25 32 C25 32, 26 18, 24 18 Z" fill="#1c2b1e"/></svg>
+    </div>
+    <!-- Butterfly 8 (Sage) -->
+    <div class="butterfly-fly-box bf-8">
+      <svg class="butterfly-svg" viewBox="0 0 50 50" style="width: 32px; height: 32px;"><g class="wing-left"><path d="M25 25 C12 5, 2 15, 8 27 C12 33, 22 30, 25 25 Z" fill="#2e7d32"/><path d="M25 25 C15 28, 8 36, 16 43 C22 47, 25 35, 25 25 Z" fill="#4caf50"/></g><g class="wing-right"><path d="M25 25 C38 5, 48 15, 42 27 C38 33, 28 30, 25 25 Z" fill="#2e7d32"/><path d="M25 25 C35 28, 42 36, 34 43 C28 47, 25 35, 25 25 Z" fill="#4caf50"/></g><path d="M24 18 C24 18, 25 32, 25 32 C25 32, 26 18, 24 18 Z" fill="#1c2b1e"/></svg>
+    </div>
+    <!-- Butterfly 9 (Gold) -->
+    <div class="butterfly-fly-box bf-9">
+      <svg class="butterfly-svg" viewBox="0 0 50 50" style="width: 29px; height: 29px;"><g class="wing-left"><path d="M25 25 C12 5, 2 15, 8 27 C12 33, 22 30, 25 25 Z" fill="#d4af37"/><path d="M25 25 C15 28, 8 36, 16 43 C22 47, 25 35, 25 25 Z" fill="#e5c158"/></g><g class="wing-right"><path d="M25 25 C38 5, 48 15, 42 27 C38 33, 28 30, 25 25 Z" fill="#d4af37"/><path d="M25 25 C35 28, 42 36, 34 43 C28 47, 25 35, 25 25 Z" fill="#e5c158"/></g><path d="M24 18 C24 18, 25 32, 25 32 C25 32, 26 18, 24 18 Z" fill="#1c2b1e"/></svg>
+    </div>
+    <!-- Butterfly 10 (Green) -->
+    <div class="butterfly-fly-box bf-10">
+      <svg class="butterfly-svg" viewBox="0 0 50 50" style="width: 34px; height: 34px;"><g class="wing-left"><path d="M25 25 C12 5, 2 15, 8 27 C12 33, 22 30, 25 25 Z" fill="#2e7d32"/><path d="M25 25 C15 28, 8 36, 16 43 C22 47, 25 35, 25 25 Z" fill="#a8c3a8"/></g><g class="wing-right"><path d="M25 25 C38 5, 48 15, 42 27 C38 33, 28 30, 25 25 Z" fill="#2e7d32"/><path d="M25 25 C35 28, 42 36, 34 43 C28 47, 25 35, 25 25 Z" fill="#a8c3a8"/></g><path d="M24 18 C24 18, 25 32, 25 32 C25 32, 26 18, 24 18 Z" fill="#1c2b1e"/></svg>
+    </div>
+    <!-- Butterfly 11 (Gold) -->
+    <div class="butterfly-fly-box bf-11">
+      <svg class="butterfly-svg" viewBox="0 0 50 50" style="width: 27px; height: 27px;"><g class="wing-left"><path d="M25 25 C12 5, 2 15, 8 27 C12 33, 22 30, 25 25 Z" fill="#d4af37"/><path d="M25 25 C15 28, 8 36, 16 43 C22 47, 25 35, 25 25 Z" fill="#e5c158"/></g><g class="wing-right"><path d="M25 25 C38 5, 48 15, 42 27 C38 33, 28 30, 25 25 Z" fill="#d4af37"/><path d="M25 25 C35 28, 42 36, 34 43 C28 47, 25 35, 25 25 Z" fill="#e5c158"/></g><path d="M24 18 C24 18, 25 32, 25 32 C25 32, 26 18, 24 18 Z" fill="#1c2b1e"/></svg>
+    </div>
+    <!-- Butterfly 12 (Coral/Gold) -->
+    <div class="butterfly-fly-box bf-12">
+      <svg class="butterfly-svg" viewBox="0 0 50 50" style="width: 31px; height: 31px;"><g class="wing-left"><path d="M25 25 C12 5, 2 15, 8 27 C12 33, 22 30, 25 25 Z" fill="#e0a96d"/><path d="M25 25 C15 28, 8 36, 16 43 C22 47, 25 35, 25 25 Z" fill="#f4e8c1"/></g><g class="wing-right"><path d="M25 25 C38 5, 48 15, 42 27 C38 33, 28 30, 25 25 Z" fill="#e0a96d"/><path d="M25 25 C35 28, 42 36, 34 43 C28 47, 25 35, 25 25 Z" fill="#f4e8c1"/></g><path d="M24 18 C24 18, 25 32, 25 32 C25 32, 26 18, 24 18 Z" fill="#1c2b1e"/></svg>
+    </div>
+    <!-- Butterfly 13 (Green) -->
+    <div class="butterfly-fly-box bf-13">
+      <svg class="butterfly-svg" viewBox="0 0 50 50" style="width: 33px; height: 33px;"><g class="wing-left"><path d="M25 25 C12 5, 2 15, 8 27 C12 33, 22 30, 25 25 Z" fill="#2e7d32"/><path d="M25 25 C15 28, 8 36, 16 43 C22 47, 25 35, 25 25 Z" fill="#4caf50"/></g><g class="wing-right"><path d="M25 25 C38 5, 48 15, 42 27 C38 33, 28 30, 25 25 Z" fill="#2e7d32"/><path d="M25 25 C35 28, 42 36, 34 43 C28 47, 25 35, 25 25 Z" fill="#4caf50"/></g><path d="M24 18 C24 18, 25 32, 25 32 C25 32, 26 18, 24 18 Z" fill="#1c2b1e"/></svg>
+    </div>
+    <!-- Butterfly 14 (Gold) -->
+    <div class="butterfly-fly-box bf-14">
+      <svg class="butterfly-svg" viewBox="0 0 50 50" style="width: 29px; height: 29px;"><g class="wing-left"><path d="M25 25 C12 5, 2 15, 8 27 C12 33, 22 30, 25 25 Z" fill="#d4af37"/><path d="M25 25 C15 28, 8 36, 16 43 C22 47, 25 35, 25 25 Z" fill="#e5c158"/></g><g class="wing-right"><path d="M25 25 C38 5, 48 15, 42 27 C38 33, 28 30, 25 25 Z" fill="#d4af37"/><path d="M25 25 C35 28, 42 36, 34 43 C28 47, 25 35, 25 25 Z" fill="#e5c158"/></g><path d="M24 18 C24 18, 25 32, 25 32 C25 32, 26 18, 24 18 Z" fill="#1c2b1e"/></svg>
+    </div>
+    <!-- Butterfly 15 (Green) -->
+    <div class="butterfly-fly-box bf-15">
+      <svg class="butterfly-svg" viewBox="0 0 50 50" style="width: 35px; height: 35px;"><g class="wing-left"><path d="M25 25 C12 5, 2 15, 8 27 C12 33, 22 30, 25 25 Z" fill="#4caf50"/><path d="M25 25 C15 28, 8 36, 16 43 C22 47, 25 35, 25 25 Z" fill="#a8c3a8"/></g><g class="wing-right"><path d="M25 25 C38 5, 48 15, 42 27 C38 33, 28 30, 25 25 Z" fill="#4caf50"/><path d="M25 25 C35 28, 42 36, 34 43 C28 47, 25 35, 25 25 Z" fill="#a8c3a8"/></g><path d="M24 18 C24 18, 25 32, 25 32 C25 32, 26 18, 24 18 Z" fill="#1c2b1e"/></svg>
+    </div>
+
+    <!-- MAIN GRID CONTENT -->
+    <div class="about-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; align-items: center; position: relative; z-index: 2;">
+      
+      <!-- ABOUT TEXT CONTENT -->
+      <div class="about-text">
+        <p class="eyebrow" style="font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; color: #d4af37; margin-bottom: 10px; font-weight: 600;">
+          🌱 From Bean to Butterfly
+        </p>
+        <h2 class="section-heading" style="font-family: 'Playfair Display', serif; font-size: 2.3rem; color: #1c2b1e; margin-bottom: 20px; line-height: 1.2;">
+          Our Story
+        </h2>
+        <p style="color: #4a5d50; font-size: 0.98rem; line-height: 1.7; margin-bottom: 14px;">
+          Papillon Brew began with a simple belief: that a single cup of coffee can turn an ordinary morning into something extraordinary. Just as a caterpillar becomes a butterfly, we believe every visit here should feel like a small <strong style="color: #1c2b1e;">metamorphosis</strong> — a pause, a breath, a moment of quiet wonder.
+        </p>
+        <p style="color: #4a5d50; font-size: 0.98rem; line-height: 1.7; margin-bottom: 14px;">
+          We partner with local farmers across Punjab for our beans, roasting each batch in small quantities to keep its character intact. Our teas are grown in the foothills we call home, and our pastries are baked fresh every morning using honey, herbs, and fruit from nearby gardens.
+        </p>
+        <p style="color: #4a5d50; font-size: 0.98rem; line-height: 1.7; margin-bottom: 20px;">
+          Sustainability isn't a footnote here — it's the soil we grow from. Compostable cups, reusable jars for our regulars, and a near zero-waste kitchen are just the beginning. <em>"Papillon"</em> is French for butterfly, and every choice we make asks the same quiet question: what would a butterfly do?
+        </p>
+
+        <!-- Nature Badges -->
+        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+          <span style="background: rgba(46, 125, 50, 0.08); color: #2e7d32; border: 1px solid rgba(46, 125, 50, 0.2); padding: 6px 14px; border-radius: 20px; font-size: 0.82rem; font-weight: 600;">🌿 100% Organic Beans</span>
+          <span style="background: rgba(212, 175, 55, 0.1); color: #b8860b; border: 1px solid rgba(212, 175, 55, 0.3); padding: 6px 14px; border-radius: 20px; font-size: 0.82rem; font-weight: 600;">🦋 Zero-Waste Garden</span>
+        </div>
+      </div>
+
+      <!-- IMAGE CARD WITH BRIGHT COFFEE SHOP / BOTANICAL SANCTUARY PHOTO -->
+      <div class="about-art-wrapper" style="position: relative; padding: 10px;">
+        
+        <!-- Bright High-Quality Cafe Sanctuary Image -->
+        <div class="about-photo-card" style="position: relative; border-radius: 24px; overflow: hidden; box-shadow: 0 15px 35px rgba(28, 43, 30, 0.1); border: 6px solid #fff;">
+          <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&auto=format&fit=crop&q=80" alt="Bright Papillon Brew Cafe Interior" style="width: 100%; height: 390px; object-fit: cover; display: block;">
+        </div>
+
+        <!-- Glassmorphism Badge -->
+        <div class="garden-badge" style="position: absolute; bottom: -12px; left: -10px; background: rgba(255, 255, 255, 0.92); backdrop-filter: blur(8px); padding: 12px 18px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.8); box-shadow: 0 10px 20px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 10px; z-index: 5;">
+          <div style="width: 10px; height: 10px; background: #4caf50; border-radius: 50%; box-shadow: 0 0 8px #4caf50;"></div>
+          <div>
+            <div style="font-size: 0.82rem; font-weight: 700; color: #1c2b1e;">Organic Sanctuary</div>
+            <div style="font-size: 0.72rem; color: #667c6e;">Freshly Harvested Daily</div>
+          </div>
+        </div>
+
+      </div>
+
     </div>
   </div>
 </section>
@@ -941,81 +1117,170 @@
     </div>
   </div>
 </section>
+<style>
+  #gallery {
+    padding: 75px 0;
+    background: #fbfbf8;
+  }
+
+  #gallery .gallery-header {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 50px auto;
+  }
+
+  #gallery .eyebrow {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #d4af37;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+
+  #gallery .section-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    color: #1c2b1e;
+    margin-bottom: 10px;
+  }
+
+  #gallery .section-sub {
+    color: #5c6f62;
+    font-size: 0.98rem;
+    line-height: 1.5;
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 28px;
+  }
+
+  .gallery-item {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 10px 25px rgba(28, 43, 30, 0.08);
+    border: 4px solid #ffffff;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+  }
+
+  .gallery-item:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 18px 38px rgba(28, 43, 30, 0.14);
+  }
+
+  .gallery-img-wrapper {
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .gallery-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  .gallery-item:hover .gallery-img-wrapper img {
+    transform: scale(1.08);
+  }
+
+  .gallery-caption {
+    padding: 16px 20px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.12rem;
+    font-weight: 600;
+    color: #1c2b1e;
+    background: #ffffff;
+    text-align: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.04);
+  }
+
+  @media (max-width: 768px) {
+    #gallery {
+      padding: 50px 0;
+    }
+    .gallery-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    .gallery-img-wrapper {
+      height: 230px;
+    }
+  }
+</style>
 
 <section class="pad reveal" id="gallery">
-  <div class="container">
-    <p class="eyebrow"><svg viewBox="0 0 100 90"><use href="#butterfly-icon"></use></svg>The Shop, In Glimpses</p>
-    <h2 class="section-heading">Moments at Papillon</h2>
-    <p class="section-sub">Illustrated glimpses of the space — swap these for your own photography anytime.</p>
+  <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+    
+    <!-- GALLERY HEADER -->
+    <div class="gallery-header">
+      <p class="eyebrow">🌱 The Shop, In Glimpses</p>
+      <h2 class="section-heading">Moments at Papillon</h2>
+      <p class="section-sub">Aesthetic moments captured across our green sanctuary and coffee bar.</p>
+    </div>
+
+    <!-- GALLERY PHOTO GRID -->
     <div class="gallery-grid">
-      <div class="gallery-item" style="background:var(--sage-pale)">
-        <svg viewBox="0 0 200 150" preserveAspectRatio="xMidYMid slice">
-          <rect width="200" height="150" fill="var(--sage-pale)"/>
-          <rect x="30" y="10" width="80" height="90" fill="var(--cream)" opacity="0.7"/>
-          <rect x="120" y="70" width="50" height="60" fill="var(--cream-warm)"/>
-          <rect x="130" y="80" width="30" height="35" fill="none" stroke="var(--sage-dark)" stroke-width="2"/>
-          <use href="#leaf-icon" x="15" y="90" width="24" height="40" style="color:var(--sage-dark)"/>
-          <use href="#leaf-icon" x="165" y="20" width="18" height="30" transform="rotate(20 174 35)" style="color:var(--sage-dark)"/>
-          <g transform="translate(140,25) scale(0.55) rotate(-10)" style="color:var(--lavender-deep)"><use href="#butterfly-icon"></use></g>
-        </svg>
+      
+      <!-- ITEM 1: Cozy Corner -->
+      <div class="gallery-item">
+        <div class="gallery-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&auto=format&fit=crop&q=80" alt="Warm Cozy Cafe Armchair Corner">
+        </div>
         <div class="gallery-caption">Cozy Corner</div>
       </div>
-      <div class="gallery-item" style="background:var(--cream-warm)">
-        <svg viewBox="0 0 200 150" preserveAspectRatio="xMidYMid slice">
-          <rect width="200" height="150" fill="var(--cream-warm)"/>
-          <circle cx="100" cy="75" r="55" fill="#fff8ec" stroke="var(--sage-dark)" stroke-width="2"/>
-          <g transform="translate(72,50) scale(0.9)" style="color:var(--lavender-deep)"><use href="#butterfly-icon"></use></g>
-        </svg>
+
+      <!-- ITEM 2: Latte Art -->
+      <div class="gallery-item">
+        <div class="gallery-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?w=800&auto=format&fit=crop&q=80" alt="Intricate Swan Latte Art Pouring">
+        </div>
         <div class="gallery-caption">Latte Art</div>
       </div>
-      <div class="gallery-item" style="background:var(--sage-pale)">
-        <svg viewBox="0 0 200 150" preserveAspectRatio="xMidYMid slice">
-          <rect width="200" height="150" fill="var(--sage-pale)"/>
-          <rect x="40" y="100" width="120" height="8" fill="var(--sage-dark)"/>
-          <circle cx="75" cy="80" r="18" fill="var(--cream)"/>
-          <rect x="66" y="95" width="18" height="26" fill="var(--cream)"/>
-          <circle cx="130" cy="80" r="18" fill="var(--cream-warm)"/>
-          <rect x="121" y="95" width="18" height="26" fill="var(--cream-warm)"/>
-          <ellipse cx="80" cy="60" rx="8" ry="10" fill="var(--sage-dark)"/>
-          <ellipse cx="125" cy="58" rx="8" ry="10" fill="var(--sage-dark)"/>
-          <g transform="translate(95,20) scale(0.5) rotate(8)" style="color:var(--gold)"><use href="#butterfly-icon"></use></g>
-        </svg>
+
+      <!-- ITEM 3: Golden Hour Chats -->
+      <div class="gallery-item">
+        <div class="gallery-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop&q=80" alt="Friends laughing in golden hour sunlight at cafe">
+        </div>
         <div class="gallery-caption">Golden Hour Chats</div>
       </div>
-      <div class="gallery-item" style="background:var(--cream-warm)">
-        <svg viewBox="0 0 200 150" preserveAspectRatio="xMidYMid slice">
-          <rect width="200" height="150" fill="var(--cream-warm)"/>
-          <rect x="80" y="60" width="40" height="60" rx="6" fill="var(--sage-dark)"/>
-          <path d="M120,70 Q150,60 150,90" stroke="var(--sage-dark)" stroke-width="6" fill="none" stroke-linecap="round"/>
-          <path d="M95,55 Q90,40 95,25" stroke="rgba(143,168,136,0.6)" stroke-width="3" fill="none" stroke-linecap="round"/>
-          <path d="M110,55 Q115,40 110,25" stroke="rgba(143,168,136,0.6)" stroke-width="3" fill="none" stroke-linecap="round"/>
-          <g transform="translate(150,20) scale(0.5) rotate(-12)" style="color:var(--lavender-deep)"><use href="#butterfly-icon"></use></g>
-        </svg>
+
+      <!-- ITEM 4: Barista at Work -->
+      <div class="gallery-item">
+        <div class="gallery-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800&auto=format&fit=crop&q=80" alt="Barista Crafting Fresh Espresso Shot">
+        </div>
         <div class="gallery-caption">Barista at Work</div>
       </div>
-      <div class="gallery-item" style="background:var(--sage-pale)">
-        <svg viewBox="0 0 200 150" preserveAspectRatio="xMidYMid slice">
-          <rect width="200" height="150" fill="var(--sage-pale)"/>
-          <path d="M60,100 L60,60 L100,55 L100,95 Z" fill="var(--cream)" stroke="var(--sage-dark)" stroke-width="2"/>
-          <path d="M100,95 L100,55 L140,60 L140,100 Z" fill="#fff8ec" stroke="var(--sage-dark)" stroke-width="2"/>
-          <g transform="translate(145,75) scale(0.6)" style="color:var(--gold)"><use href="#butterfly-icon"></use></g>
-        </svg>
+
+      <!-- ITEM 5: Garden Reads -->
+      <div class="gallery-item">
+        <div class="gallery-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=800&auto=format&fit=crop&q=80" alt="Reading Open Book with Coffee among Plants">
+        </div>
         <div class="gallery-caption">Garden Reads</div>
       </div>
-      <div class="gallery-item" style="background:var(--cream-warm)">
-        <svg viewBox="0 0 200 150" preserveAspectRatio="xMidYMid slice">
-          <rect width="200" height="150" fill="var(--cream-warm)"/>
-          <rect x="20" y="20" width="160" height="110" fill="none" stroke="var(--sage-dark)" stroke-width="1.5" stroke-dasharray="4 4"/>
-          <g transform="translate(45,40) scale(0.55)" style="color:var(--lavender-deep)"><use href="#butterfly-icon"></use></g>
-          <g transform="translate(95,65) scale(0.4) rotate(15)" style="color:var(--sage-dark)"><use href="#butterfly-icon"></use></g>
-          <g transform="translate(130,35) scale(0.5) rotate(-10)" style="color:var(--gold)"><use href="#butterfly-icon"></use></g>
-          <g transform="translate(70,90) scale(0.45) rotate(8)" style="color:var(--lavender-deep)"><use href="#butterfly-icon"></use></g>
-        </svg>
+
+      <!-- ITEM 6: The Wishes Wall -->
+      <div class="gallery-item">
+        <div class="gallery-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=800&auto=format&fit=crop&q=80" alt="Aesthetic Photo Wall with Fairy Lights and Cards">
+        </div>
         <div class="gallery-caption">The Wishes Wall</div>
       </div>
+
     </div>
   </div>
 </section>
+
 
 <section class="pad reveal" id="testimonials">
   <div class="container">
@@ -1057,24 +1322,199 @@
   </div>
 </section>
 
+<style>
+  #order {
+    padding: 70px 0;
+    background: #faf8f2;
+  }
+
+  #order .order-header {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 45px auto;
+  }
+
+  #order .eyebrow {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #8c789e;
+    margin-bottom: 8px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  #order .section-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #3b5040;
+    margin-bottom: 10px;
+    font-style: italic;
+  }
+
+  #order .section-sub {
+    color: #6b7a6d;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .order-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+  }
+
+  .order-card {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 40px 30px;
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .order-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.08);
+  }
+
+  .order-icon {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .order-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: #3b5040;
+    margin-bottom: 12px;
+    font-style: italic;
+  }
+
+  .order-card p {
+    color: #7a887c;
+    font-size: 0.93rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    flex-grow: 1;
+  }
+
+  .order-card .btn {
+    width: 100%;
+    padding: 13px 24px;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+  }
+
+  /* WhatsApp Theme Matching */
+  .whatsapp-icon-bg {
+    background-color: #43604a;
+    color: #ffffff;
+  }
+
+  .order-card .btn-whatsapp {
+    background-color: #43604a;
+    color: #ffffff;
+    border: none;
+  }
+
+  .order-card:hover .btn-whatsapp {
+    background-color: #2f4534;
+  }
+
+  /* Foodpanda Theme Matching */
+  .foodpanda-icon-bg {
+    background-color: #d70f64;
+    color: #ffffff;
+  }
+
+  .order-card .btn-foodpanda {
+    background-color: #d70f64;
+    color: #ffffff;
+    border: none;
+  }
+
+  .order-card:hover .btn-foodpanda {
+    background-color: #b50b52;
+  }
+
+  @media (max-width: 680px) {
+    #order {
+      padding: 50px 0;
+    }
+    .order-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+    .order-card {
+      width: 100%;
+    }
+  }
+</style>
+
 <section class="pad reveal" id="order">
-  <div class="container">
-    <p class="eyebrow"><svg viewBox="0 0 100 90"><use href="#butterfly-icon"></use></svg>Coffee, Delivered</p>
-    <h2 class="section-heading">Order Online</h2>
-    <p class="section-sub">Wherever you are in Bahawalpur, your cup can still find its wings.</p>
+  <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+    
+    <!-- HEADER -->
+    <div class="order-header">
+      <p class="eyebrow">
+        <span>🦋</span> Coffee, Delivered
+      </p>
+      <h2 class="section-heading">Order Online</h2>
+      <p class="section-sub">Wherever you are in Bahawalpur, your cup can still find its wings.</p>
+    </div>
+
+    <!-- CARDS GRID -->
     <div class="order-grid">
+      
+      <!-- WHATSAPP CARD -->
       <a href="https://wa.me/923001234567?text=Hi%20Papillon%20Brew%2C%20I%27d%20like%20to%20place%20an%20order%20%F0%9F%A6%8B" target="_blank" rel="noopener" class="order-card">
-        <div class="order-icon" style="background:#5F7A5C"><svg viewBox="0 0 24 24"><use href="#whatsapp-icon"></use></svg></div>
+        <div class="order-icon whatsapp-icon-bg">
+          <svg width="32" height="32" fill="#ffffff" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+          </svg>
+        </div>
         <h3>WhatsApp</h3>
         <p>Message us your order directly — quick, simple, and personal.</p>
-        <span class="btn btn-primary">Chat on WhatsApp</span>
+        <span class="btn btn-whatsapp">Chat on WhatsApp</span>
       </a>
+
+      <!-- FOODPANDA CARD -->
       <a href="https://www.foodpanda.pk/" target="_blank" rel="noopener" class="order-card">
-        <div class="order-icon" style="background:#8B7A9E"><svg viewBox="0 0 24 24"><use href="#delivery-icon"></use></svg></div>
+        <div class="order-icon foodpanda-icon-bg">
+          <svg width="32" height="32" fill="#ffffff" viewBox="0 0 24 24">
+            <path d="M19 7h-3V6a4 4 0 0 0-8 0v1H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zm-9-1a2 2 0 0 1 4 0v1h-4V6zm9 13H5V9h3v2h2V9h4v2h2V9h3v10z"/>
+          </svg>
+        </div>
         <h3>Foodpanda</h3>
         <p>Order through the app for delivery straight to your door.</p>
-        <span class="btn btn-outline">Order on Foodpanda</span>
+        <span class="btn btn-foodpanda">Order on Foodpanda</span>
       </a>
+
     </div>
   </div>
 </section>
@@ -1097,93 +1537,894 @@
   </div>
 </section>
 
+<style>
+  #reserve {
+    padding: 70px 0;
+    background: #faf8f2;
+    text-align: center;
+  }
+
+  #reserve .reserve-container {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  #reserve .eyebrow {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #8c789e;
+    margin-bottom: 8px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  #reserve .section-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.6rem;
+    color: #3b5040;
+    margin-bottom: 12px;
+    font-style: italic;
+  }
+
+  #reserve .section-sub {
+    color: #6b7a6d;
+    font-size: 0.98rem;
+    line-height: 1.5;
+    margin-bottom: 35px;
+  }
+
+  /* FORM STYLING */
+  .reservation-form {
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+  }
+
+  .form-row {
+    display: flex;
+    gap: 20px;
+  }
+
+  .form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .form-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #3b5040;
+  }
+
+  .form-group input, 
+  .form-group select, 
+  .form-group textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: #ffffff;
+    font-size: 0.95rem;
+    color: #333333;
+    outline: none;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+  }
+
+  .form-group input:focus, 
+  .form-group select:focus, 
+  .form-group textarea:focus {
+    border-color: #43604a;
+    box-shadow: 0 0 0 3px rgba(67, 96, 74, 0.15);
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+    font-family: inherit;
+  }
+
+  /* BUTTON STYLING */
+  .reserve-btn-container {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .btn-reserve {
+    background-color: #43604a;
+    color: #ffffff;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 14px rgba(67, 96, 74, 0.2);
+  }
+
+  .btn-reserve:hover {
+    background-color: #2f4534;
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 600px) {
+    .form-row {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+</style>
+
 <section class="pad reveal" id="reserve">
-  <div class="container">
-    <p class="eyebrow"><svg viewBox="0 0 100 90"><use href="#butterfly-icon"></use></svg>Save Your Seat</p>
+  <div class="reserve-container">
+    
+    <!-- HEADER -->
+    <p class="eyebrow">
+      <span>🦋</span> Save Your Seat
+    </p>
     <h2 class="section-heading">Reserve a Table</h2>
     <p class="section-sub">Fill this in and we'll open WhatsApp with everything pre-filled — just hit send.</p>
-    <form class="reserve-form" id="reserveForm">
+
+    <!-- FORM -->
+    <form class="reservation-form" onsubmit="sendReservationToWhatsApp(event)">
+      
+      <!-- ROW 1: NAME & PHONE -->
       <div class="form-row">
-        <label>Name<input type="text" id="resName" required></label>
-        <label>Phone<input type="tel" id="resPhone" required placeholder="03XX-XXXXXXX"></label>
+        <div class="form-group">
+          <label for="res-name">Name</label>
+          <input type="text" id="res-name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <label for="res-phone">Phone</label>
+          <input type="tel" id="res-phone" placeholder="03XX-XXXXXXX" required>
+        </div>
       </div>
+
+      <!-- ROW 2: DATE, TIME, GUESTS -->
       <div class="form-row">
-        <label>Date<input type="date" id="resDate" required></label>
-        <label>Time<input type="time" id="resTime" required></label>
-        <label>Guests<input type="number" id="resGuests" min="1" max="20" value="2" required></label>
+        <div class="form-group">
+          <label for="res-date">Date</label>
+          <input type="date" id="res-date" required>
+        </div>
+        <div class="form-group">
+          <label for="res-time">Time</label>
+          <input type="time" id="res-time" required>
+        </div>
+        <div class="form-group">
+          <label for="res-guests">Guests</label>
+          <select id="res-guests" required>
+            <option value="1 Guest">1 Guest</option>
+            <option value="2 Guests" selected>2 Guests</option>
+            <option value="3 Guests">3 Guests</option>
+            <option value="4 Guests">4 Guests</option>
+            <option value="5+ Guests">5+ Guests</option>
+          </select>
+        </div>
       </div>
-      <label class="form-full">Special request (optional)<textarea id="resNote" rows="3" placeholder="e.g. the Silent Wings Table, a window seat, dietary needs..."></textarea></label>
-      <button type="submit" class="btn btn-primary">Send Reservation Request</button>
-      <p class="reserve-note" id="reserveNote"></p>
+
+      <!-- ROW 3: SPECIAL REQUEST -->
+      <div class="form-group">
+        <label for="res-notes">Special request (optional)</label>
+        <textarea id="res-notes" placeholder="e.g. the Silent Wings Table, a window seat, dietary needs..."></textarea>
+      </div>
+
+      <!-- SUBMIT BUTTON -->
+      <div class="reserve-btn-container">
+        <button type="submit" class="btn-reserve">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+          </svg>
+          Send Reservation Request
+        </button>
+      </div>
+
     </form>
+
   </div>
 </section>
+
+<!-- JAVASCRIPT FOR AUTOMATIC WHATSAPP PRE-FILLED MESSAGE -->
+<script>
+  function sendReservationToWhatsApp(event) {
+    event.preventDefault();
+    
+    // REPLACE WITH YOUR CAFE'S WHATSAPP NUMBER
+    const phoneNumber = "923000000000"; 
+
+    const name = document.getElementById('res-name').value;
+    const phone = document.getElementById('res-phone').value;
+    const date = document.getElementById('res-date').value;
+    const time = document.getElementById('res-time').value;
+    const guests = document.getElementById('res-guests').value;
+    const notes = document.getElementById('res-notes').value;
+
+    let message = `*Table Reservation Request - Papillon Brew*%0A%0A`;
+    message += `*Name:* ${encodeURIComponent(name)}%0A`;
+    message += `*Phone:* ${encodeURIComponent(phone)}%0A`;
+    message += `*Date:* ${encodeURIComponent(date)}%0A`;
+    message += `*Time:* ${encodeURIComponent(time)}%0A`;
+    message += `*Guests:* ${encodeURIComponent(guests)}%0A`;
+    
+    if (notes.trim() !== '') {
+      message += `*Special Request:* ${encodeURIComponent(notes)}%0A`;
+    }
+
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+    window.open(whatsappUrl, '_blank');
+  }
+</script>
+
+<!-- GOOD TO KNOW (FAQ SECTION) -->
+<!-- COMPLETE WORKING FAQ ACCORDION SECTION -->
+<style>
+  #faq {
+    padding: 70px 0 50px 0;
+    background: #faf8f2;
+    text-align: center;
+  }
+
+  #faq .faq-container {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  #faq .eyebrow {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #8c789e;
+    margin-bottom: 8px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  #faq .section-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.6rem;
+    color: #3b5040;
+    margin-bottom: 10px;
+    font-style: italic;
+  }
+
+  #faq .section-sub {
+    color: #6b7a6d;
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+
+  /* ACCORDION STYLING */
+  .faq-list {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    color: #3b5040;
+    font-style: italic;
+    text-align: left;
+    transition: color 0.2s ease;
+  }
+
+  .faq-question:hover {
+    color: #5f7a5c;
+  }
+
+  .faq-icon {
+    font-size: 1.4rem;
+    color: #8c789e;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1;
+    transition: transform 0.3s ease;
+  }
+
+  /* ANSWER CONTAINER FIX */
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    color: #6b7a6d;
+    font-family: inherit;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .faq-answer-content {
+    padding-bottom: 20px;
+  }
+
+  .faq-item.active .faq-icon {
+    transform: rotate(45deg); /* Rotates + to x */
+  }
+
+  /* BOTTOM NAV */
+  .bottom-nav {
+    margin-top: 60px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .bottom-nav a {
+    color: #3b5040;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+  }
+
+  .bottom-nav a:hover {
+    color: #8c789e;
+  }
+</style>
 
 <section class="pad reveal" id="faq">
-  <div class="container">
-    <p class="eyebrow"><svg viewBox="0 0 100 90"><use href="#butterfly-icon"></use></svg>Before You Visit</p>
+  <div class="faq-container">
+    
+    <!-- HEADER -->
+    <p class="eyebrow">
+      <span>🦋</span> Before You Visit
+    </p>
     <h2 class="section-heading">Good to Know</h2>
     <p class="section-sub">A few things people usually ask us.</p>
+
+    <!-- FAQ LIST -->
     <div class="faq-list">
+      
       <div class="faq-item">
-        <button class="faq-question" type="button" aria-expanded="false">
-          <span>Do you have parking available?</span><span class="faq-toggle">+</span>
+        <button type="button" class="faq-question" onclick="toggleFaq(this)">
+          <span>Do you have parking available?</span>
+          <span class="faq-icon">+</span>
         </button>
-        <div class="faq-answer"><p>Yes — we have dedicated parking right outside for both two- and four-wheelers.</p></div>
+        <div class="faq-answer">
+          <div class="faq-answer-content">
+            Yes, we have dedicated roadside and valet parking space available for our guests.
+          </div>
+        </div>
       </div>
+
       <div class="faq-item">
-        <button class="faq-question" type="button" aria-expanded="false">
-          <span>Do you accept card payments?</span><span class="faq-toggle">+</span>
+        <button type="button" class="faq-question" onclick="toggleFaq(this)">
+          <span>Do you accept card payments?</span>
+          <span class="faq-icon">+</span>
         </button>
-        <div class="faq-answer"><p>We accept cash, all major debit/credit cards, and popular mobile wallets.</p></div>
+        <div class="faq-answer">
+          <div class="faq-answer-content">
+            Yes, we accept all major debit/credit cards, cash, and digital wallet transfers.
+          </div>
+        </div>
       </div>
+
       <div class="faq-item">
-        <button class="faq-question" type="button" aria-expanded="false">
-          <span>Is Papillon Brew pet-friendly?</span><span class="faq-toggle">+</span>
+        <button type="button" class="faq-question" onclick="toggleFaq(this)">
+          <span>Do you have vegan or dairy-free options?</span>
+          <span class="faq-icon">+</span>
         </button>
-        <div class="faq-answer"><p>Well-behaved pets are welcome in our outdoor garden seating area.</p></div>
+        <div class="faq-answer">
+          <div class="faq-answer-content">
+            We offer almond and oat milk alternatives for coffee, as well as plant-based snacks.
+          </div>
+        </div>
       </div>
+
       <div class="faq-item">
-        <button class="faq-question" type="button" aria-expanded="false">
-          <span>Do you have vegan or dairy-free options?</span><span class="faq-toggle">+</span>
+        <button type="button" class="faq-question" onclick="toggleFaq(this)">
+          <span>Can I reserve the Silent Wings Table in advance?</span>
+          <span class="faq-icon">+</span>
         </button>
-        <div class="faq-answer"><p>Yes — ask your barista about oat and almond milk substitutions on any coffee or tea.</p></div>
+        <div class="faq-answer">
+          <div class="faq-answer-content">
+            Yes, you can reserve specific seating via our online reservation form or WhatsApp.
+          </div>
+        </div>
       </div>
+
       <div class="faq-item">
-        <button class="faq-question" type="button" aria-expanded="false">
-          <span>Can I reserve the Silent Wings Table in advance?</span><span class="faq-toggle">+</span>
+        <button type="button" class="faq-question" onclick="toggleFaq(this)">
+          <span>Do you cater for private events or birthdays?</span>
+          <span class="faq-icon">+</span>
         </button>
-        <div class="faq-answer"><p>Walk-ins are welcome, but you can also use the reservation form above or message us on WhatsApp to book it ahead of time.</p></div>
+        <div class="faq-answer">
+          <div class="faq-answer-content">
+            Absolutely! Contact us on WhatsApp to discuss custom arrangements for your special event.
+          </div>
+        </div>
       </div>
-      <div class="faq-item">
-        <button class="faq-question" type="button" aria-expanded="false">
-          <span>Do you cater for private events or birthdays?</span><span class="faq-toggle">+</span>
-        </button>
-        <div class="faq-answer"><p>We do! Message us on WhatsApp with your date and group size, and we'll help you plan something special.</p></div>
-      </div>
+
     </div>
   </div>
 </section>
 
+<!-- RELIABLE ACCORDION JAVASCRIPT -->
+<script>
+  function toggleFaq(button) {
+    const currentItem = button.parentElement;
+    const currentAnswer = currentItem.querySelector('.faq-answer');
+    const isAlreadyOpen = currentItem.classList.contains('active');
+
+    // Close all open items
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.classList.remove('active');
+      const answer = item.querySelector('.faq-answer');
+      if (answer) {
+        answer.style.maxHeight = null;
+      }
+    });
+
+    // If it wasn't open before, open it now
+    if (!isAlreadyOpen) {
+      currentItem.classList.add('active');
+      currentAnswer.style.maxHeight = currentAnswer.scrollHeight + "px";
+    }
+  }
+</script>
+
+    
+
+<!-- UPDATED FOOTER CODE -->
+<style>
+  footer {
+    background-color: #383431; /* Dark aesthetic background */
+    color: #faf8f2;
+    padding: 60px 0 30px 0;
+    text-align: center;
+  }
+
+  footer .footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* FOOTER NAVIGATION MENU */
+  .footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+    margin-bottom: 45px;
+  }
+
+  .footer-nav a {
+    color: #e5dec9;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .footer-nav a:hover {
+    color: #c9b082;
+  }
+
+  /* INSTAGRAM FEED HEADINGS */
+  .footer-insta-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-style: italic;
+    color: #faf8f2;
+    margin-bottom: 6px;
+    font-weight: 400;
+  }
+
+  .footer-insta-handle {
+    color: #c9b082;
+    text-decoration: none;
+    font-size: 0.95rem;
+    display: inline-block;
+    margin-bottom: 30px;
+    transition: opacity 0.3s ease;
+  }
+
+  .footer-insta-handle:hover {
+    opacity: 0.8;
+  }
+
+  /* 3-ITEM INSTA GRID */
+  .insta-grid-3 {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 550px;
+    margin: 0 auto 50px auto;
+  }
+
+  .insta-item {
+    flex: 1;
+    aspect-ratio: 1 / 1;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+
+  .insta-item:hover {
+    transform: translateY(-4px);
+  }
+
+  /* DIVIDER LINE */
+  .footer-divider {
+    border: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin-bottom: 30px;
+  }
+
+  /* BOTTOM BRANDING & SOCIALS */
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+
+  .footer-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #faf8f2;
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    font-style: italic;
+  }
+
+  .footer-logo svg {
+    width: 24px;
+    height: 24px;
+    fill: #faf8f2;
+  }
+
+  .footer-socials {
+    display: flex;
+    gap: 12px;
+  }
+
+  .social-icon-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #faf8f2;
+    text-decoration: none;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+
+  .social-icon-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #c9b082;
+  }
+
+  .footer-copyright {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.85rem;
+    text-align: center;
+  }
+
+  @media (max-width: 600px) {
+    .footer-bottom {
+      flex-direction: column;
+      gap: 20px;
+    }
+    .footer-nav {
+      gap: 18px;
+    }
+  }
+</style>
+
+<!-- UPDATED FOOTER WITH REAL IMAGES -->
+<!-- UPDATED FOOTER WITH FULL SOCIAL ICONS -->
+<style>
+  footer {
+    background-color: #383431;
+    color: #faf8f2;
+    padding: 60px 0 30px 0;
+    text-align: center;
+  }
+
+  footer .footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* FOOTER NAVIGATION MENU */
+  .footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+    margin-bottom: 45px;
+  }
+
+  .footer-nav a {
+    color: #e5dec9;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .footer-nav a:hover {
+    color: #c9b082;
+  }
+
+  /* INSTAGRAM FEED HEADINGS */
+  .footer-insta-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-style: italic;
+    color: #faf8f2;
+    margin-bottom: 6px;
+    font-weight: 400;
+  }
+
+  .footer-insta-handle {
+    color: #c9b082;
+    text-decoration: none;
+    font-size: 0.95rem;
+    display: inline-block;
+    margin-bottom: 30px;
+    transition: opacity 0.3s ease;
+  }
+
+  .footer-insta-handle:hover {
+    opacity: 0.8;
+  }
+
+  /* 3-ITEM INSTA REAL IMAGES GRID */
+  .insta-grid-3 {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 580px;
+    margin: 0 auto 50px auto;
+  }
+
+  .insta-item {
+    flex: 1;
+    aspect-ratio: 1 / 1;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .insta-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  .insta-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.3);
+  }
+
+  .insta-item:hover img {
+    transform: scale(1.08);
+  }
+
+  .insta-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(56, 52, 49, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .insta-item:hover .insta-overlay {
+    opacity: 1;
+  }
+
+  .insta-overlay svg {
+    width: 26px;
+    height: 26px;
+    fill: #ffffff;
+  }
+
+  /* DIVIDER LINE */
+  .footer-divider {
+    border: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin-bottom: 30px;
+  }
+
+  /* BOTTOM BRANDING & SOCIALS */
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+
+  .footer-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #faf8f2;
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    font-style: italic;
+  }
+
+  .footer-logo svg {
+    width: 24px;
+    height: 24px;
+    fill: #faf8f2;
+  }
+
+  .footer-socials {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .social-icon-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #faf8f2;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .social-icon-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #c9b082;
+    color: #c9b082;
+    transform: translateY(-2px);
+  }
+
+  .footer-copyright {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.85rem;
+    text-align: center;
+  }
+
+  @media (max-width: 600px) {
+    .footer-bottom {
+      flex-direction: column;
+      gap: 20px;
+    }
+    .footer-nav {
+      gap: 18px;
+    }
+  }
+</style>
+
 <footer>
-  <div class="container">
+  <div class="footer-container">
+    
+    <!-- FOOTER NAVIGATION -->
+    <nav class="footer-nav">
+      <a href="#vibe">Find Your Vibe</a>
+      <a href="#menu">Menu</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#location">Location</a>
+    </nav>
+
+    <!-- INSTAGRAM HEADING -->
     <h3 class="footer-insta-heading">Follow Our Flight</h3>
     <a href="https://www.instagram.com/papillonbrew/" target="_blank" rel="noopener" class="footer-insta-handle">@papillonbrew</a>
-    <div class="insta-grid">
-      <div class="insta-item" style="background:var(--sage-dark)"><svg viewBox="0 0 100 90" style="padding:22%; box-sizing:border-box; color:var(--cream)"><use href="#butterfly-icon"></use></svg></div>
-      <div class="insta-item" style="background:var(--lavender-deep)"><svg viewBox="0 0 60 80" style="padding:20%; box-sizing:border-box; color:var(--cream)"><use href="#bean-icon"></use></svg></div>
-      <div class="insta-item" style="background:var(--gold)"><svg viewBox="0 0 100 90" style="padding:22%; box-sizing:border-box; color:var(--ink)"><use href="#butterfly-icon"></use></svg></div>
-      <div class="insta-item" style="background:var(--sage)"><svg viewBox="0 0 60 100" style="padding:18%; box-sizing:border-box; color:var(--cream)"><use href="#leaf-icon"></use></svg></div>
-      <div class="insta-item" style="background:var(--lavender)"><svg viewBox="0 0 60 80" style="padding:20%; box-sizing:border-box; color:var(--ink)"><use href="#cocoon-icon"></use></svg></div>
-      <div class="insta-item" style="background:var(--sage-dark)"><svg viewBox="0 0 100 90" style="padding:24%; box-sizing:border-box; color:var(--gold)"><use href="#butterfly-icon"></use></svg></div>
+
+    <!-- 3 REAL AESTHETIC INSTA IMAGES -->
+    <div class="insta-grid-3">
+      <a href="https://www.instagram.com/papillonbrew/" target="_blank" rel="noopener" class="insta-item">
+        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=600&auto=format&fit=crop" alt="Coffee Latte Art">
+        <div class="insta-overlay">
+          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </div>
+      </a>
+
+      <a href="https://www.instagram.com/papillonbrew/" target="_blank" rel="noopener" class="insta-item">
+        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=600&auto=format&fit=crop" alt="Cafe Ambiance">
+        <div class="insta-overlay">
+          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </div>
+      </a>
+
+      <a href="https://www.instagram.com/papillonbrew/" target="_blank" rel="noopener" class="insta-item">
+        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=600&auto=format&fit=crop" alt="Fresh Bakery Pastry">
+        <div class="insta-overlay">
+          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </div>
+      </a>
     </div>
+
+    <hr class="footer-divider">
+
+    <!-- BOTTOM BRANDING & 5 SOCIAL ICONS -->
     <div class="footer-bottom">
-      <a href="#" class="footer-logo"><svg viewBox="0 0 100 90"><use href="#butterfly-icon"></use></svg>Papillon Brew</a>
+      <a href="#" class="footer-logo">
+        <svg viewBox="0 0 100 90"><use href="#butterfly-icon"></use></svg>
+        Papillon Brew
+      </a>
+
       <div class="footer-socials">
-        <a href="https://www.instagram.com/papillonbrew/" target="_blank" rel="noopener" aria-label="Instagram" style="color:var(--cream)"><svg viewBox="0 0 24 24"><use href="#ig-icon"></use></svg></a>
-        <a href="#" aria-label="Facebook" style="color:var(--cream)"><svg viewBox="0 0 24 24"><use href="#fb-icon"></use></svg></a>
+        <!-- INSTAGRAM -->
+        <a href="https://www.instagram.com/papillonbrew/" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon-btn">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+
+        <!-- FACEBOOK -->
+        <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook" class="social-icon-btn">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.374 14.5 5 15.5 5H18V0h-3.808C10.592 0 9 1.583 9 4.615V8z"/></svg>
+        </a>
+
+        <!-- WHATSAPP -->
+        <a href="https://wa.me/923001234567" target="_blank" rel="noopener" aria-label="WhatsApp" class="social-icon-btn">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+        </a>
+
+        <!-- TIKTOK -->
+        <a href="https://tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok" class="social-icon-btn">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.82.53-1.31 1.48-1.28 2.46.01.82.4 1.63 1.05 2.14.78.63 1.84.83 2.81.57.97-.24 1.79-.97 2.14-1.91.24-.62.29-1.3.28-1.96V.02z"/></svg>
+        </a>
+
+        <!-- GOOGLE MAPS / LOCATION -->
+        <a href="#location" aria-label="Location" class="social-icon-btn">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        </a>
       </div>
     </div>
+
     <p class="footer-copyright">© 2026 Papillon Brew, Bahawalpur. Brewed with nature, served with wings.</p>
   </div>
 </footer>
