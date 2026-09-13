@@ -455,47 +455,71 @@
     </div>
   </div>
 </header>
-<section class="pad reveal" id="vibe">
+<section class="pad reveal" id="vibe" style="padding: 60px 0;">
   <div class="container">
-    <p class="eyebrow"><svg viewBox="0 0 100 90"><use href="#butterfly-icon"></use></svg>What Brings You In Today?</p>
-    <h2 class="section-heading">Find Your Vibe</h2>
-    <p class="section-sub">Every corner of Papillon Brew has its own mood. Tell us what you're after, and we'll set the table.</p>
+    <p class="eyebrow" style="text-align: center; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; color: #d4af37; margin-bottom: 8px; display: flex; align-items: center; justify-content: center; gap: 8px;">
+      <svg viewBox="0 0 100 90" style="width: 18px; fill: #d4af37;"><use href="#butterfly-icon"></use></svg>What Brings You In Today?
+    </p>
+    <h2 class="section-heading" style="text-align: center; font-family: 'Playfair Display', serif; font-size: 2.3rem; color: #1c2b1e; margin-bottom: 10px;">Find Your Vibe</h2>
+    <p class="section-sub" style="text-align: center; font-size: 1rem; color: #556b5e; max-width: 600px; margin: 0 auto 35px auto;">Every corner of Papillon Brew has its own mood. Tell us what you're after, and we'll set the table.</p>
 
-    <div class="vibe-selector">
-      <button class="vibe-card" data-vibe="quiet" type="button">
-        <div class="vibe-icon"><svg viewBox="0 0 24 24"><use href="#book-icon"></use></svg></div>
-        <h4>Quiet Corner</h4>
-        <p>A little stillness, a good read</p>
+    <div class="vibe-selector" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-bottom: 35px;">
+      
+      <!-- 01. QUIET CORNER CARD WITH PHOTO -->
+      <button class="vibe-card tilt-3d" data-vibe="quiet" type="button" style="background: #fff; border: 1px solid rgba(0,0,0,0.06); border-radius: 20px; padding: 15px; text-align: left; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 10px 25px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+        <div class="vibe-photo" style="overflow: hidden; border-radius: 14px; height: 170px; margin-bottom: 16px; position: relative; width: 100%;">
+          <img src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=500&auto=format&fit=crop&q=80" alt="Quiet Reading Nook" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+        </div>
+        <div style="padding: 0 6px 6px 6px;">
+          <h4 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; color: #1c2b1e; margin: 0 0 6px 0;">Quiet Corner</h4>
+          <p style="font-size: 0.9rem; color: #667c6e; margin: 0; line-height: 1.4;">A little stillness, a good read</p>
+        </div>
       </button>
-      <button class="vibe-card" data-vibe="work" type="button">
-        <div class="vibe-icon"><svg viewBox="0 0 24 24"><use href="#work-icon"></use></svg></div>
-        <h4>Deep Work</h4>
-        <p>Focus, plugged in and caffeinated</p>
+
+      <!-- 02. DEEP WORK CARD WITH PHOTO -->
+      <button class="vibe-card tilt-3d" data-vibe="work" type="button" style="background: #fff; border: 1px solid rgba(0,0,0,0.06); border-radius: 20px; padding: 15px; text-align: left; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 10px 25px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+        <div class="vibe-photo" style="overflow: hidden; border-radius: 14px; height: 170px; margin-bottom: 16px; position: relative; width: 100%;">
+          <img src="https://images.unsplash.com/photo-1527192491265-7e15c55b1ed2?w=500&auto=format&fit=crop&q=80" alt="Workplace Laptop and Coffee" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+        </div>
+        <div style="padding: 0 6px 6px 6px;">
+          <h4 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; color: #1c2b1e; margin: 0 0 6px 0;">Deep Work</h4>
+          <p style="font-size: 0.9rem; color: #667c6e; margin: 0; line-height: 1.4;">Focus, plugged in and caffeinated</p>
+        </div>
       </button>
-      <button class="vibe-card" data-vibe="chill" type="button">
-        <div class="vibe-icon"><svg viewBox="0 0 24 24"><use href="#chill-icon"></use></svg></div>
-        <h4>Just Chill</h4>
-        <p>Easy coffee, easy conversation</p>
+
+      <!-- 03. JUST CHILL CARD WITH PHOTO -->
+      <button class="vibe-card tilt-3d" data-vibe="chill" type="button" style="background: #fff; border: 1px solid rgba(0,0,0,0.06); border-radius: 20px; padding: 15px; text-align: left; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 10px 25px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+        <div class="vibe-photo" style="overflow: hidden; border-radius: 14px; height: 170px; margin-bottom: 16px; position: relative; width: 100%;">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=500&auto=format&fit=crop&q=80" alt="Cozy Garden Lounge" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+        </div>
+        <div style="padding: 0 6px 6px 6px;">
+          <h4 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; color: #1c2b1e; margin: 0 0 6px 0;">Just Chill</h4>
+          <p style="font-size: 0.9rem; color: #667c6e; margin: 0; line-height: 1.4;">Easy coffee, easy conversation</p>
+        </div>
       </button>
+
     </div>
 
+    <!-- RESULT PANELS -->
     <div class="vibe-result" id="vibeResult">
       <div class="vibe-result-panel" data-panel="quiet">
-        <h3>Your Spot: The Silent Wings Table</h3>
+        <h3 style="font-family: 'Playfair Display', serif; color: #1c2b1e;">Your Spot: The Silent Wings Table</h3>
         <div class="vibe-detail"><strong>Seat</strong><span>The Silent Wings Table — our phone-free nook by the window</span></div>
         <div class="vibe-detail"><strong>Order</strong><span>Chamomile Garden or Butterfly Pea Blossom tea</span></div>
         <div class="vibe-detail"><strong>Best time</strong><span>Weekday mornings, 9–11AM, when the café is softest and slowest</span></div>
         <p class="vibe-note">Bring a book, a sketchpad, or just your thoughts. No notifications allowed here — only the quiet kind of metamorphosis.</p>
       </div>
+
       <div class="vibe-result-panel" data-panel="work">
-        <h3>Your Spot: The Sunlit Counter</h3>
+        <h3 style="font-family: 'Playfair Display', serif; color: #1c2b1e;">Your Spot: The Sunlit Counter</h3>
         <div class="vibe-detail"><strong>Seat</strong><span>Window-side counter seating, within easy reach of outlets</span></div>
         <div class="vibe-detail"><strong>Order</strong><span>Americano or Flat White, for the long haul</span></div>
         <div class="vibe-detail"><strong>Best time</strong><span>Weekday afternoons, 12–4PM — steady energy, fewer crowds, reliable WiFi</span></div>
         <p class="vibe-note">Refills on request, headphones welcome. A few of our regulars have written entire chapters here.</p>
       </div>
+
       <div class="vibe-result-panel" data-panel="chill">
-        <h3>Your Spot: The Garden Lounge</h3>
+        <h3 style="font-family: 'Playfair Display', serif; color: #1c2b1e;">Your Spot: The Garden Lounge</h3>
         <div class="vibe-detail"><strong>Seat</strong><span>Our softest lounge seating, made for lingering</span></div>
         <div class="vibe-detail"><strong>Order</strong><span>Papillon Signature or a Café Latte, something to sip slowly</span></div>
         <div class="vibe-detail"><strong>Best time</strong><span>Weekend afternoons, when the whole café hums with easy conversation</span></div>
