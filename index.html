@@ -1066,18 +1066,19 @@
     </div>
   </div>
 </section>
+
 <style>
-  /* Experience Section Base Layout - No Sage Palette */
+  /* Experience Section Base */
   .experience {
     background: #F8F4EC;
-    padding: 6rem 0;
+    padding: 4rem 0;
     font-family: 'Poppins', sans-serif;
   }
 
   .exp-container {
     max-width: 1180px;
     margin: 0 auto;
-    padding: 0 5vw;
+    padding: 0 4vw;
   }
 
   .exp-eyebrow {
@@ -1113,170 +1114,18 @@
     font-weight: 300;
   }
 
-  /* Loyalty Card Section */
+  /* LOYALTY CARD CONTAINER */
   .loyalty-card {
-    background: #FFFFFF;
-    border-radius: 24px;
-    padding: 2.5rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
-    align-items: center;
-    box-shadow: 0 10px 30px rgba(58, 52, 46, 0.05);
-    margin-bottom: 4rem;
-    border: 1px solid rgba(139, 122, 158, 0.15);
-  }
-
-  .loyalty-visual {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .loyalty-svg-wrap { width: 80px; height: 80px; color: #8B7A9E; }
-  .loyalty-outline { fill: none; stroke: currentColor; stroke-width: 2; }
-
-  .stamp-row { display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center; }
-
-  .stamp {
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    border: 1.5px dashed #8B7A9E;
-  }
-
-  .stamp.active { background: #8B7A9E; border-style: solid; }
-
-  .loyalty-info h3 {
-    font-family: 'Cormorant', serif;
-    font-size: 2rem;
-    color: #3A342E;
-    margin-bottom: 0.6rem;
-  }
-
-  .loyalty-info p {
-    color: rgba(58, 52, 46, 0.75);
-    font-size: 0.95rem;
-    line-height: 1.6;
-  }
-
-  /* Grid Layout */
-  .exp-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-    gap: 2rem;
-  }
-
-  /* Individual Cards */
-  .exp-card {
-    background: #FFFFFF;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 8px 24px rgba(58, 52, 46, 0.04);
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid rgba(0, 0, 0, 0.04);
-  }
-
-  .exp-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 16px 36px rgba(58, 52, 46, 0.1);
-  }
-
-  .exp-img-wrapper {
-    position: relative;
-    width: 100%;
-    height: 210px;
-    overflow: hidden;
-  }
-
-  .exp-img-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.6s ease;
-  }
-
-  .exp-card:hover .exp-img-wrapper img {
-    transform: scale(1.06);
-  }
-
-  .exp-icon {
-    position: absolute;
-    bottom: -18px;
-    right: 20px;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-    z-index: 2;
-  }
-
-  .exp-icon svg { width: 22px; height: 22px; }
-
-  .exp-card-body {
-    padding: 1.8rem 1.6rem 2rem;
-    flex-grow: 1;
-  }
-
-  .exp-card-body h4 {
-    font-family: 'Cormorant', serif;
-    font-size: 1.55rem;
-    margin-bottom: 0.6rem;
-    color: #3A342E;
-  }
-
-  .exp-card-body p {
-    font-size: 0.92rem;
-    color: rgba(58, 52, 46, 0.75);
-    line-height: 1.6;
-  }
-
-  .btn-loyalty {
-    padding: 0.65rem 1.4rem;
-    font-size: 0.85rem;
-    border-radius: 999px;
-    background: transparent;
-    border: 1.5px solid #8B7A9E;
-    color: #8B7A9E;
-    cursor: pointer;
-    font-weight: 500;
-    transition: all 0.3s ease;
-  }
-
-  .btn-loyalty:hover {
-    background: #8B7A9E;
-    color: #FFFFFF;
-  }
-
-  @media (max-width: 768px) {
-    .loyalty-card { grid-template-columns: 1fr; gap: 1.5rem; padding: 1.5rem; }
-    .exp-grid { grid-template-columns: 1fr; }
-  }
-</style>
-
-<style>
-  /* =========================================================
-     LIGHTER WARM LOYALTY CARD & GOLDEN BUTTERFLY STYLES
-     ========================================================= */
-  .loyalty-card {
-    /* Lighter, warm luxury dark background */
-    background: linear-gradient(145deg, #2D2722 0%, #221D19 100%);
+    background: #1C1917;
     border-radius: 20px;
     padding: 3rem 2.5rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2.5rem;
     align-items: center;
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
     margin-bottom: 4.5rem;
-    border: 1px solid rgba(212, 175, 55, 0.3);
+    border: 1px solid rgba(212, 175, 55, 0.25);
     color: #FBF7EE;
     position: relative;
     overflow: hidden;
@@ -1286,41 +1135,33 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1.2rem;
     text-align: center;
     position: relative;
     z-index: 5;
     width: 100%;
   }
 
-  /* Detailed Golden Butterfly Icon Container */
   .loyalty-svg-wrap {
-    width: 70px;
-    height: 70px;
+    width: 65px;
+    height: 65px;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
   }
 
   .golden-hero-butterfly {
-    width: 65px;
-    height: 65px;
+    width: 60px;
+    height: 60px;
     filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.6));
-    animation: gentleGlow 3s ease-in-out infinite alternate;
   }
 
-  @keyframes gentleGlow {
-    0% { transform: scale(1); filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.5)); }
-    100% { transform: scale(1.06); filter: drop-shadow(0 0 14px rgba(255, 215, 0, 0.9)); }
-  }
-
-  /* LINE / BAR TYPE STAMP PROGRESS */
+  /* Stamp Progress Indicator */
   .stamp-line-container {
     display: flex;
     gap: 6px;
     width: 100%;
-    max-width: 380px;
+    max-width: 360px;
     justify-content: center;
     align-items: center;
   }
@@ -1328,32 +1169,22 @@
   .stamp-line-step {
     flex: 1;
     height: 8px;
-    background: rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.15);
     border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s ease;
     border: 1px solid rgba(212, 175, 55, 0.2);
   }
 
   .stamp-line-step.active {
-    background: linear-gradient(90deg, #B8860B, #FFD700, #FFF8DC, #FFD700);
-    background-size: 200% 100%;
-    animation: goldShimmer 2s infinite linear;
+    background: linear-gradient(90deg, #B8860B, #FFD700, #FFF8DC);
     box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
     border-color: #FFE57F;
-  }
-
-  @keyframes goldShimmer {
-    0% { background-position: 200% 0; }
-    100% { background-position: -200% 0; }
   }
 
   .loyalty-msg {
     font-size: 0.95rem;
     color: #E6D2B5;
     font-weight: 500;
-    letter-spacing: 0.5px;
   }
 
   .btn-loyalty {
@@ -1367,16 +1198,17 @@
     cursor: pointer;
     box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
     transition: all 0.3s ease;
+    touch-action: manipulation;
   }
 
-  .btn-loyalty:hover {
-    transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
+  .btn-loyalty:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
   }
 
   .loyalty-info h3 {
     font-family: 'Cormorant', serif;
-    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    font-size: clamp(2rem, 3.5vw, 2.6rem);
     color: #FFFFFF;
     font-style: italic;
     margin-bottom: 0.8rem;
@@ -1388,9 +1220,7 @@
     line-height: 1.65;
   }
 
-  /* =========================================================
-     PARTY SHOOTER, BALLOONS & GOLDEN BUTTERFLIES ANIMATION
-     ========================================================= */
+  /* CELEBRATION OVERLAY STAGE */
   .celebration-stage {
     position: absolute;
     inset: 0;
@@ -1400,133 +1230,173 @@
   }
   .celebration-stage.active { display: block; }
 
-  /* Party Shooters in Corners */
+  /* Party Shooters */
   .party-shooter {
     position: absolute;
-    bottom: -10px;
-    font-size: 3.5rem;
+    bottom: -5px;
+    font-size: 3rem;
     opacity: 0;
   }
-  .party-shooter.left { left: 20px; }
-  .party-shooter.right { right: 20px; }
+  .party-shooter.left { left: 15px; }
+  .party-shooter.right { right: 15px; }
 
-  .celebration-stage.active .party-shooter.left {
-    animation: shooterPopLeft 0.5s ease forwards;
-  }
-  .celebration-stage.active .party-shooter.right {
-    animation: shooterPopRight 0.5s ease forwards;
-  }
+  .celebration-stage.active .party-shooter.left { animation: shooterPopLeft 0.5s ease forwards; }
+  .celebration-stage.active .party-shooter.right { animation: shooterPopRight 0.5s ease forwards; }
 
   @keyframes shooterPopLeft {
     0% { opacity: 0; transform: rotate(45deg) scale(0); }
-    50% { opacity: 1; transform: rotate(25deg) scale(1.3); }
-    100% { opacity: 1; transform: rotate(35deg) scale(1); }
+    100% { opacity: 1; transform: rotate(25deg) scale(1); }
   }
   @keyframes shooterPopRight {
     0% { opacity: 0; transform: rotate(-45deg) scale(0); }
-    50% { opacity: 1; transform: rotate(-25deg) scale(1.3); }
-    100% { opacity: 1; transform: rotate(-35deg) scale(1); }
+    100% { opacity: 1; transform: rotate(-25deg) scale(1); }
   }
 
-  /* Golden Metallic Balloons */
+  /* Temporary Metallic Balloons */
   .golden-balloon {
     position: absolute;
-    bottom: -80px;
-    width: 42px;
-    height: 54px;
+    bottom: -60px;
+    width: 36px;
+    height: 46px;
     border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
-    background: radial-gradient(circle at 35% 30%, #FFFFFF 0%, #FFE57F 20%, #D4AF37 55%, #8B6508 90%);
-    box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.45), 0 8px 18px rgba(212, 175, 55, 0.4);
-    animation: balloonFloat 3.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    background: radial-gradient(circle at 35% 30%, #FFFFFF 0%, #FFE57F 25%, #D4AF37 60%, #8B6508 100%);
+    box-shadow: inset -2px -2px 8px rgba(0,0,0,0.4), 0 6px 15px rgba(212, 175, 55, 0.3);
+    animation: balloonRise 3.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
   }
 
-  @keyframes balloonFloat {
-    0% { transform: translateY(0) rotate(0deg) scale(0.8); opacity: 1; }
-    100% { transform: translateY(-450px) rotate(15deg) scale(1.1); opacity: 0; }
+  @keyframes balloonRise {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(-400px) rotate(15deg); opacity: 0; }
   }
 
-  /* Golden Flying Butterfly Animation */
-  .golden-flying-butterfly {
+  /* REALISTIC FLAPPING BUTTERFLIES ENGINE */
+  .butterfly-flyer-wrap {
     position: absolute;
-    bottom: -40px;
+    pointer-events: none;
+    animation: flightPath var(--duration) ease-in-out infinite;
+  }
+
+  /* 3D Wing Flap Animation */
+  .butterfly-wings {
+    display: inline-block;
     font-size: 1.8rem;
     filter: drop-shadow(0 0 10px #FFD700);
-    animation: flyUpButterflies 3.4s cubic-bezier(0.2, 0.8, 0.4, 1) forwards;
+    transform-origin: center center;
+    animation: wingFlap 0.28s ease-in-out infinite alternate;
   }
 
-  @keyframes flyUpButterflies {
+  @keyframes wingFlap {
+    0% { transform: scaleX(1) rotate(0deg); }
+    100% { transform: scaleX(0.25) rotate(12deg); }
+  }
+
+  @keyframes flightPath {
     0% {
-      transform: translateY(0) translateX(0) scale(0.5) rotate(-10deg);
       opacity: 0;
+      transform: translate(0, 0) scale(0.6);
     }
-    20% { opacity: 1; }
+    15% { opacity: 1; }
     50% {
-      transform: translateY(-200px) translateX(var(--drift)) scale(1.2) rotate(15deg);
+      transform: translate(var(--mx), var(--my)) scale(1.1);
     }
+    85% { opacity: 1; }
     100% {
-      transform: translateY(-420px) translateX(calc(var(--drift) * -0.8)) scale(0.9) rotate(-10deg);
       opacity: 0;
+      transform: translate(var(--ex), var(--ey)) scale(0.6);
     }
   }
 
-  /* Confetti Burst Particles */
-  .party-burst-particle {
-    position: absolute;
-    width: 8px;
-    height: 14px;
-    border-radius: 2px;
-    background: linear-gradient(135deg, #FFD700, #FFF);
-    box-shadow: 0 0 8px #FFD700;
-    animation: burstShoot 2.8s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+  /* 3-COLUMN SQUARE CARDS GRID */
+  .exp-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.8rem;
   }
 
-  @keyframes burstShoot {
-    0% { transform: translate(0, 0) rotate(0deg); opacity: 1; }
-    100% { transform: translate(var(--dx), var(--dy)) rotate(720deg); opacity: 0; }
+  .exp-card {
+    background: #FFFFFF;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(58, 52, 46, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .exp-img-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+  }
+
+  .exp-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .exp-card:hover .exp-img-wrapper img {
+    transform: scale(1.06);
+  }
+
+  .exp-card-body {
+    padding: 1.4rem 1.2rem;
+    flex-grow: 1;
+  }
+
+  .exp-card-body h4 {
+    font-family: 'Cormorant', serif;
+    font-size: 1.35rem;
+    margin-bottom: 0.4rem;
+    color: #3A342E;
+  }
+
+  .exp-card-body p {
+    font-size: 0.88rem;
+    color: rgba(58, 52, 46, 0.75);
+    line-height: 1.55;
+  }
+
+  /* Responsive Adjustments */
+  @media (max-width: 992px) {
+    .exp-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 600px) {
+    .exp-grid { grid-template-columns: 1fr; }
+    .loyalty-card { padding: 2rem 1.2rem; grid-template-columns: 1fr; gap: 1.5rem; }
   }
 </style>
 
-<section class="experience" id="experience">
+<section class="experience">
   <div class="exp-container">
-    <p class="exp-eyebrow">
-      <svg viewBox="0 0 100 90"><use href="#butterfly-icon"></use></svg>
-      More Than Coffee
-    </p>
+    
+    <div class="exp-eyebrow">
+      <svg viewBox="0 0 100 90"><path d="M50 45C40 20 15 10 5 25C-5 40 15 65 45 52Z"/></svg>
+      MORE THAN COFFEE
+    </div>
     <h2 class="exp-heading">The Butterfly Experience</h2>
     <p class="exp-sub">Little rituals, seasonal surprises, and reasons to linger a little longer.</p>
 
-    <!-- Loyalty Card -->
-    <div class="loyalty-card">
+    <!-- LOYALTY CARD -->
+    <div class="loyalty-card" id="loyaltyCard">
       <div class="celebration-stage" id="celebrationStage">
         <div class="party-shooter left">🎉</div>
         <div class="party-shooter right">🎉</div>
-        <div id="effectsContainer"></div>
+        <div id="tempEffects"></div>
+        <div id="continuousButterflies"></div>
       </div>
 
       <div class="loyalty-visual">
         <div class="loyalty-svg-wrap">
-          <!-- Detailed Golden Butterfly Image/Icon -->
-          <svg class="golden-hero-butterfly" viewBox="0 0 100 90" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M50 45C40 20 15 10 5 25C-5 40 15 65 45 52C48 51 49 48 50 45Z" fill="url(#goldGrad1)"/>
-            <path d="M50 45C60 20 85 10 95 25C105 40 85 65 55 52C52 51 51 48 50 45Z" fill="url(#goldGrad1)"/>
-            <path d="M50 48C42 62 25 80 15 72C5 64 25 50 46 50Z" fill="url(#goldGrad2)"/>
-            <path d="M50 48C58 62 75 80 85 72C95 64 75 50 54 50Z" fill="url(#goldGrad2)"/>
-            <circle cx="50" cy="45" r="3" fill="#FFF8DC"/>
-            <defs>
-              <linearGradient id="goldGrad1" x1="0" y1="0" x2="100" y2="90">
-                <stop offset="0%" stop-color="#FFE57F"/>
-                <stop offset="50%" stop-color="#D4AF37"/>
-                <stop offset="100%" stop-color="#8B6508"/>
-              </linearGradient>
-              <linearGradient id="goldGrad2" x1="0" y1="0" x2="100" y2="90">
-                <stop offset="0%" stop-color="#FFD700"/>
-                <stop offset="100%" stop-color="#B8860B"/>
-              </linearGradient>
-            </defs>
+          <svg class="golden-hero-butterfly" viewBox="0 0 100 90">
+            <path d="M50 45C40 20 15 10 5 25C-5 40 15 65 45 52C48 51 49 48 50 45Z" fill="#FFD700"/>
+            <path d="M50 45C60 20 85 10 95 25C105 40 85 65 55 52C52 51 51 48 50 45Z" fill="#FFD700"/>
           </svg>
         </div>
 
-        <!-- Horizontal Lines Stamp Bar -->
         <div class="stamp-line-container" id="stampLineRow"></div>
 
         <p class="loyalty-msg" id="loyaltyMsg">0 of 9 stamps collected</p>
@@ -1539,259 +1409,185 @@
       </div>
     </div>
 
-    <!-- 9 Experience Cards -->
+    <!-- EXPERIENCE PICTURE CARDS -->
     <div class="exp-grid">
-      
-      <!-- 1. Sip & Sketch -->
       <div class="exp-card">
         <div class="exp-img-wrapper">
-          <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=800&auto=format&fit=crop" alt="Painting session with coffee cup">
-          <div class="exp-icon" style="background:#F0E6EF">
-            <svg viewBox="0 0 100 90" style="color:#8B7A9E"><use href="#butterfly-icon"></use></svg>
-          </div>
+          <img src="images/card-1.jpg" alt="Sip & Sketch" onerror="this.src='https://images.unsplash.com/photo-1511920170033-f8396924c348?w=500&auto=format&fit=crop';">
         </div>
         <div class="exp-card-body">
-          <h4>Sip &amp; Sketch</h4>
-          <p>Every Sunday, pull up a chair for latte art and butterfly painting sessions. No experience needed — just curiosity.</p>
+          <h4>Sip & Sketch</h4>
+          <p>Every Sunday morning, we provide watercolor sets. Draw, sip, and let your creativity bloom.</p>
         </div>
       </div>
 
-      <!-- 2. Metamorphosis Menu -->
       <div class="exp-card">
         <div class="exp-img-wrapper">
-          <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?q=80&w=800&auto=format&fit=crop" alt="Specialty lavender colored iced coffee drink">
-          <div class="exp-icon" style="background:#F0E6EF">
-            <svg viewBox="0 0 100 90" style="color:#8B7A9E"><use href="#butterfly-icon"></use></svg>
-          </div>
+          <img src="images/card-2.jpg" alt="Metamorphosis Menu" onerror="this.src='https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500&auto=format&fit=crop';">
         </div>
         <div class="exp-card-body">
           <h4>Metamorphosis Menu</h4>
-          <p>Each season brings one new drink, named after the butterfly species that inspired its flavor.</p>
+          <p>Each season brings 3 new drinks named after real butterfly species. From Chrysalis to Flutter.</p>
         </div>
       </div>
 
-      <!-- 3. Winged Wishes Wall (UPDATED PHOTO FOR PENCIL/NOTES THEME) -->
       <div class="exp-card">
         <div class="exp-img-wrapper">
-          <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=800&auto=format&fit=crop" alt="Writing wish notes with pencil next to warm coffee">
-          <div class="exp-icon" style="background:#F3E9D6">
-            <svg viewBox="0 0 100 90" style="color:#C9A876"><use href="#butterfly-icon"></use></svg>
-          </div>
+          <img src="images/card-3.jpg" alt="Winged Wishes Wall" onerror="this.src='https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=500&auto=format&fit=crop';">
         </div>
         <div class="exp-card-body">
           <h4>Winged Wishes Wall</h4>
-          <p>Write a wish on a paper butterfly and pin it to our wall. One wish is drawn every month for a free coffee and a feature on our page.</p>
+          <p>Write a wish on a paper butterfly and pin it to our wall. One wish is drawn every month for free coffee.</p>
         </div>
       </div>
 
-      <!-- 4. Flight Board Menu -->
       <div class="exp-card">
         <div class="exp-img-wrapper">
-          <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=800&auto=format&fit=crop" alt="Coffee shop interior menu board">
-          <div class="exp-icon" style="background:#EAE5DF">
-            <svg viewBox="0 0 100 90" style="color:#3A342E"><use href="#butterfly-icon"></use></svg>
-          </div>
+          <img src="images/card-4.jpg" alt="Flight Board Menu" onerror="this.src='https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=500&auto=format&fit=crop';">
         </div>
         <div class="exp-card-body">
           <h4>Flight Board Menu</h4>
-          <p>Our menu board follows a butterfly's own journey, from Bean to Full Flight — see it in the Menu above.</p>
+          <p>Try 4 mini roasts side-by-side: a coffee tasting flight designed to reveal hidden tasting notes.</p>
         </div>
       </div>
 
-      <!-- 5. Butterfly Effect Hours -->
       <div class="exp-card">
         <div class="exp-img-wrapper">
-          <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?q=80&w=800&auto=format&fit=crop" alt="Floral pattern latte art">
-          <div class="exp-icon" style="background:#F0E6EF">
-            <svg viewBox="0 0 100 90" style="color:#8B7A9E"><use href="#butterfly-icon"></use></svg>
-          </div>
+          <img src="images/card-5.jpg" alt="Butterfly Effect Hours" onerror="this.src='https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=500&auto=format&fit=crop';">
         </div>
         <div class="exp-card-body">
           <h4>Butterfly Effect Hours</h4>
-          <p>One magic hour, every day, 4–5PM. Every cup that hour arrives with a free edible butterfly or butterfly latte art.</p>
+          <p>Random magic hours every day — buy a coffee, and the next person gets a free drink on us.</p>
         </div>
       </div>
 
-      <!-- 6. Release the Butterflies -->
       <div class="exp-card">
         <div class="exp-img-wrapper">
-          <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=800&auto=format&fit=crop" alt="Gardening mini plant and seed paper concept">
-          <div class="exp-icon" style="background:#F3E9D6">
-            <svg viewBox="0 0 100 90" style="color:#C9A876"><use href="#butterfly-icon"></use></svg>
-          </div>
+          <img src="images/card-6.jpg" alt="Release the Butterflies" onerror="this.src='https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=500&auto=format&fit=crop';">
         </div>
         <div class="exp-card-body">
           <h4>Release the Butterflies</h4>
-          <p>Celebrating a birthday or anniversary? Take home a seed-paper butterfly — plant it, water it, and watch flowers grow.</p>
+          <p>Plantable wildflower seed paper butterflies. Take one, plant it, and watch flowers grow.</p>
         </div>
       </div>
-
-      <!-- 7. Silent Wings Table -->
-      <div class="exp-card">
-        <div class="exp-img-wrapper">
-          <img src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?q=80&w=800&auto=format&fit=crop" alt="Cozy quiet table with book and coffee cup">
-          <div class="exp-icon" style="background:#EAE5DF">
-            <svg viewBox="0 0 100 90" style="color:#3A342E"><use href="#butterfly-icon"></use></svg>
-          </div>
-        </div>
-        <div class="exp-card-body">
-          <h4>Silent Wings Table</h4>
-          <p>One reserved table, phone-free — just books, sketchpads, and quiet. A small card reads: "Take a moment to metamorphose."</p>
-        </div>
-      </div>
-
-      <!-- 8. Butterfly Barista Battle -->
-      <div class="exp-card">
-        <div class="exp-img-wrapper">
-          <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?q=80&w=800&auto=format&fit=crop" alt="Barista pouring coffee latte art">
-          <div class="exp-icon" style="background:#F0E6EF">
-            <svg viewBox="0 0 100 90" style="color:#8B7A9E"><use href="#butterfly-icon"></use></svg>
-          </div>
-        </div>
-        <div class="exp-card-body">
-          <h4>Butterfly Barista Battle</h4>
-          <p>One Sunday a month: baristas and customers face off in a butterfly-only latte art contest. Winners join our Wall of Wings.</p>
-        </div>
-      </div>
-
-      <!-- 9. The Migration Menu -->
-      <div class="exp-card">
-        <div class="exp-img-wrapper">
-          <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?q=80&w=800&auto=format&fit=crop" alt="Coffee beans from around the world">
-          <div class="exp-icon" style="background:#F3E9D6">
-            <svg viewBox="0 0 100 90" style="color:#C9A876"><use href="#butterfly-icon"></use></svg>
-          </div>
-        </div>
-        <div class="exp-card-body">
-          <h4>The Migration Menu</h4>
-          <p>Every two months, our menu "migrates" to a new country's coffee, paired with the story of a butterfly that makes that same journey.</p>
-        </div>
-      </div>
-
     </div>
+
   </div>
 </section>
 
-<!-- SCRIPT: STAMPS, SOUND, BALLOONS & GOLDEN BUTTERFLIES -->
 <script>
-  (function initShimmerLoyalty() {
-    function run() {
-      let count = 0;
-      const max = 9;
+  document.addEventListener('DOMContentLoaded', function() {
+    let currentStamps = 0;
+    const maxStamps = 9;
+    let resetTimer = null;
 
-      const lineRow = document.getElementById('stampLineRow');
-      const addBtn = document.getElementById('addStampBtn');
-      const msg = document.getElementById('loyaltyMsg');
-      const stage = document.getElementById('celebrationStage');
-      const container = document.getElementById('effectsContainer');
+    const lineRow = document.getElementById('stampLineRow');
+    const addBtn = document.getElementById('addStampBtn');
+    const msg = document.getElementById('loyaltyMsg');
+    const stage = document.getElementById('celebrationStage');
+    const tempEffects = document.getElementById('tempEffects');
+    const continuousButterflies = document.getElementById('continuousButterflies');
+    const card = document.getElementById('loyaltyCard');
 
-      if (!lineRow || !addBtn) return;
-
+    // Generate 9 Progress Lines
+    if (lineRow) {
       lineRow.innerHTML = '';
-      for (let i = 0; i < max; i++) {
+      for (let i = 0; i < maxStamps; i++) {
         const step = document.createElement('div');
         step.className = 'stamp-line-step';
         lineRow.appendChild(step);
       }
+    }
 
-      function playPopperSound() {
-        try {
-          const ctx = new (window.AudioContext || window.webkitAudioContext)();
-          const osc = ctx.createOscillator();
-          const gain = ctx.createGain();
-          osc.type = 'triangle';
-          osc.frequency.setValueAtTime(150, ctx.currentTime);
-          osc.frequency.exponentialRampToValueAtTime(800, ctx.currentTime + 0.08);
-          osc.frequency.exponentialRampToValueAtTime(40, ctx.currentTime + 0.25);
-          
-          gain.gain.setValueAtTime(1, ctx.currentTime);
-          gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.25);
-          
-          osc.connect(gain);
-          gain.connect(ctx.destination);
-          osc.start();
-          osc.stop(ctx.currentTime + 0.25);
-        } catch (err) {}
-      }
-
-      function launchCelebration() {
-        stage.classList.add('active');
-        container.innerHTML = '';
-        playPopperSound();
-
-        // 1. Golden Metallic Balloons
-        for (let i = 0; i < 12; i++) {
-          const balloon = document.createElement('div');
-          balloon.className = 'golden-balloon';
-          balloon.style.left = (Math.random() * 88 + 6) + '%';
-          balloon.style.animationDelay = (Math.random() * 0.4) + 's';
-          container.appendChild(balloon);
-        }
-
-        // 2. 15 Golden Flying Butterflies
-        for (let i = 0; i < 15; i++) {
-          const butterfly = document.createElement('div');
-          butterfly.className = 'golden-flying-butterfly';
-          butterfly.textContent = '🦋';
-          butterfly.style.left = (Math.random() * 80 + 10) + '%';
-          butterfly.style.setProperty('--drift', (Math.random() * 120 - 60) + 'px');
-          butterfly.style.animationDelay = (Math.random() * 0.5) + 's';
-          container.appendChild(butterfly);
-        }
-
-        // 3. Shooter Burst Particles
-        for (let i = 0; i < 30; i++) {
-          const p = document.createElement('div');
-          p.className = 'party-burst-particle';
-          const isLeft = i % 2 === 0;
-          p.style.bottom = '15px';
-          p.style.left = isLeft ? '30px' : 'calc(100% - 30px)';
-
-          const dx = (isLeft ? 1 : -1) * (Math.random() * 260 + 40);
-          const dy = -(Math.random() * 300 + 60);
-
-          p.style.setProperty('--dx', dx + 'px');
-          p.style.setProperty('--dy', dy + 'px');
-          p.style.animationDelay = (Math.random() * 0.2) + 's';
-
-          container.appendChild(p);
-        }
-      }
-
-      addBtn.onclick = function(e) {
+    if (addBtn) {
+      addBtn.addEventListener('click', function(e) {
         e.preventDefault();
         const steps = lineRow.querySelectorAll('.stamp-line-step');
 
-        if (count < max) {
-          steps[count].classList.add('active');
-          count++;
-          msg.textContent = `${count} of ${max} stamps collected`;
+        if (currentStamps < maxStamps) {
+          steps[currentStamps].classList.add('active');
+          currentStamps++;
+          msg.textContent = `${currentStamps} of ${maxStamps} stamps collected`;
 
-          if (count === max) {
-            msg.textContent = "🎉 Congratulations! Free Coffee Unlocked!";
+          // EXACT 9TH STAMP TRIGGER
+          if (currentStamps === maxStamps) {
+            msg.textContent = "🎉 Free Coffee Unlocked!";
             addBtn.disabled = true;
-            addBtn.textContent = "Reward Claimed!";
-            launchCelebration();
+            runLoyaltyCelebration();
 
-            setTimeout(() => {
-              count = 0;
-              steps.forEach(s => s.classList.remove('active'));
-              msg.textContent = "0 of 9 stamps collected";
-              addBtn.disabled = false;
-              addBtn.textContent = "+ Add a Stamp (demo)";
-              stage.classList.remove('active');
-            }, 3600);
+            // AUTOMATIC RE-CYCLE RESET AFTER 8 SECONDS
+            resetTimer = setTimeout(() => {
+              resetStampCard();
+            }, 8000);
           }
         }
-      };
+      });
     }
 
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', run);
-    } else {
-      run();
+    function resetStampCard() {
+      currentStamps = 0;
+      const steps = lineRow.querySelectorAll('.stamp-line-step');
+      steps.forEach(s => s.classList.remove('active'));
+      msg.textContent = "0 of 9 stamps collected";
+      stage.classList.remove('active');
+      tempEffects.innerHTML = '';
+      continuousButterflies.innerHTML = '';
+      addBtn.disabled = false;
     }
-  })();
+
+    function runLoyaltyCelebration() {
+      stage.classList.add('active');
+      tempEffects.innerHTML = '';
+      continuousButterflies.innerHTML = '';
+
+      const cardW = card.clientWidth;
+      const cardH = card.clientHeight;
+
+      // 1. Temporary Golden Balloons Pop
+      for (let i = 0; i < 6; i++) {
+        const balloon = document.createElement('div');
+        balloon.className = 'golden-balloon';
+        balloon.style.left = `${Math.random() * (cardW - 60) + 30}px`;
+        balloon.style.animationDelay = `${i * 0.2}s`;
+        tempEffects.appendChild(balloon);
+      }
+
+      // 2. Realistic Flapping Flying Butterflies
+      const butterflyCount = 7;
+      for (let i = 0; i < butterflyCount; i++) {
+        const wrap = document.createElement('div');
+        wrap.className = 'butterfly-flyer-wrap';
+
+        const innerWings = document.createElement('span');
+        innerWings.className = 'butterfly-wings';
+        innerWings.textContent = '🦋';
+        wrap.appendChild(innerWings);
+
+        const startX = Math.random() * (cardW * 0.7) + (cardW * 0.15);
+        wrap.style.left = `${startX}px`;
+        wrap.style.bottom = '10px';
+
+        const mx = (Math.random() - 0.5) * (cardW * 0.45);
+        const my = -(Math.random() * (cardH * 0.45) + 40);
+        const ex = mx + (Math.random() - 0.5) * (cardW * 0.35);
+        const ey = -(cardH + 60);
+
+        const duration = (Math.random() * 1.5 + 3.2).toFixed(2) + 's';
+
+        wrap.style.setProperty('--mx', `${mx}px`);
+        wrap.style.setProperty('--my', `${my}px`);
+        wrap.style.setProperty('--ex', `${ex}px`);
+        wrap.style.setProperty('--ey', `${ey}px`);
+        wrap.style.setProperty('--duration', duration);
+        wrap.style.animationDelay = `${(i * 0.35).toFixed(2)}s`;
+
+        // Vary flapping speed per butterfly
+        innerWings.style.animationDuration = `${(Math.random() * 0.12 + 0.2).toFixed(2)}s`;
+
+        continuousButterflies.appendChild(wrap);
+      }
+    }
+  });
 </script>
 
 <style>
