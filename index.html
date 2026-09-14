@@ -455,18 +455,90 @@
     </div>
   </div>
 </header>
+<style>
+  /* VIBE SECTION STYLES */
+  .vibe-card {
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: 20px;
+    padding: 15px;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    outline: none;
+  }
+
+  /* Active card highlight state */
+  .vibe-card.active {
+    border-color: #d4af37;
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.25);
+    transform: translateY(-4px);
+  }
+
+  .vibe-card:hover {
+    transform: translateY(-4px);
+  }
+
+  /* RESULT PANELS HIDING & SHOWING */
+  .vibe-result-panel {
+    display: none; /* Hide all panels by default */
+    background: #fdfbf7;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 16px;
+    padding: 24px;
+    margin-top: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    animation: fadeIn 0.4s ease-in-out;
+  }
+
+  .vibe-result-panel.active {
+    display: block; /* Show only active panel */
+  }
+
+  .vibe-detail {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    color: #334438;
+  }
+
+  .vibe-detail strong {
+    min-width: 80px;
+    color: #1c2b1e;
+  }
+
+  .vibe-note {
+    margin-top: 15px;
+    padding-top: 12px;
+    border-top: 1px dashed rgba(0,0,0,0.1);
+    font-style: italic;
+    color: #556b5e;
+    font-size: 0.9rem;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+
 <section class="pad reveal" id="vibe" style="padding: 60px 0;">
-  <div class="container">
+  <div class="container" style="max-width: 1100px; margin: 0 auto; padding: 0 20px;">
     <p class="eyebrow" style="text-align: center; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; color: #d4af37; margin-bottom: 8px; display: flex; align-items: center; justify-content: center; gap: 8px;">
       <svg viewBox="0 0 100 90" style="width: 18px; fill: #d4af37;"><use href="#butterfly-icon"></use></svg>What Brings You In Today?
     </p>
     <h2 class="section-heading" style="text-align: center; font-family: 'Playfair Display', serif; font-size: 2.3rem; color: #1c2b1e; margin-bottom: 10px;">Find Your Vibe</h2>
     <p class="section-sub" style="text-align: center; font-size: 1rem; color: #556b5e; max-width: 600px; margin: 0 auto 35px auto;">Every corner of Papillon Brew has its own mood. Tell us what you're after, and we'll set the table.</p>
 
+    <!-- CARDS GRID -->
     <div class="vibe-selector" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-bottom: 35px;">
       
-      <!-- 01. QUIET CORNER CARD WITH PHOTO -->
-      <button class="vibe-card tilt-3d" data-vibe="quiet" type="button" style="background: #fff; border: 1px solid rgba(0,0,0,0.06); border-radius: 20px; padding: 15px; text-align: left; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 10px 25px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+      <!-- 01. QUIET CORNER CARD -->
+      <button class="vibe-card tilt-3d" data-vibe="quiet" type="button">
         <div class="vibe-photo" style="overflow: hidden; border-radius: 14px; height: 170px; margin-bottom: 16px; position: relative; width: 100%;">
           <img src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=500&auto=format&fit=crop&q=80" alt="Quiet Reading Nook" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
         </div>
@@ -476,8 +548,8 @@
         </div>
       </button>
 
-      <!-- 02. DEEP WORK CARD WITH PHOTO -->
-      <button class="vibe-card tilt-3d" data-vibe="work" type="button" style="background: #fff; border: 1px solid rgba(0,0,0,0.06); border-radius: 20px; padding: 15px; text-align: left; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 10px 25px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+      <!-- 02. DEEP WORK CARD -->
+      <button class="vibe-card tilt-3d" data-vibe="work" type="button">
         <div class="vibe-photo" style="overflow: hidden; border-radius: 14px; height: 170px; margin-bottom: 16px; position: relative; width: 100%;">
           <img src="https://images.unsplash.com/photo-1527192491265-7e15c55b1ed2?w=500&auto=format&fit=crop&q=80" alt="Workplace Laptop and Coffee" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
         </div>
@@ -487,8 +559,8 @@
         </div>
       </button>
 
-      <!-- 03. JUST CHILL CARD WITH PHOTO -->
-      <button class="vibe-card tilt-3d" data-vibe="chill" type="button" style="background: #fff; border: 1px solid rgba(0,0,0,0.06); border-radius: 20px; padding: 15px; text-align: left; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 10px 25px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+      <!-- 03. JUST CHILL CARD -->
+      <button class="vibe-card tilt-3d" data-vibe="chill" type="button">
         <div class="vibe-photo" style="overflow: hidden; border-radius: 14px; height: 170px; margin-bottom: 16px; position: relative; width: 100%;">
           <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=500&auto=format&fit=crop&q=80" alt="Cozy Garden Lounge" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
         </div>
@@ -503,7 +575,7 @@
     <!-- RESULT PANELS -->
     <div class="vibe-result" id="vibeResult">
       <div class="vibe-result-panel" data-panel="quiet">
-        <h3 style="font-family: 'Playfair Display', serif; color: #1c2b1e;">Your Spot: The Silent Wings Table</h3>
+        <h3 style="font-family: 'Playfair Display', serif; color: #1c2b1e; margin-top:0;">Your Spot: The Silent Wings Table</h3>
         <div class="vibe-detail"><strong>Seat</strong><span>The Silent Wings Table — our phone-free nook by the window</span></div>
         <div class="vibe-detail"><strong>Order</strong><span>Chamomile Garden or Butterfly Pea Blossom tea</span></div>
         <div class="vibe-detail"><strong>Best time</strong><span>Weekday mornings, 9–11AM, when the café is softest and slowest</span></div>
@@ -511,7 +583,7 @@
       </div>
 
       <div class="vibe-result-panel" data-panel="work">
-        <h3 style="font-family: 'Playfair Display', serif; color: #1c2b1e;">Your Spot: The Sunlit Counter</h3>
+        <h3 style="font-family: 'Playfair Display', serif; color: #1c2b1e; margin-top:0;">Your Spot: The Sunlit Counter</h3>
         <div class="vibe-detail"><strong>Seat</strong><span>Window-side counter seating, within easy reach of outlets</span></div>
         <div class="vibe-detail"><strong>Order</strong><span>Americano or Flat White, for the long haul</span></div>
         <div class="vibe-detail"><strong>Best time</strong><span>Weekday afternoons, 12–4PM — steady energy, fewer crowds, reliable WiFi</span></div>
@@ -519,7 +591,7 @@
       </div>
 
       <div class="vibe-result-panel" data-panel="chill">
-        <h3 style="font-family: 'Playfair Display', serif; color: #1c2b1e;">Your Spot: The Garden Lounge</h3>
+        <h3 style="font-family: 'Playfair Display', serif; color: #1c2b1e; margin-top:0;">Your Spot: The Garden Lounge</h3>
         <div class="vibe-detail"><strong>Seat</strong><span>Our softest lounge seating, made for lingering</span></div>
         <div class="vibe-detail"><strong>Order</strong><span>Papillon Signature or a Café Latte, something to sip slowly</span></div>
         <div class="vibe-detail"><strong>Best time</strong><span>Weekend afternoons, when the whole café hums with easy conversation</span></div>
@@ -528,6 +600,38 @@
     </div>
   </div>
 </section>
+
+<!-- CLICK EVENT JAVASCRIPT -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.vibe-card');
+    const panels = document.querySelectorAll('.vibe-result-panel');
+
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        const targetVibe = card.getAttribute('data-vibe');
+
+        // Toggle active border state on cards
+        cards.forEach(c => c.classList.remove('active'));
+        card.classList.add('active');
+
+        // Toggle visibility of result panels
+        panels.forEach(panel => {
+          if (panel.getAttribute('data-panel') === targetVibe) {
+            panel.classList.add('active');
+          } else {
+            panel.classList.remove('active');
+          }
+        });
+      });
+    });
+
+    // Default: Pehle card ("quiet") ko automatic open rakhne ke liye
+    if(cards.length > 0) {
+      cards[0].click();
+    }
+  });
+</script>
 
 <section class="pad reveal" id="menu">
   <div class="container">
@@ -1753,217 +1857,343 @@
     </div>
   </div>
 </section>
+<!-- REVIEW TRIGGER BUTTON -->
 <style>
-  /* Section Layout & Reserved Spacing */
+  /* FONTS IMPORT */
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+  /* SECTION & HEADER DESIGN */
   #testimonials {
-    padding-top: 5rem;
-    padding-bottom: 9rem;
-    position: relative;
+    background-color: #FBF8F3;
+    padding: 3.5rem 1.25rem;
+    font-family: 'Poppins', sans-serif;
+    color: #3A342E;
   }
 
   .testimonial-header-action {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    text-align: center;
     margin-bottom: 2.5rem;
   }
 
+  .eyebrow {
+    font-size: 0.8rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #8B7A9E;
+    margin-bottom: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-weight: 500;
+  }
+
+  .eyebrow-icon {
+    width: 16px;
+    height: 16px;
+    fill: #C9A876;
+    display: inline-block;
+  }
+
+  .section-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    font-style: italic;
+    color: #1E352B;
+    font-weight: 500;
+    margin: 0 0 0.6rem 0;
+    line-height: 1.1;
+  }
+
+  .section-sub {
+    max-width: 580px;
+    margin: 0 0 1.8rem 0;
+    color: rgba(58, 52, 46, 0.75);
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+
+  /* BUTTON STYLING */
   .btn-write-review {
-    background: linear-gradient(135deg, #4A5D4E 0%, #2E3A31 100%);
-    color: #FBF7EE;
+    background: #1E352B;
+    color: #FFFFFF;
     border: none;
-    padding: 0.75rem 1.8rem;
+    padding: 0.8rem 2rem;
     border-radius: 999px;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     cursor: pointer;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease;
     display: inline-flex;
     align-items: center;
     gap: 8px;
+    min-height: 44px;
+    touch-action: manipulation;
   }
 
   .btn-write-review:hover {
+    background: #12221B;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.22);
   }
 
-  /* Testimonial Cards Layout Adjustment */
+  /* CARDS GRID */
   .testimonial-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.8rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: 1180px;
+    margin: 0 auto;
   }
 
   .testimonial-card {
-    background: #FFFDF8;
+    background: #FFFFFF;
     border-radius: 16px;
-    padding: 1.8rem;
-    border: 1px solid rgba(212, 175, 55, 0.2);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.04);
+    padding: 1.4rem;
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.03);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: transform 0.3s ease;
-  }
-
-  .testimonial-card:hover {
-    transform: translateY(-4px);
-  }
-
-  .testimonial-card-img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-    border: 1px solid #E0D9CE;
-  }
-
-  /* Review Modal Styling */
-  .review-modal-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(5px);
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-    padding: 1.5rem;
-  }
-
-  .review-modal-overlay.active {
-    display: flex;
-  }
-
-  .review-modal {
-    background: #FFFDF8;
-    border-radius: 20px;
-    padding: 2.2rem;
-    width: 100%;
-    max-width: 480px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
-    border: 1px solid rgba(212, 175, 55, 0.3);
-    position: relative;
-    max-height: 90vh;
-    overflow-y: auto;
-  }
-
-  .modal-close {
-    position: absolute;
-    top: 1.2rem;
-    right: 1.2rem;
-    background: transparent;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #666;
-  }
-
-  .star-rating-picker {
-    display: flex;
-    justify-content: center;
-    gap: 6px;
-    font-size: 1.8rem;
-    color: #D4AF37;
-    cursor: pointer;
-    margin-bottom: 1.2rem;
-  }
-
-  .review-form-group {
-    margin-bottom: 1.1rem;
-  }
-
-  .review-form-group label {
-    display: block;
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: #4A5D4E;
-    margin-bottom: 0.4rem;
-  }
-
-  .review-form-group input,
-  .review-form-group textarea {
-    width: 100%;
-    padding: 0.75rem 1rem;
-    border-radius: 10px;
-    border: 1px solid #E0D9CE;
-    background: #FAFAFA;
-    font-size: 0.92rem;
-    outline: none;
-  }
-
-  .modal-actions-row {
-    display: flex;
-    gap: 10px;
-    margin-top: 1.2rem;
-  }
-
-  .btn-submit-review {
-    flex: 2;
-    background: #4A5D4E;
-    color: #FFF;
-    border: none;
-    padding: 0.85rem;
-    border-radius: 10px;
-    font-weight: 700;
-    cursor: pointer;
-  }
-
-  .btn-delete-review {
-    flex: 1;
-    background: #A94442;
-    color: #FFF;
-    border: none;
-    padding: 0.85rem;
-    border-radius: 10px;
-    font-weight: 600;
-    cursor: pointer;
-    display: none;
-  }
-
-  .img-validation-msg {
-    font-size: 0.78rem;
-    color: #C0392B;
-    margin-top: 0.3rem;
-    display: none;
   }
 
   .testimonial-card.user-card {
     border: 2px solid #D4AF37;
     background: #FFFDF5;
   }
+
+  .testimonial-card-img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 0.8rem;
+    border: 1px solid #E0D9CE;
+  }
+
+  /* MODAL OVERLAY & CARD (FIXED NO-SCROLL FIT) */
+  .review-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(4px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    padding: 1rem;
+  }
+
+  .review-modal {
+    background: #FFFDF9;
+    border-radius: 24px;
+    padding: 1.5rem 1.6rem 1.4rem;
+    width: 100%;
+    max-width: 440px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden; /* Scrollbar completely hidden */
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1.2rem;
+    background: transparent;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: #555555;
+    line-height: 1;
+    padding: 4px;
+  }
+
+  .modal-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    color: #1E352B;
+    margin-top: 0;
+    margin-bottom: 0.6rem;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  /* STAR RATING PICKER */
+  .star-rating-picker {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    font-size: 1.5rem;
+    color: #D4AF37;
+    cursor: pointer;
+    margin-top: 0.2rem;
+    margin-bottom: 0.8rem;
+    user-select: none;
+  }
+
+  /* FORM INPUTS & LABELS */
+  .review-form-group {
+    margin-bottom: 0.8rem;
+  }
+
+  .review-form-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #1E352B;
+    margin-bottom: 0.35rem;
+  }
+
+  .review-form-group input[type="text"],
+  .review-form-group textarea,
+  .file-input-wrapper {
+    width: 100%;
+    padding: 0.6rem 0.85rem;
+    border-radius: 12px;
+    border: 1px solid #E2DDD5;
+    background: #F9F8F6;
+    font-size: 0.9rem;
+    font-family: inherit;
+    color: #222222;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease;
+  }
+
+  .review-form-group textarea {
+    resize: none;
+    height: 72px;
+  }
+
+  .review-form-group input[type="text"]:focus,
+  .review-form-group textarea:focus {
+    border-color: #1E352B;
+    background: #FFFFFF;
+  }
+
+  .file-input-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 0.45rem 0.85rem;
+  }
+
+  .review-form-group input[type="file"] {
+    width: 100%;
+    font-size: 0.85rem;
+    color: #555;
+  }
+
+  /* ACTION BUTTONS */
+  .modal-actions-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 1.1rem;
+  }
+
+  .btn-submit-review {
+    flex: 1.5;
+    background: #1E352B;
+    color: #FFFFFF;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    min-height: 44px;
+    transition: background 0.2s ease;
+  }
+
+  .btn-submit-review:hover {
+    background: #13231C;
+  }
+
+  .btn-delete-review {
+    flex: 1;
+    background: #8B2626;
+    color: #FFFFFF;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    display: none;
+    min-height: 44px;
+    transition: background 0.2s ease;
+  }
+
+  .btn-delete-review:hover {
+    background: #6D1B1B;
+  }
+
+  .img-validation-msg {
+    font-size: 0.75rem;
+    color: #8B2626;
+    margin-top: 0.25rem;
+    display: none;
+  }
+
+  /* MOBILE OPTIMIZATIONS (Fit screen without inner scrollbar) */
+  @media (max-width: 480px) {
+    .review-modal {
+      padding: 1.25rem 1.1rem 1.1rem;
+      border-radius: 18px;
+      max-height: 96vh;
+    }
+    .modal-title {
+      font-size: 1.7rem;
+      margin-bottom: 0.4rem;
+    }
+    .star-rating-picker {
+      font-size: 1.4rem;
+      margin-bottom: 0.6rem;
+    }
+    .review-form-group {
+      margin-bottom: 0.65rem;
+    }
+    .review-form-group textarea {
+      height: 60px;
+    }
+  }
 </style>
 
-<section class="pad reveal" id="testimonials">
-  <div class="container">
-    <div class="testimonial-header-action">
-      <p class="eyebrow"><svg viewBox="0 0 100 90"><use href="#butterfly-icon"></use></svg>From Our Regulars</p>
-      <h2 class="section-heading">What People Are Saying</h2>
-      <p class="section-sub">Warm words from those who make Papillon Brew their daily ritual.</p>
+<section id="testimonials">
+  <div class="testimonial-header-action">
+    <p class="eyebrow">
+      <svg class="eyebrow-icon" viewBox="0 0 100 90">
+        <path d="M50 45C40 20 15 10 5 25C-5 40 15 65 45 52C48 51 49 48 50 45Z"/>
+        <path d="M50 45C60 20 85 10 95 25C105 40 85 65 55 52C52 51 51 48 50 45Z"/>
+      </svg>
+      FROM OUR REGULARS
+    </p>
 
-      <button type="button" class="btn-write-review" id="openReviewModalBtn">
-        ✍️ <span id="reviewBtnText">Leave a Review</span>
-      </button>
-    </div>
+    <h2 class="section-heading">What People Are Saying</h2>
+    <p class="section-sub">Warm words from those who make Papillon Brew their daily ritual.</p>
 
-    <!-- Review Grid (Auto-limited to 6) -->
-    <div class="testimonial-grid" id="testimonialGrid"></div>
+    <button type="button" class="btn-write-review" id="openReviewModalBtn">
+      ✍️ <span id="reviewBtnText">Leave a Review</span>
+    </button>
   </div>
+
+  <div class="testimonial-grid" id="testimonialGrid"></div>
 </section>
 
-<!-- Review Modal -->
+<!-- Review Modal Overlay -->
 <div class="review-modal-overlay" id="reviewModalOverlay">
   <div class="review-modal">
-    <button type="button" class="modal-close" id="closeReviewModalBtn">&times;</button>
-    <h3 style="font-family:'Cormorant', serif; font-size: 1.8rem; color:#2E3A31; margin-bottom: 1rem;" id="modalHeading">Share Your Experience</h3>
+    <button type="button" class="modal-close" id="closeReviewModalBtn" aria-label="Close modal">&times;</button>
+    <h3 class="modal-title" id="modalHeading">Share Your Experience</h3>
     
     <form id="reviewForm">
-      <div class="review-form-group" style="text-align: center;">
-        <label>Your Rating</label>
+      <div style="text-align: center;">
+        <label style="font-size: 0.85rem; font-weight: 600; color: #1E352B;">Your Rating</label>
         <div class="star-rating-picker" id="starPicker">
           <span data-rating="1">★</span>
           <span data-rating="2">★</span>
@@ -1980,14 +2210,15 @@
 
       <div class="review-form-group">
         <label for="reviewerQuote">Your Review</label>
-        <textarea id="reviewerQuote" rows="3" placeholder="Tell us about your favorite brew or experience..." required></textarea>
+        <textarea id="reviewerQuote" placeholder="Tell us about your favorite brew or experience..." required></textarea>
       </div>
 
-      <!-- Optional Image Upload with Validation -->
       <div class="review-form-group">
         <label for="reviewerImg">Upload Photo (Optional - Coffee/Ambience only)</label>
-        <input type="file" id="reviewerImg" accept="image/jpeg, image/png, image/webp">
-        <p class="img-validation-msg" id="imgError">Please select a clear photo of your coffee or ambience (Max 2MB).</p>
+        <div class="file-input-wrapper">
+          <input type="file" id="reviewerImg" accept="image/jpeg, image/png, image/webp">
+        </div>
+        <p class="img-validation-msg" id="imgError">Please select a clear photo (Max 2MB).</p>
       </div>
 
       <div class="modal-actions-row">
@@ -1999,12 +2230,11 @@
 </div>
 
 <script>
-  (function initAdvancedReviewSystem() {
+  (function initReviewSystem() {
     const MAX_REVIEWS = 6;
     let currentRating = 5;
     let imageBase64 = null;
 
-    // Default Seed Reviews
     const defaultReviews = [
       { id: 1, name: "Ayesha K.", quote: "I came for the coffee and stayed for the quiet. The Silent Wings Table is my Sunday ritual now — no phone, just a book and the best chai in Bahawalpur.", rating: 5, img: null },
       { id: 2, name: "Bilal R.", quote: "My daughter and I did the Sip & Sketch morning last weekend and it might be the nicest two hours we've spent together in months.", rating: 5, img: null },
@@ -2025,7 +2255,6 @@
     const imgInput = document.getElementById('reviewerImg');
     const imgError = document.getElementById('imgError');
 
-    // Rating Picker
     stars.forEach((star, index) => {
       star.addEventListener('click', () => {
         currentRating = index + 1;
@@ -2039,7 +2268,6 @@
       });
     }
 
-    // Smart Image Check (Size + Basic Brightness/Validity Validation)
     imgInput.onchange = function(e) {
       const file = e.target.files[0];
       imgError.style.display = 'none';
@@ -2049,7 +2277,7 @@
         return;
       }
 
-      if (file.size > 2 * 1024 * 1024) { // 2MB Limit
+      if (file.size > 2 * 1024 * 1024) {
         imgError.textContent = "Image size too large. Please select under 2MB.";
         imgError.style.display = 'block';
         imgInput.value = "";
@@ -2061,7 +2289,6 @@
         const img = new Image();
         img.src = evt.target.result;
         img.onload = function() {
-          // Check pixel brightness to reject completely dark/pitch-black uploads
           const canvas = document.createElement('canvas');
           const ctx = canvas.getContext('2d');
           canvas.width = 50;
@@ -2074,8 +2301,8 @@
           }
           const brightness = colorSum / (50 * 50);
 
-          if (brightness < 15) { // Reject pitch black images
-            imgError.textContent = "Image is too dark or unclear. Please upload a clear coffee photo.";
+          if (brightness < 15) {
+            imgError.textContent = "Image is too dark or unclear. Please upload a clear photo.";
             imgError.style.display = 'block';
             imgInput.value = "";
             imageBase64 = null;
@@ -2087,13 +2314,16 @@
       reader.readAsDataURL(file);
     };
 
-    // Modal Control
     openBtn.onclick = () => {
-      modal.classList.add('active');
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
       checkUserReviewState();
     };
 
-    closeBtn.onclick = () => modal.classList.remove('active');
+    closeBtn.onclick = () => {
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
+    };
 
     function checkUserReviewState() {
       const savedUser = localStorage.getItem('user_papillon_review');
@@ -2113,7 +2343,6 @@
       updateStarPickerUI();
     }
 
-    // Render Grid (Maintains Max 6 Cards Threshold)
     function renderReviews() {
       grid.innerHTML = '';
       let list = [...defaultReviews];
@@ -2122,13 +2351,12 @@
       if (savedUser) {
         const userData = JSON.parse(savedUser);
         userData.isUser = true;
-        list.unshift(userData); // Add user review to front
+        list.unshift(userData);
         btnText.textContent = "Edit / Delete Review";
       } else {
         btnText.textContent = "Leave a Review";
       }
 
-      // Auto-Cap at MAX_REVIEWS (6)
       if (list.length > MAX_REVIEWS) {
         list = list.slice(0, MAX_REVIEWS);
       }
@@ -2137,21 +2365,20 @@
         const card = document.createElement('div');
         card.className = `testimonial-card ${item.isUser ? 'user-card' : ''}`;
         
-        const imgHTML = item.img ? `<img src="${item.img}" class="testimonial-card-img" alt="Coffee review photo">` : '';
+        const imgHTML = item.img ? `<img src="${item.img}" class="testimonial-card-img" alt="Review photo">` : '';
 
         card.innerHTML = `
           <div>
             ${imgHTML}
-            <div class="testimonial-stars" style="color:#D4AF37; margin-bottom:0.5rem;">${'★'.repeat(item.rating)}</div>
-            <p class="testimonial-quote">"${item.quote}"</p>
+            <div style="color:#D4AF37; margin-bottom:0.4rem;">${'★'.repeat(item.rating)}</div>
+            <p style="margin: 0 0 0.8rem 0; font-style: italic; line-height: 1.5;">"${item.quote}"</p>
           </div>
-          <p class="testimonial-name" style="margin-top:1rem; font-weight:600;">— ${item.name} ${item.isUser ? '(Your Review)' : ''}</p>
+          <p style="margin: 0; font-weight: 600; font-size: 0.9rem;">— ${item.name} ${item.isUser ? '(Your Review)' : ''}</p>
         `;
         grid.appendChild(card);
       });
     }
 
-    // Form Submit
     reviewForm.onsubmit = (e) => {
       e.preventDefault();
       const name = document.getElementById('reviewerName').value.trim();
@@ -2167,21 +2394,22 @@
 
       localStorage.setItem('user_papillon_review', JSON.stringify(userReview));
       renderReviews();
-      modal.classList.remove('active');
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
     };
 
-    // Delete Review Handler
     deleteBtn.onclick = () => {
       localStorage.removeItem('user_papillon_review');
       renderReviews();
-      modal.classList.remove('active');
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
     };
 
-    // Initial Load
     updateStarPickerUI();
     renderReviews();
   })();
 </script>
+
 
 <style>
   #order {
