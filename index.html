@@ -1245,7 +1245,7 @@
 </section>
 
 <style>
-  /* Experience Section Scope */
+  /* Experience Section Scope - Global Protection */
   .pb-exp-wrapper,
   .pb-exp-wrapper * {
     box-sizing: border-box;
@@ -1255,18 +1255,21 @@
 
   .pb-exp-section {
     background: #F8F4EC;
-    padding: 2.5rem 1rem;
+    padding: 2rem 0.8rem;
     font-family: 'Poppins', sans-serif;
+    width: 100%;
+    overflow-x: hidden;
   }
 
   .pb-exp-container {
     max-width: 1050px;
     margin: 0 auto;
+    width: 100%;
   }
 
   .pb-exp-eyebrow {
     font-size: 0.75rem;
-    letter-spacing: 0.25em;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
     color: #8B7A9E;
     margin-bottom: 0.4rem;
@@ -1281,7 +1284,7 @@
 
   .pb-exp-heading {
     text-align: center;
-    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    font-size: clamp(1.5rem, 5vw, 2.3rem);
     margin-bottom: 0.4rem;
     font-family: 'Cormorant', serif;
     font-style: italic;
@@ -1291,10 +1294,11 @@
   .pb-exp-sub {
     text-align: center;
     max-width: 480px;
-    margin: 0 auto 2rem;
+    margin: 0 auto 1.8rem;
     color: rgba(58, 52, 46, 0.75);
-    font-size: 0.88rem;
+    font-size: 0.85rem;
     font-weight: 300;
+    padding: 0 10px;
   }
 
   /* LOYALTY CARD WITH METAMORPHOSIS BACKGROUND */
@@ -1305,24 +1309,25 @@
     background-position: center;
     background-blend-mode: overlay;
     border-radius: 16px;
-    padding: 1.8rem 1.5rem;
+    padding: 1.5rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
     align-items: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    margin-bottom: 2.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    margin-bottom: 2rem;
     border: 1px solid rgba(212, 175, 55, 0.3);
     color: #FBF7EE;
     position: relative;
     overflow: hidden;
+    width: 100%;
   }
 
   .pb-loyalty-visual {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.8rem;
+    gap: 0.7rem;
     text-align: center;
     position: relative;
     z-index: 5;
@@ -1330,16 +1335,16 @@
   }
 
   .pb-loyalty-svg-wrap {
-    width: 45px;
-    height: 45px;
+    width: 42px;
+    height: 42px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
   .pb-golden-hero-butterfly {
-    width: 42px;
-    height: 42px;
+    width: 40px;
+    height: 40px;
     filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.7));
   }
 
@@ -1348,7 +1353,7 @@
     display: flex;
     gap: 4px;
     width: 100%;
-    max-width: 300px;
+    max-width: 280px;
     justify-content: center;
     align-items: center;
   }
@@ -1369,7 +1374,7 @@
   }
 
   .pb-loyalty-msg {
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     color: #E6D2B5;
     font-weight: 500;
   }
@@ -1378,14 +1383,15 @@
     background: linear-gradient(135deg, #D4AF37 0%, #FFD700 50%, #AA7C11 100%);
     color: #1A140E;
     border: none;
-    padding: 0.65rem 1.6rem;
+    padding: 0.6rem 1.4rem;
     border-radius: 999px;
     font-weight: 700;
-    font-size: 0.82rem;
+    font-size: 0.8rem;
     cursor: pointer;
     box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
     transition: all 0.3s ease;
     touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .pb-btn-loyalty:disabled {
@@ -1395,17 +1401,17 @@
 
   .pb-loyalty-info h3 {
     font-family: 'Cormorant', serif;
-    font-size: clamp(1.5rem, 3vw, 2.1rem);
+    font-size: clamp(1.4rem, 4vw, 2rem);
     color: #FFFFFF;
     font-style: italic;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
     text-shadow: 0 2px 4px rgba(0,0,0,0.5);
   }
 
   .pb-loyalty-info p {
     color: rgba(251, 247, 238, 0.9);
-    font-size: 0.85rem;
-    line-height: 1.5;
+    font-size: 0.82rem;
+    line-height: 1.45;
     text-shadow: 0 1px 3px rgba(0,0,0,0.5);
   }
 
@@ -1422,11 +1428,11 @@
   .pb-party-shooter {
     position: absolute;
     bottom: -5px;
-    font-size: 2.2rem;
+    font-size: 2rem;
     opacity: 0;
   }
-  .pb-party-shooter.left { left: 10px; }
-  .pb-party-shooter.right { right: 10px; }
+  .pb-party-shooter.left { left: 8px; }
+  .pb-party-shooter.right { right: 8px; }
 
   .pb-celebration-stage.active .pb-party-shooter.left { animation: pbShooterPopLeft 0.5s ease forwards; }
   .pb-celebration-stage.active .pb-party-shooter.right { animation: pbShooterPopRight 0.5s ease forwards; }
@@ -1443,8 +1449,8 @@
   .pb-golden-balloon {
     position: absolute;
     bottom: -40px;
-    width: 28px;
-    height: 36px;
+    width: 24px;
+    height: 32px;
     border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
     background: radial-gradient(circle at 35% 30%, #FFFFFF 0%, #FFE57F 25%, #D4AF37 60%, #8B6508 100%);
     box-shadow: inset -2px -2px 6px rgba(0,0,0,0.4), 0 4px 10px rgba(212, 175, 55, 0.3);
@@ -1453,7 +1459,7 @@
 
   @keyframes pbBalloonRise {
     0% { transform: translateY(0) rotate(0deg); opacity: 1; }
-    100% { transform: translateY(-300px) rotate(15deg); opacity: 0; }
+    100% { transform: translateY(-280px) rotate(15deg); opacity: 0; }
   }
 
   .pb-butterfly-flyer-wrap {
@@ -1464,7 +1470,7 @@
 
   .pb-butterfly-wings {
     display: inline-block;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     filter: drop-shadow(0 0 8px #FFD700);
     transform-origin: center center;
     animation: pbWingFlap 0.28s ease-in-out infinite alternate;
@@ -1483,28 +1489,28 @@
     100% { opacity: 0; transform: translate(var(--ex), var(--ey)) scale(0.6); }
   }
 
-  /* COMPACT CARDS GRID */
+  /* RESPONSIVE CARDS GRID */
   .pb-exp-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.2rem;
+    width: 100%;
   }
 
   .pb-exp-card {
     background: #FFFFFF;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(58, 52, 46, 0.05);
-    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.05);
     display: flex;
     flex-direction: column;
   }
 
-  /* Aspect ratio reduced to 16/9 for shorter card height */
   .pb-exp-img-wrapper {
     position: relative;
     width: 100%;
-    aspect-ratio: 16 / 10;
+    height: 140px;
     overflow: hidden;
   }
 
@@ -1512,63 +1518,80 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
     transition: transform 0.4s ease;
   }
 
   .pb-exp-card:hover .pb-exp-img-wrapper img {
-    transform: scale(1.05);
+    transform: scale(1.04);
   }
 
   .pb-exp-card-body {
-    padding: 0.9rem 0.9rem;
+    padding: 0.8rem 0.82rem;
     flex-grow: 1;
   }
 
   .pb-exp-card-body h4 {
     font-family: 'Cormorant', serif;
-    font-size: 1.15rem;
-    margin-bottom: 0.3rem;
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
     color: #3A342E;
   }
 
   .pb-exp-card-body p {
     font-size: 0.78rem;
     color: rgba(58, 52, 46, 0.75);
-    line-height: 1.45;
+    line-height: 1.4;
   }
 
-  /* Responsive Adjustments for Mobile */
-  @media (max-width: 850px) {
-    .pb-exp-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-  }
-
-  @media (max-width: 580px) {
-    .pb-loyalty-card { 
-      grid-template-columns: 1fr; 
-      gap: 1.2rem; 
-      padding: 1.4rem 1rem; 
+  /* MEDIA QUERIES FOR TABLET & MOBILE RESPONSIVENESS */
+  @media (max-width: 900px) {
+    .pb-exp-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
     }
-    
-    .pb-exp-grid { 
-      grid-template-columns: repeat(2, 1fr); /* 2 Columns on mobile so cards don't take full screen */
-      gap: 0.8rem; 
+  }
+
+  @media (max-width: 600px) {
+    .pb-exp-section {
+      padding: 1.5rem 0.6rem;
+    }
+
+    .pb-loyalty-card {
+      grid-template-columns: 1fr;
+      padding: 1.2rem 0.9rem;
+      gap: 1rem;
+      text-align: center;
+    }
+
+    .pb-loyalty-info h3 {
+      text-align: center;
+    }
+
+    .pb-loyalty-info p {
+      text-align: center;
+    }
+
+    .pb-exp-grid {
+      grid-template-columns: 1fr; /* Full control on smaller screens prevents overflowing */
+      gap: 0.9rem;
+    }
+
+    .pb-exp-img-wrapper {
+      height: 125px; /* Shorter compact height for mobile */
     }
 
     .pb-exp-card-body {
-      padding: 0.7rem;
+      padding: 0.75rem;
     }
 
     .pb-exp-card-body h4 {
-      font-size: 1rem;
+      font-size: 1.05rem;
     }
 
     .pb-exp-card-body p {
-      font-size: 0.72rem;
+      font-size: 0.75rem;
     }
-  }
-
-  @media (max-width: 380px) {
-    .pb-exp-grid { grid-template-columns: 1fr; }
   }
 </style>
 
@@ -1680,111 +1703,119 @@
 </div>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    let currentStamps = 0;
-    const maxStamps = 9;
+  (function() {
+    function initLoyaltyComponent() {
+      let currentStamps = 0;
+      const maxStamps = 9;
 
-    const lineRow = document.getElementById('pbStampLineRow');
-    const addBtn = document.getElementById('pbAddStampBtn');
-    const msg = document.getElementById('pbLoyaltyMsg');
-    const stage = document.getElementById('pbCelebrationStage');
-    const tempEffects = document.getElementById('pbTempEffects');
-    const continuousButterflies = document.getElementById('pbContinuousButterflies');
-    const card = document.getElementById('pbLoyaltyCard');
+      const lineRow = document.getElementById('pbStampLineRow');
+      const addBtn = document.getElementById('pbAddStampBtn');
+      const msg = document.getElementById('pbLoyaltyMsg');
+      const stage = document.getElementById('pbCelebrationStage');
+      const tempEffects = document.getElementById('pbTempEffects');
+      const continuousButterflies = document.getElementById('pbContinuousButterflies');
+      const card = document.getElementById('pbLoyaltyCard');
 
-    if (lineRow) {
-      lineRow.innerHTML = '';
-      for (let i = 0; i < maxStamps; i++) {
-        const step = document.createElement('div');
-        step.className = 'pb-stamp-line-step';
-        lineRow.appendChild(step);
-      }
-    }
-
-    if (addBtn) {
-      addBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        const steps = lineRow.querySelectorAll('.pb-stamp-line-step');
-
-        if (currentStamps < maxStamps) {
-          steps[currentStamps].classList.add('active');
-          currentStamps++;
-          msg.textContent = `${currentStamps} of ${maxStamps} stamps collected`;
-
-          if (currentStamps === maxStamps) {
-            msg.textContent = "🎉 Free Coffee Unlocked!";
-            addBtn.disabled = true;
-            runLoyaltyCelebration();
-
-            setTimeout(() => {
-              resetStampCard();
-            }, 8000);
-          }
+      if (lineRow) {
+        lineRow.innerHTML = '';
+        for (let i = 0; i < maxStamps; i++) {
+          const step = document.createElement('div');
+          step.className = 'pb-stamp-line-step';
+          lineRow.appendChild(step);
         }
-      });
-    }
-
-    function resetStampCard() {
-      currentStamps = 0;
-      const steps = lineRow.querySelectorAll('.pb-stamp-line-step');
-      steps.forEach(s => s.classList.remove('active'));
-      msg.textContent = "0 of 9 stamps collected";
-      stage.classList.remove('active');
-      tempEffects.innerHTML = '';
-      continuousButterflies.innerHTML = '';
-      addBtn.disabled = false;
-    }
-
-    function runLoyaltyCelebration() {
-      stage.classList.add('active');
-      tempEffects.innerHTML = '';
-      continuousButterflies.innerHTML = '';
-
-      const cardW = card.clientWidth;
-      const cardH = card.clientHeight;
-
-      for (let i = 0; i < 5; i++) {
-        const balloon = document.createElement('div');
-        balloon.className = 'pb-golden-balloon';
-        balloon.style.left = `${Math.random() * (cardW - 50) + 25}px`;
-        balloon.style.animationDelay = `${i * 0.2}s`;
-        tempEffects.appendChild(balloon);
       }
 
-      const butterflyCount = 6;
-      for (let i = 0; i < butterflyCount; i++) {
-        const wrap = document.createElement('div');
-        wrap.className = 'pb-butterfly-flyer-wrap';
+      if (addBtn) {
+        addBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          const steps = lineRow.querySelectorAll('.pb-stamp-line-step');
 
-        const innerWings = document.createElement('span');
-        innerWings.className = 'pb-butterfly-wings';
-        innerWings.textContent = '🦋';
-        wrap.appendChild(innerWings);
+          if (currentStamps < maxStamps) {
+            steps[currentStamps].classList.add('active');
+            currentStamps++;
+            msg.textContent = `${currentStamps} of ${maxStamps} stamps collected`;
 
-        const startX = Math.random() * (cardW * 0.7) + (cardW * 0.15);
-        wrap.style.left = `${startX}px`;
-        wrap.style.bottom = '10px';
+            if (currentStamps === maxStamps) {
+              msg.textContent = "🎉 Free Coffee Unlocked!";
+              addBtn.disabled = true;
+              runLoyaltyCelebration();
 
-        const mx = (Math.random() - 0.5) * (cardW * 0.45);
-        const my = -(Math.random() * (cardH * 0.45) + 30);
-        const ex = mx + (Math.random() - 0.5) * (cardW * 0.35);
-        const ey = -(cardH + 50);
+              setTimeout(() => {
+                resetStampCard();
+              }, 8000);
+            }
+          }
+        });
+      }
 
-        const duration = (Math.random() * 1.5 + 3.0).toFixed(2) + 's';
+      function resetStampCard() {
+        currentStamps = 0;
+        const steps = lineRow.querySelectorAll('.pb-stamp-line-step');
+        steps.forEach(s => s.classList.remove('active'));
+        msg.textContent = "0 of 9 stamps collected";
+        stage.classList.remove('active');
+        tempEffects.innerHTML = '';
+        continuousButterflies.innerHTML = '';
+        addBtn.disabled = false;
+      }
 
-        wrap.style.setProperty('--mx', `${mx}px`);
-        wrap.style.setProperty('--my', `${my}px`);
-        wrap.style.setProperty('--ex', `${ex}px`);
-        wrap.style.setProperty('--ey', `${ey}px`);
-        wrap.style.setProperty('--duration', duration);
-        wrap.style.animationDelay = `${(i * 0.3).toFixed(2)}s`;
+      function runLoyaltyCelebration() {
+        stage.classList.add('active');
+        tempEffects.innerHTML = '';
+        continuousButterflies.innerHTML = '';
 
-        innerWings.style.animationDuration = `${(Math.random() * 0.12 + 0.18).toFixed(2)}s`;
+        const cardW = card.clientWidth;
+        const cardH = card.clientHeight;
 
-        continuousButterflies.appendChild(wrap);
+        for (let i = 0; i < 5; i++) {
+          const balloon = document.createElement('div');
+          balloon.className = 'pb-golden-balloon';
+          balloon.style.left = `${Math.random() * (cardW - 40) + 20}px`;
+          balloon.style.animationDelay = `${i * 0.2}s`;
+          tempEffects.appendChild(balloon);
+        }
+
+        const butterflyCount = 5;
+        for (let i = 0; i < butterflyCount; i++) {
+          const wrap = document.createElement('div');
+          wrap.className = 'pb-butterfly-flyer-wrap';
+
+          const innerWings = document.createElement('span');
+          innerWings.className = 'pb-butterfly-wings';
+          innerWings.textContent = '🦋';
+          wrap.appendChild(innerWings);
+
+          const startX = Math.random() * (cardW * 0.6) + (cardW * 0.2);
+          wrap.style.left = `${startX}px`;
+          wrap.style.bottom = '10px';
+
+          const mx = (Math.random() - 0.5) * (cardW * 0.4);
+          const my = -(Math.random() * (cardH * 0.4) + 20);
+          const ex = mx + (Math.random() - 0.5) * (cardW * 0.3);
+          const ey = -(cardH + 40);
+
+          const duration = (Math.random() * 1.5 + 2.8).toFixed(2) + 's';
+
+          wrap.style.setProperty('--mx', `${mx}px`);
+          wrap.style.setProperty('--my', `${my}px`);
+          wrap.style.setProperty('--ex', `${ex}px`);
+          wrap.style.setProperty('--ey', `${ey}px`);
+          wrap.style.setProperty('--duration', duration);
+          wrap.style.animationDelay = `${(i * 0.25).toFixed(2)}s`;
+
+          innerWings.style.animationDuration = `${(Math.random() * 0.12 + 0.18).toFixed(2)}s`;
+
+          continuousButterflies.appendChild(wrap);
+        }
       }
     }
-  });
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initLoyaltyComponent);
+    } else {
+      initLoyaltyComponent();
+    }
+  })();
 </script>
 
 <style>
