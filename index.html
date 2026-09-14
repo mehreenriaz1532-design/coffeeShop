@@ -455,90 +455,18 @@
     </div>
   </div>
 </header>
-<style>
-  /* VIBE SECTION STYLES */
-  .vibe-card {
-    background: #fff;
-    border: 1px solid rgba(0,0,0,0.06);
-    border-radius: 20px;
-    padding: 15px;
-    text-align: left;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-    display: flex;
-    flex-direction: column;
-    outline: none;
-  }
-
-  /* Active card highlight state */
-  .vibe-card.active {
-    border-color: #d4af37;
-    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.25);
-    transform: translateY(-4px);
-  }
-
-  .vibe-card:hover {
-    transform: translateY(-4px);
-  }
-
-  /* RESULT PANELS HIDING & SHOWING */
-  .vibe-result-panel {
-    display: none; /* Hide all panels by default */
-    background: #fdfbf7;
-    border: 1px solid rgba(212, 175, 55, 0.3);
-    border-radius: 16px;
-    padding: 24px;
-    margin-top: 10px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
-    animation: fadeIn 0.4s ease-in-out;
-  }
-
-  .vibe-result-panel.active {
-    display: block; /* Show only active panel */
-  }
-
-  .vibe-detail {
-    display: flex;
-    gap: 12px;
-    margin-bottom: 10px;
-    font-size: 0.95rem;
-    color: #334438;
-  }
-
-  .vibe-detail strong {
-    min-width: 80px;
-    color: #1c2b1e;
-  }
-
-  .vibe-note {
-    margin-top: 15px;
-    padding-top: 12px;
-    border-top: 1px dashed rgba(0,0,0,0.1);
-    font-style: italic;
-    color: #556b5e;
-    font-size: 0.9rem;
-  }
-
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-</style>
-
 <section class="pad reveal" id="vibe" style="padding: 60px 0;">
-  <div class="container" style="max-width: 1100px; margin: 0 auto; padding: 0 20px;">
+  <div class="container">
     <p class="eyebrow" style="text-align: center; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; color: #d4af37; margin-bottom: 8px; display: flex; align-items: center; justify-content: center; gap: 8px;">
       <svg viewBox="0 0 100 90" style="width: 18px; fill: #d4af37;"><use href="#butterfly-icon"></use></svg>What Brings You In Today?
     </p>
     <h2 class="section-heading" style="text-align: center; font-family: 'Playfair Display', serif; font-size: 2.3rem; color: #1c2b1e; margin-bottom: 10px;">Find Your Vibe</h2>
     <p class="section-sub" style="text-align: center; font-size: 1rem; color: #556b5e; max-width: 600px; margin: 0 auto 35px auto;">Every corner of Papillon Brew has its own mood. Tell us what you're after, and we'll set the table.</p>
 
-    <!-- CARDS GRID -->
     <div class="vibe-selector" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-bottom: 35px;">
       
-      <!-- 01. QUIET CORNER CARD -->
-      <button class="vibe-card tilt-3d" data-vibe="quiet" type="button">
+      <!-- 01. QUIET CORNER CARD WITH PHOTO -->
+      <button class="vibe-card tilt-3d" data-vibe="quiet" type="button" style="background: #fff; border: 1px solid rgba(0,0,0,0.06); border-radius: 20px; padding: 15px; text-align: left; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 10px 25px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
         <div class="vibe-photo" style="overflow: hidden; border-radius: 14px; height: 170px; margin-bottom: 16px; position: relative; width: 100%;">
           <img src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=500&auto=format&fit=crop&q=80" alt="Quiet Reading Nook" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
         </div>
@@ -548,8 +476,8 @@
         </div>
       </button>
 
-      <!-- 02. DEEP WORK CARD -->
-      <button class="vibe-card tilt-3d" data-vibe="work" type="button">
+      <!-- 02. DEEP WORK CARD WITH PHOTO -->
+      <button class="vibe-card tilt-3d" data-vibe="work" type="button" style="background: #fff; border: 1px solid rgba(0,0,0,0.06); border-radius: 20px; padding: 15px; text-align: left; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 10px 25px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
         <div class="vibe-photo" style="overflow: hidden; border-radius: 14px; height: 170px; margin-bottom: 16px; position: relative; width: 100%;">
           <img src="https://images.unsplash.com/photo-1527192491265-7e15c55b1ed2?w=500&auto=format&fit=crop&q=80" alt="Workplace Laptop and Coffee" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
         </div>
@@ -559,8 +487,8 @@
         </div>
       </button>
 
-      <!-- 03. JUST CHILL CARD -->
-      <button class="vibe-card tilt-3d" data-vibe="chill" type="button">
+      <!-- 03. JUST CHILL CARD WITH PHOTO -->
+      <button class="vibe-card tilt-3d" data-vibe="chill" type="button" style="background: #fff; border: 1px solid rgba(0,0,0,0.06); border-radius: 20px; padding: 15px; text-align: left; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 10px 25px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
         <div class="vibe-photo" style="overflow: hidden; border-radius: 14px; height: 170px; margin-bottom: 16px; position: relative; width: 100%;">
           <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=500&auto=format&fit=crop&q=80" alt="Cozy Garden Lounge" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
         </div>
@@ -575,7 +503,7 @@
     <!-- RESULT PANELS -->
     <div class="vibe-result" id="vibeResult">
       <div class="vibe-result-panel" data-panel="quiet">
-        <h3 style="font-family: 'Playfair Display', serif; color: #1c2b1e; margin-top:0;">Your Spot: The Silent Wings Table</h3>
+        <h3 style="font-family: 'Playfair Display', serif; color: #1c2b1e;">Your Spot: The Silent Wings Table</h3>
         <div class="vibe-detail"><strong>Seat</strong><span>The Silent Wings Table — our phone-free nook by the window</span></div>
         <div class="vibe-detail"><strong>Order</strong><span>Chamomile Garden or Butterfly Pea Blossom tea</span></div>
         <div class="vibe-detail"><strong>Best time</strong><span>Weekday mornings, 9–11AM, when the café is softest and slowest</span></div>
@@ -583,7 +511,7 @@
       </div>
 
       <div class="vibe-result-panel" data-panel="work">
-        <h3 style="font-family: 'Playfair Display', serif; color: #1c2b1e; margin-top:0;">Your Spot: The Sunlit Counter</h3>
+        <h3 style="font-family: 'Playfair Display', serif; color: #1c2b1e;">Your Spot: The Sunlit Counter</h3>
         <div class="vibe-detail"><strong>Seat</strong><span>Window-side counter seating, within easy reach of outlets</span></div>
         <div class="vibe-detail"><strong>Order</strong><span>Americano or Flat White, for the long haul</span></div>
         <div class="vibe-detail"><strong>Best time</strong><span>Weekday afternoons, 12–4PM — steady energy, fewer crowds, reliable WiFi</span></div>
@@ -591,7 +519,7 @@
       </div>
 
       <div class="vibe-result-panel" data-panel="chill">
-        <h3 style="font-family: 'Playfair Display', serif; color: #1c2b1e; margin-top:0;">Your Spot: The Garden Lounge</h3>
+        <h3 style="font-family: 'Playfair Display', serif; color: #1c2b1e;">Your Spot: The Garden Lounge</h3>
         <div class="vibe-detail"><strong>Seat</strong><span>Our softest lounge seating, made for lingering</span></div>
         <div class="vibe-detail"><strong>Order</strong><span>Papillon Signature or a Café Latte, something to sip slowly</span></div>
         <div class="vibe-detail"><strong>Best time</strong><span>Weekend afternoons, when the whole café hums with easy conversation</span></div>
@@ -600,38 +528,6 @@
     </div>
   </div>
 </section>
-
-<!-- CLICK EVENT JAVASCRIPT -->
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const cards = document.querySelectorAll('.vibe-card');
-    const panels = document.querySelectorAll('.vibe-result-panel');
-
-    cards.forEach(card => {
-      card.addEventListener('click', () => {
-        const targetVibe = card.getAttribute('data-vibe');
-
-        // Toggle active border state on cards
-        cards.forEach(c => c.classList.remove('active'));
-        card.classList.add('active');
-
-        // Toggle visibility of result panels
-        panels.forEach(panel => {
-          if (panel.getAttribute('data-panel') === targetVibe) {
-            panel.classList.add('active');
-          } else {
-            panel.classList.remove('active');
-          }
-        });
-      });
-    });
-
-    // Default: Pehle card ("quiet") ko automatic open rakhne ke liye
-    if(cards.length > 0) {
-      cards[0].click();
-    }
-  });
-</script>
 
 <section class="pad reveal" id="menu">
   <div class="container">
@@ -847,65 +743,242 @@
     </div>
 
     <!-- METAMORPHOSIS FLIGHT BOARD (COMPACT & SINGLE LINE GRID WITH DARK BOTANICAL IMAGE) -->
-    <div class="flight-board" style="
-  background: linear-gradient(rgba(12, 22, 16, 0.88), rgba(12, 22, 16, 0.92)), 
-              url('https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=1400&q=80');
-  background-size: cover;
-  background-position: center;
-  padding: 38px 24px;
-  border-radius: 20px;
-  color: #fff;
-  margin: 40px auto 10px auto;
-  text-align: center;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
-  border: 1px solid rgba(212, 175, 55, 0.2);
-  max-width: 1100px;
-">
-  <h3 class="flight-board-heading" style="font-family: 'Playfair Display', serif; font-size: 1.85rem; color: #f4e8c1; margin: 0 0 8px 0;">
-    The Metamorphosis Flight Board
-  </h3>
-  <p class="flight-board-sub" style="color: #d1e0d3; max-width: 580px; margin: 0 auto 26px auto; font-size: 0.9rem; opacity: 0.9;">
-    Our menu follows a butterfly's own journey — click any stage to select your flight.
-  </p>
-  
-  <!-- Interactive Flight Stages -->
-  <div class="flight-path" id="flightPath" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; width: 100%; max-width: 900px; margin: 0 auto;">
+    <!-- Papillon Brew - Flight Board Component -->
+<div class="pb-fb-wrapper">
+  <style>
+    /* Scope Reset to avoid breakages */
+    .pb-fb-wrapper,
+    .pb-fb-wrapper * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    .pb-fb-container {
+      background: linear-gradient(135deg, rgba(35, 50, 38, 0.96), rgba(18, 28, 20, 0.98)), 
+                  url('https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=1200&auto=format&fit=crop&q=80');
+      background-size: cover;
+      background-position: center;
+      background-blend-mode: overlay;
+      padding: 28px 20px;
+      border-radius: 20px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+      color: #ffffff;
+      margin: 30px auto;
+      text-align: center;
+      width: 100%;
+      max-width: 1100px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    .pb-fb-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.4rem, 3.5vw, 1.9rem);
+      color: #f4e8c1;
+      margin-bottom: 6px;
+      line-height: 1.25;
+    }
+
+    .pb-fb-subtitle {
+      color: #d1e0d3;
+      max-width: 550px;
+      margin: 0 auto 22px auto;
+      font-size: 0.88rem;
+      line-height: 1.4;
+    }
+
+    /* Desktop View: Exactly 4 Columns */
+    .pb-fb-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      width: 100%;
+    }
+
+    .pb-fb-card {
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 14px;
+      padding: 10px;
+      text-align: left;
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+
+    .pb-fb-card:hover {
+      transform: translateY(-3px);
+    }
+
+    .pb-fb-card.active-flight {
+      background: rgba(212, 175, 55, 0.14);
+      border-color: #d4af37;
+    }
+
+    /* Reduced Image Heights */
+    .pb-fb-img-wrap {
+      position: relative;
+      height: 85px;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 8px;
+      width: 100%;
+    }
+
+    .pb-fb-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .pb-fb-badge {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      background: rgba(0, 0, 0, 0.75);
+      color: #d4af37;
+      font-weight: 700;
+      font-size: 0.65rem;
+      padding: 2px 7px;
+      border-radius: 12px;
+      letter-spacing: 0.5px;
+    }
+
+    .pb-fb-badge.active-badge {
+      background: #d4af37;
+      color: #121c14;
+    }
+
+    .pb-fb-card h4 {
+      color: #ffffff;
+      font-size: 0.95rem;
+      margin-bottom: 3px;
+      font-weight: 600;
+    }
+
+    .pb-fb-card.active-flight h4 {
+      color: #f4e8c1;
+    }
+
+    .pb-fb-card p {
+      font-size: 0.78rem;
+      color: #b0c2b2;
+      line-height: 1.3;
+    }
+
+    .pb-fb-card.active-flight p {
+      color: #e2d8b8;
+    }
+
+    /* Tablet Screen: 2x2 Grid */
+    @media (max-width: 850px) {
+      .pb-fb-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+    }
+
+    /* Mobile Screen: 4 Cards Stacked Downward Vertical */
+    @media (max-width: 550px) {
+      .pb-fb-container {
+        padding: 20px 12px;
+        border-radius: 16px;
+      }
+
+      .pb-fb-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .pb-fb-card {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 10px;
+      }
+
+      .pb-fb-img-wrap {
+        width: 75px;
+        height: 65px;
+        margin-bottom: 0;
+        flex-shrink: 0;
+      }
+
+      .pb-fb-content {
+        flex: 1;
+      }
+
+      .pb-fb-card h4 {
+        font-size: 0.9rem;
+      }
+
+      .pb-fb-card p {
+        font-size: 0.75rem;
+      }
+    }
+  </style>
+
+  <div class="pb-fb-container">
+    <h3 class="pb-fb-title">The Metamorphosis Flight Board</h3>
+    <p class="pb-fb-subtitle">Experience our coffee evolution through four iconic stages — from raw origin to artful flight.</p>
     
-    <div class="flight-stage active" onclick="selectFlightStage(this)" style="cursor: pointer; background: rgba(255, 255, 255, 0.06); backdrop-filter: blur(8px); padding: 16px 8px; border-radius: 14px; border: 1.5px solid transparent; transition: all 0.3s ease; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-      <div class="flight-icon-wrap" style="height: 26px; margin-bottom: 8px; fill: #d4af37;">
-        <svg viewBox="0 0 60 80" style="height: 100%;"><use href="#bean-icon"></use></svg>
+    <div class="pb-fb-grid">
+      
+      <!-- Stage 01: BEAN / Espresso Shot -->
+      <div class="pb-fb-card">
+        <div class="pb-fb-img-wrap">
+          <img src="https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?w=400&auto=format&fit=crop&q=80" alt="Espresso Shot">
+          <span class="pb-fb-badge">01. BEAN</span>
+        </div>
+        <div class="pb-fb-content">
+          <h4>Espresso Shot</h4>
+          <p>Pure single-origin extract, dark & intense.</p>
+        </div>
       </div>
-      <span class="stage-label" style="display: block; font-size: 0.65rem; text-transform: uppercase; color: #d4af37; font-weight: 700; letter-spacing: 0.8px; margin-bottom: 3px;">01. BEAN</span>
-      <span class="drink-name" style="font-size: 0.88rem; color: #fff; font-family: 'Playfair Display', serif; font-style: italic;">Espresso Shot</span>
-    </div>
 
-    <div class="flight-stage" onclick="selectFlightStage(this)" style="cursor: pointer; background: rgba(255, 255, 255, 0.06); backdrop-filter: blur(8px); padding: 16px 8px; border-radius: 14px; border: 1.5px solid transparent; transition: all 0.3s ease; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-      <div class="flight-icon-wrap" style="height: 26px; margin-bottom: 8px; fill: #d4af37;">
-        <svg viewBox="0 0 60 80" style="height: 100%;"><use href="#cocoon-icon"></use></svg>
+      <!-- Stage 02: COCOON / Americano -->
+      <div class="pb-fb-card">
+        <div class="pb-fb-img-wrap">
+          <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=400&auto=format&fit=crop&q=80" alt="Americano Coffee">
+          <span class="pb-fb-badge">02. COCOON</span>
+        </div>
+        <div class="pb-fb-content">
+          <h4>Americano</h4>
+          <p>Diluted elegance revealing subtle aroma notes.</p>
+        </div>
       </div>
-      <span class="stage-label" style="display: block; font-size: 0.65rem; text-transform: uppercase; color: #d4af37; font-weight: 700; letter-spacing: 0.8px; margin-bottom: 3px;">02. COCOON</span>
-      <span class="drink-name" style="font-size: 0.88rem; color: #fff; font-family: 'Playfair Display', serif; font-style: italic;">Americano</span>
-    </div>
 
-    <div class="flight-stage" onclick="selectFlightStage(this)" style="cursor: pointer; background: rgba(255, 255, 255, 0.06); backdrop-filter: blur(8px); padding: 16px 8px; border-radius: 14px; border: 1.5px solid transparent; transition: all 0.3s ease; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-      <div class="flight-icon-wrap" style="height: 26px; margin-bottom: 8px; fill: #d4af37;">
-        <svg viewBox="0 0 100 90" style="height: 100%; opacity: 0.85;"><use href="#butterfly-icon"></use></svg>
+      <!-- Stage 03: WINGS WET / Café Latte -->
+      <div class="pb-fb-card">
+        <div class="pb-fb-img-wrap">
+          <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?w=400&auto=format&fit=crop&q=80" alt="Café Latte Art">
+          <span class="pb-fb-badge">03. WINGS WET</span>
+        </div>
+        <div class="pb-fb-content">
+          <h4>Café Latte</h4>
+          <p>Silky steamed micro-foam meets rich espresso.</p>
+        </div>
       </div>
-      <span class="stage-label" style="display: block; font-size: 0.65rem; text-transform: uppercase; color: #d4af37; font-weight: 700; letter-spacing: 0.8px; margin-bottom: 3px;">03. WINGS WET</span>
-      <span class="drink-name" style="font-size: 0.88rem; color: #fff; font-family: 'Playfair Display', serif; font-style: italic;">Café Latte</span>
-    </div>
 
-    <div class="flight-stage" onclick="selectFlightStage(this)" style="cursor: pointer; background: rgba(255, 255, 255, 0.06); backdrop-filter: blur(8px); padding: 16px 8px; border-radius: 14px; border: 1.5px solid transparent; transition: all 0.3s ease; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-      <div class="flight-icon-wrap" style="height: 26px; margin-bottom: 8px; fill: #d4af37;">
-        <svg viewBox="0 0 100 90" style="height: 100%;"><use href="#butterfly-icon"></use></svg>
+      <!-- Stage 04: FULL FLIGHT / Papillon Signature -->
+      <div class="pb-fb-card active-flight">
+        <div class="pb-fb-img-wrap">
+          <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?w=400&auto=format&fit=crop&q=80" alt="Papillon Signature Coffee">
+          <span class="pb-fb-badge active-badge">04. FULL FLIGHT</span>
+        </div>
+        <div class="pb-fb-content">
+          <h4>Papillon Signature</h4>
+          <p>Infused floral notes with custom butterfly latte art.</p>
+        </div>
       </div>
-      <span class="stage-label" style="display: block; font-size: 0.65rem; text-transform: uppercase; color: #d4af37; font-weight: 700; letter-spacing: 0.8px; margin-bottom: 3px;">04. FULL FLIGHT</span>
-      <span class="drink-name" style="font-size: 0.88rem; color: #fff; font-family: 'Playfair Display', serif; font-style: italic;">Papillon Signature</span>
-    </div>
 
+    </div>
   </div>
 </div>
-  </div>
+
+  
 </section>
 <section class="pad specials reveal" id="specials" style="padding: 60px 0;">
   <div class="container">
@@ -1172,433 +1245,458 @@
 </section>
 
 <style>
-  /* Experience Section Base */
-  .experience {
+  /* Experience Section Scope */
+  .pb-exp-wrapper,
+  .pb-exp-wrapper * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  .pb-exp-section {
     background: #F8F4EC;
-    padding: 4rem 0;
+    padding: 2.5rem 1rem;
     font-family: 'Poppins', sans-serif;
   }
 
-  .exp-container {
-    max-width: 1180px;
+  .pb-exp-container {
+    max-width: 1050px;
     margin: 0 auto;
-    padding: 0 4vw;
   }
 
-  .exp-eyebrow {
-    font-size: 0.85rem;
-    letter-spacing: 0.28em;
+  .pb-exp-eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.25em;
     text-transform: uppercase;
     color: #8B7A9E;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.4rem;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.4rem;
     justify-content: center;
-    font-weight: 500;
+    font-weight: 600;
   }
 
-  .exp-eyebrow svg { width: 18px; height: 18px; fill: #C9A876; }
+  .pb-exp-eyebrow svg { width: 14px; height: 14px; fill: #C9A876; }
 
-  .exp-heading {
+  .pb-exp-heading {
     text-align: center;
-    font-size: clamp(2.2rem, 5vw, 3.2rem);
-    margin-bottom: 0.8rem;
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    margin-bottom: 0.4rem;
     font-family: 'Cormorant', serif;
     font-style: italic;
     color: #3A342E;
   }
 
-  .exp-sub {
+  .pb-exp-sub {
     text-align: center;
-    max-width: 560px;
-    margin: 0 auto 3.5rem;
-    color: rgba(58, 52, 46, 0.72);
-    font-size: 1rem;
+    max-width: 480px;
+    margin: 0 auto 2rem;
+    color: rgba(58, 52, 46, 0.75);
+    font-size: 0.88rem;
     font-weight: 300;
   }
 
-  /* LOYALTY CARD CONTAINER */
-  .loyalty-card {
-    background: #1C1917;
-    border-radius: 20px;
-    padding: 3rem 2.5rem;
+  /* LOYALTY CARD WITH METAMORPHOSIS BACKGROUND */
+  .pb-loyalty-card {
+    background: linear-gradient(135deg, rgba(20, 25, 22, 0.88), rgba(35, 45, 38, 0.92)),
+                url('https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=1200&auto=format&fit=crop&q=80');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    border-radius: 16px;
+    padding: 1.8rem 1.5rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2.5rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
     align-items: center;
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
-    margin-bottom: 4.5rem;
-    border: 1px solid rgba(212, 175, 55, 0.25);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2.5rem;
+    border: 1px solid rgba(212, 175, 55, 0.3);
     color: #FBF7EE;
     position: relative;
     overflow: hidden;
   }
 
-  .loyalty-visual {
+  .pb-loyalty-visual {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.2rem;
+    gap: 0.8rem;
     text-align: center;
     position: relative;
     z-index: 5;
     width: 100%;
   }
 
-  .loyalty-svg-wrap {
-    width: 65px;
-    height: 65px;
+  .pb-loyalty-svg-wrap {
+    width: 45px;
+    height: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  .golden-hero-butterfly {
-    width: 60px;
-    height: 60px;
-    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.6));
+  .pb-golden-hero-butterfly {
+    width: 42px;
+    height: 42px;
+    filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.7));
   }
 
-  /* Stamp Progress Indicator */
-  .stamp-line-container {
+  /* Stamp Progress Line Indicator */
+  .pb-stamp-line-container {
     display: flex;
-    gap: 6px;
+    gap: 4px;
     width: 100%;
-    max-width: 360px;
+    max-width: 300px;
     justify-content: center;
     align-items: center;
   }
 
-  .stamp-line-step {
+  .pb-stamp-line-step {
     flex: 1;
-    height: 8px;
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: 10px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
     transition: all 0.3s ease;
-    border: 1px solid rgba(212, 175, 55, 0.2);
+    border: 1px solid rgba(212, 175, 55, 0.25);
   }
 
-  .stamp-line-step.active {
+  .pb-stamp-line-step.active {
     background: linear-gradient(90deg, #B8860B, #FFD700, #FFF8DC);
-    box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.8);
     border-color: #FFE57F;
   }
 
-  .loyalty-msg {
-    font-size: 0.95rem;
+  .pb-loyalty-msg {
+    font-size: 0.85rem;
     color: #E6D2B5;
     font-weight: 500;
   }
 
-  .btn-loyalty {
+  .pb-btn-loyalty {
     background: linear-gradient(135deg, #D4AF37 0%, #FFD700 50%, #AA7C11 100%);
     color: #1A140E;
     border: none;
-    padding: 0.85rem 2.2rem;
+    padding: 0.65rem 1.6rem;
     border-radius: 999px;
     font-weight: 700;
-    font-size: 0.9rem;
+    font-size: 0.82rem;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
     transition: all 0.3s ease;
     touch-action: manipulation;
   }
 
-  .btn-loyalty:disabled {
+  .pb-btn-loyalty:disabled {
     opacity: 0.6;
     cursor: not-allowed;
   }
 
-  .loyalty-info h3 {
+  .pb-loyalty-info h3 {
     font-family: 'Cormorant', serif;
-    font-size: clamp(2rem, 3.5vw, 2.6rem);
+    font-size: clamp(1.5rem, 3vw, 2.1rem);
     color: #FFFFFF;
     font-style: italic;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
   }
 
-  .loyalty-info p {
-    color: rgba(251, 247, 238, 0.82);
-    font-size: 0.95rem;
-    line-height: 1.65;
+  .pb-loyalty-info p {
+    color: rgba(251, 247, 238, 0.9);
+    font-size: 0.85rem;
+    line-height: 1.5;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
   }
 
   /* CELEBRATION OVERLAY STAGE */
-  .celebration-stage {
+  .pb-celebration-stage {
     position: absolute;
     inset: 0;
     pointer-events: none;
     z-index: 20;
     display: none;
   }
-  .celebration-stage.active { display: block; }
+  .pb-celebration-stage.active { display: block; }
 
-  /* Party Shooters */
-  .party-shooter {
+  .pb-party-shooter {
     position: absolute;
     bottom: -5px;
-    font-size: 3rem;
+    font-size: 2.2rem;
     opacity: 0;
   }
-  .party-shooter.left { left: 15px; }
-  .party-shooter.right { right: 15px; }
+  .pb-party-shooter.left { left: 10px; }
+  .pb-party-shooter.right { right: 10px; }
 
-  .celebration-stage.active .party-shooter.left { animation: shooterPopLeft 0.5s ease forwards; }
-  .celebration-stage.active .party-shooter.right { animation: shooterPopRight 0.5s ease forwards; }
+  .pb-celebration-stage.active .pb-party-shooter.left { animation: pbShooterPopLeft 0.5s ease forwards; }
+  .pb-celebration-stage.active .pb-party-shooter.right { animation: pbShooterPopRight 0.5s ease forwards; }
 
-  @keyframes shooterPopLeft {
+  @keyframes pbShooterPopLeft {
     0% { opacity: 0; transform: rotate(45deg) scale(0); }
     100% { opacity: 1; transform: rotate(25deg) scale(1); }
   }
-  @keyframes shooterPopRight {
+  @keyframes pbShooterPopRight {
     0% { opacity: 0; transform: rotate(-45deg) scale(0); }
     100% { opacity: 1; transform: rotate(-25deg) scale(1); }
   }
 
-  /* Temporary Metallic Balloons */
-  .golden-balloon {
+  .pb-golden-balloon {
     position: absolute;
-    bottom: -60px;
-    width: 36px;
-    height: 46px;
+    bottom: -40px;
+    width: 28px;
+    height: 36px;
     border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
     background: radial-gradient(circle at 35% 30%, #FFFFFF 0%, #FFE57F 25%, #D4AF37 60%, #8B6508 100%);
-    box-shadow: inset -2px -2px 8px rgba(0,0,0,0.4), 0 6px 15px rgba(212, 175, 55, 0.3);
-    animation: balloonRise 3.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    box-shadow: inset -2px -2px 6px rgba(0,0,0,0.4), 0 4px 10px rgba(212, 175, 55, 0.3);
+    animation: pbBalloonRise 3.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
   }
 
-  @keyframes balloonRise {
+  @keyframes pbBalloonRise {
     0% { transform: translateY(0) rotate(0deg); opacity: 1; }
-    100% { transform: translateY(-400px) rotate(15deg); opacity: 0; }
+    100% { transform: translateY(-300px) rotate(15deg); opacity: 0; }
   }
 
-  /* REALISTIC FLAPPING BUTTERFLIES ENGINE */
-  .butterfly-flyer-wrap {
+  .pb-butterfly-flyer-wrap {
     position: absolute;
     pointer-events: none;
-    animation: flightPath var(--duration) ease-in-out infinite;
+    animation: pbFlightPath var(--duration) ease-in-out infinite;
   }
 
-  /* 3D Wing Flap Animation */
-  .butterfly-wings {
+  .pb-butterfly-wings {
     display: inline-block;
-    font-size: 1.8rem;
-    filter: drop-shadow(0 0 10px #FFD700);
+    font-size: 1.4rem;
+    filter: drop-shadow(0 0 8px #FFD700);
     transform-origin: center center;
-    animation: wingFlap 0.28s ease-in-out infinite alternate;
+    animation: pbWingFlap 0.28s ease-in-out infinite alternate;
   }
 
-  @keyframes wingFlap {
+  @keyframes pbWingFlap {
     0% { transform: scaleX(1) rotate(0deg); }
     100% { transform: scaleX(0.25) rotate(12deg); }
   }
 
-  @keyframes flightPath {
-    0% {
-      opacity: 0;
-      transform: translate(0, 0) scale(0.6);
-    }
+  @keyframes pbFlightPath {
+    0% { opacity: 0; transform: translate(0, 0) scale(0.6); }
     15% { opacity: 1; }
-    50% {
-      transform: translate(var(--mx), var(--my)) scale(1.1);
-    }
+    50% { transform: translate(var(--mx), var(--my)) scale(1.1); }
     85% { opacity: 1; }
-    100% {
-      opacity: 0;
-      transform: translate(var(--ex), var(--ey)) scale(0.6);
-    }
+    100% { opacity: 0; transform: translate(var(--ex), var(--ey)) scale(0.6); }
   }
 
-  /* 3-COLUMN SQUARE CARDS GRID */
-  .exp-grid {
+  /* COMPACT CARDS GRID */
+  .pb-exp-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.8rem;
+    gap: 1.2rem;
   }
 
-  .exp-card {
+  .pb-exp-card {
     background: #FFFFFF;
-    border-radius: 16px;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 8px 24px rgba(58, 52, 46, 0.05);
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 15px rgba(58, 52, 46, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.06);
     display: flex;
     flex-direction: column;
   }
 
-  .exp-img-wrapper {
+  /* Aspect ratio reduced to 16/9 for shorter card height */
+  .pb-exp-img-wrapper {
     position: relative;
     width: 100%;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 16 / 10;
     overflow: hidden;
   }
 
-  .exp-img-wrapper img {
+  .pb-exp-img-wrapper img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
+    transition: transform 0.4s ease;
   }
 
-  .exp-card:hover .exp-img-wrapper img {
-    transform: scale(1.06);
+  .pb-exp-card:hover .pb-exp-img-wrapper img {
+    transform: scale(1.05);
   }
 
-  .exp-card-body {
-    padding: 1.4rem 1.2rem;
+  .pb-exp-card-body {
+    padding: 0.9rem 0.9rem;
     flex-grow: 1;
   }
 
-  .exp-card-body h4 {
+  .pb-exp-card-body h4 {
     font-family: 'Cormorant', serif;
-    font-size: 1.35rem;
-    margin-bottom: 0.4rem;
+    font-size: 1.15rem;
+    margin-bottom: 0.3rem;
     color: #3A342E;
   }
 
-  .exp-card-body p {
-    font-size: 0.88rem;
+  .pb-exp-card-body p {
+    font-size: 0.78rem;
     color: rgba(58, 52, 46, 0.75);
-    line-height: 1.55;
+    line-height: 1.45;
   }
 
-  /* Responsive Adjustments */
-  @media (max-width: 992px) {
-    .exp-grid { grid-template-columns: repeat(2, 1fr); }
+  /* Responsive Adjustments for Mobile */
+  @media (max-width: 850px) {
+    .pb-exp-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
   }
 
-  @media (max-width: 600px) {
-    .exp-grid { grid-template-columns: 1fr; }
-    .loyalty-card { padding: 2rem 1.2rem; grid-template-columns: 1fr; gap: 1.5rem; }
+  @media (max-width: 580px) {
+    .pb-loyalty-card { 
+      grid-template-columns: 1fr; 
+      gap: 1.2rem; 
+      padding: 1.4rem 1rem; 
+    }
+    
+    .pb-exp-grid { 
+      grid-template-columns: repeat(2, 1fr); /* 2 Columns on mobile so cards don't take full screen */
+      gap: 0.8rem; 
+    }
+
+    .pb-exp-card-body {
+      padding: 0.7rem;
+    }
+
+    .pb-exp-card-body h4 {
+      font-size: 1rem;
+    }
+
+    .pb-exp-card-body p {
+      font-size: 0.72rem;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .pb-exp-grid { grid-template-columns: 1fr; }
   }
 </style>
 
-<section class="experience">
-  <div class="exp-container">
-    
-    <div class="exp-eyebrow">
-      <svg viewBox="0 0 100 90"><path d="M50 45C40 20 15 10 5 25C-5 40 15 65 45 52Z"/></svg>
-      MORE THAN COFFEE
+<div class="pb-exp-wrapper">
+  <section class="pb-exp-section">
+    <div class="pb-exp-container">
+      
+      <div class="pb-exp-eyebrow">
+        <svg viewBox="0 0 100 90"><path d="M50 45C40 20 15 10 5 25C-5 40 15 65 45 52Z"/></svg>
+        MORE THAN COFFEE
+      </div>
+      <h2 class="pb-exp-heading">The Butterfly Experience</h2>
+      <p class="pb-exp-sub">Little rituals, seasonal surprises, and reasons to linger a little longer.</p>
+
+      <!-- LOYALTY CARD WITH MORPH BG -->
+      <div class="pb-loyalty-card" id="pbLoyaltyCard">
+        <div class="pb-celebration-stage" id="pbCelebrationStage">
+          <div class="pb-party-shooter left">🎉</div>
+          <div class="pb-party-shooter right">🎉</div>
+          <div id="pbTempEffects"></div>
+          <div id="pbContinuousButterflies"></div>
+        </div>
+
+        <div class="pb-loyalty-visual">
+          <div class="pb-loyalty-svg-wrap">
+            <svg class="pb-golden-hero-butterfly" viewBox="0 0 100 90">
+              <path d="M50 45C40 20 15 10 5 25C-5 40 15 65 45 52C48 51 49 48 50 45Z" fill="#FFD700"/>
+              <path d="M50 45C60 20 85 10 95 25C105 40 85 65 55 52C52 51 51 48 50 45Z" fill="#FFD700"/>
+            </svg>
+          </div>
+
+          <div class="pb-stamp-line-container" id="pbStampLineRow"></div>
+
+          <p class="pb-loyalty-msg" id="pbLoyaltyMsg">0 of 9 stamps collected</p>
+          <button type="button" class="pb-btn-loyalty" id="pbAddStampBtn">+ Add a Stamp (demo)</button>
+        </div>
+
+        <div class="pb-loyalty-info">
+          <h3>Butterfly Loyalty</h3>
+          <p>Every coffee earns a stamp. Collect 9 and watch your card's wings fill in — the ninth stamp earns you a free coffee, on the house.</p>
+        </div>
+      </div>
+
+      <!-- EXPERIENCE PICTURE CARDS GRID -->
+      <div class="pb-exp-grid">
+        <div class="pb-exp-card">
+          <div class="pb-exp-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=500&auto=format&fit=crop" alt="Sip & Sketch">
+          </div>
+          <div class="pb-exp-card-body">
+            <h4>Sip & Sketch</h4>
+            <p>Every Sunday morning, we provide watercolor sets. Draw, sip, and let your creativity bloom.</p>
+          </div>
+        </div>
+
+        <div class="pb-exp-card">
+          <div class="pb-exp-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500&auto=format&fit=crop" alt="Metamorphosis Menu">
+          </div>
+          <div class="pb-exp-card-body">
+            <h4>Metamorphosis Menu</h4>
+            <p>Each season brings 3 new drinks named after real butterfly species. From Chrysalis to Flutter.</p>
+          </div>
+        </div>
+
+        <div class="pb-exp-card">
+          <div class="pb-exp-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=500&auto=format&fit=crop" alt="Winged Wishes Wall">
+          </div>
+          <div class="pb-exp-card-body">
+            <h4>Winged Wishes Wall</h4>
+            <p>Write a wish on a paper butterfly and pin it to our wall. One wish is drawn every month for free coffee.</p>
+          </div>
+        </div>
+
+        <div class="pb-exp-card">
+          <div class="pb-exp-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=500&auto=format&fit=crop" alt="Flight Board Menu">
+          </div>
+          <div class="pb-exp-card-body">
+            <h4>Flight Board Menu</h4>
+            <p>Try 4 mini roasts side-by-side: a coffee tasting flight designed to reveal hidden tasting notes.</p>
+          </div>
+        </div>
+
+        <div class="pb-exp-card">
+          <div class="pb-exp-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=500&auto=format&fit=crop" alt="Butterfly Effect Hours">
+          </div>
+          <div class="pb-exp-card-body">
+            <h4>Butterfly Effect Hours</h4>
+            <p>Random magic hours every day — buy a coffee, and the next person gets a free drink on us.</p>
+          </div>
+        </div>
+
+        <div class="pb-exp-card">
+          <div class="pb-exp-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=500&auto=format&fit=crop" alt="Release the Butterflies">
+          </div>
+          <div class="pb-exp-card-body">
+            <h4>Release the Butterflies</h4>
+            <p>Plantable wildflower seed paper butterflies. Take one, plant it, and watch flowers grow.</p>
+          </div>
+        </div>
+      </div>
+
     </div>
-    <h2 class="exp-heading">The Butterfly Experience</h2>
-    <p class="exp-sub">Little rituals, seasonal surprises, and reasons to linger a little longer.</p>
-
-    <!-- LOYALTY CARD -->
-    <div class="loyalty-card" id="loyaltyCard">
-      <div class="celebration-stage" id="celebrationStage">
-        <div class="party-shooter left">🎉</div>
-        <div class="party-shooter right">🎉</div>
-        <div id="tempEffects"></div>
-        <div id="continuousButterflies"></div>
-      </div>
-
-      <div class="loyalty-visual">
-        <div class="loyalty-svg-wrap">
-          <svg class="golden-hero-butterfly" viewBox="0 0 100 90">
-            <path d="M50 45C40 20 15 10 5 25C-5 40 15 65 45 52C48 51 49 48 50 45Z" fill="#FFD700"/>
-            <path d="M50 45C60 20 85 10 95 25C105 40 85 65 55 52C52 51 51 48 50 45Z" fill="#FFD700"/>
-          </svg>
-        </div>
-
-        <div class="stamp-line-container" id="stampLineRow"></div>
-
-        <p class="loyalty-msg" id="loyaltyMsg">0 of 9 stamps collected</p>
-        <button type="button" class="btn-loyalty" id="addStampBtn">+ Add a Stamp (demo)</button>
-      </div>
-
-      <div class="loyalty-info">
-        <h3>Butterfly Loyalty</h3>
-        <p>Every coffee earns a stamp. Collect 9 and watch your card's wings fill in — the ninth stamp earns you a free coffee, on the house.</p>
-      </div>
-    </div>
-
-    <!-- EXPERIENCE PICTURE CARDS -->
-    <div class="exp-grid">
-      <div class="exp-card">
-        <div class="exp-img-wrapper">
-          <img src="images/card-1.jpg" alt="Sip & Sketch" onerror="this.src='https://images.unsplash.com/photo-1511920170033-f8396924c348?w=500&auto=format&fit=crop';">
-        </div>
-        <div class="exp-card-body">
-          <h4>Sip & Sketch</h4>
-          <p>Every Sunday morning, we provide watercolor sets. Draw, sip, and let your creativity bloom.</p>
-        </div>
-      </div>
-
-      <div class="exp-card">
-        <div class="exp-img-wrapper">
-          <img src="images/card-2.jpg" alt="Metamorphosis Menu" onerror="this.src='https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500&auto=format&fit=crop';">
-        </div>
-        <div class="exp-card-body">
-          <h4>Metamorphosis Menu</h4>
-          <p>Each season brings 3 new drinks named after real butterfly species. From Chrysalis to Flutter.</p>
-        </div>
-      </div>
-
-      <div class="exp-card">
-        <div class="exp-img-wrapper">
-          <img src="images/card-3.jpg" alt="Winged Wishes Wall" onerror="this.src='https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=500&auto=format&fit=crop';">
-        </div>
-        <div class="exp-card-body">
-          <h4>Winged Wishes Wall</h4>
-          <p>Write a wish on a paper butterfly and pin it to our wall. One wish is drawn every month for free coffee.</p>
-        </div>
-      </div>
-
-      <div class="exp-card">
-        <div class="exp-img-wrapper">
-          <img src="images/card-4.jpg" alt="Flight Board Menu" onerror="this.src='https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=500&auto=format&fit=crop';">
-        </div>
-        <div class="exp-card-body">
-          <h4>Flight Board Menu</h4>
-          <p>Try 4 mini roasts side-by-side: a coffee tasting flight designed to reveal hidden tasting notes.</p>
-        </div>
-      </div>
-
-      <div class="exp-card">
-        <div class="exp-img-wrapper">
-          <img src="images/card-5.jpg" alt="Butterfly Effect Hours" onerror="this.src='https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=500&auto=format&fit=crop';">
-        </div>
-        <div class="exp-card-body">
-          <h4>Butterfly Effect Hours</h4>
-          <p>Random magic hours every day — buy a coffee, and the next person gets a free drink on us.</p>
-        </div>
-      </div>
-
-      <div class="exp-card">
-        <div class="exp-img-wrapper">
-          <img src="images/card-6.jpg" alt="Release the Butterflies" onerror="this.src='https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=500&auto=format&fit=crop';">
-        </div>
-        <div class="exp-card-body">
-          <h4>Release the Butterflies</h4>
-          <p>Plantable wildflower seed paper butterflies. Take one, plant it, and watch flowers grow.</p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
+  </section>
+</div>
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     let currentStamps = 0;
     const maxStamps = 9;
-    let resetTimer = null;
 
-    const lineRow = document.getElementById('stampLineRow');
-    const addBtn = document.getElementById('addStampBtn');
-    const msg = document.getElementById('loyaltyMsg');
-    const stage = document.getElementById('celebrationStage');
-    const tempEffects = document.getElementById('tempEffects');
-    const continuousButterflies = document.getElementById('continuousButterflies');
-    const card = document.getElementById('loyaltyCard');
+    const lineRow = document.getElementById('pbStampLineRow');
+    const addBtn = document.getElementById('pbAddStampBtn');
+    const msg = document.getElementById('pbLoyaltyMsg');
+    const stage = document.getElementById('pbCelebrationStage');
+    const tempEffects = document.getElementById('pbTempEffects');
+    const continuousButterflies = document.getElementById('pbContinuousButterflies');
+    const card = document.getElementById('pbLoyaltyCard');
 
-    // Generate 9 Progress Lines
     if (lineRow) {
       lineRow.innerHTML = '';
       for (let i = 0; i < maxStamps; i++) {
         const step = document.createElement('div');
-        step.className = 'stamp-line-step';
+        step.className = 'pb-stamp-line-step';
         lineRow.appendChild(step);
       }
     }
@@ -1606,21 +1704,19 @@
     if (addBtn) {
       addBtn.addEventListener('click', function(e) {
         e.preventDefault();
-        const steps = lineRow.querySelectorAll('.stamp-line-step');
+        const steps = lineRow.querySelectorAll('.pb-stamp-line-step');
 
         if (currentStamps < maxStamps) {
           steps[currentStamps].classList.add('active');
           currentStamps++;
           msg.textContent = `${currentStamps} of ${maxStamps} stamps collected`;
 
-          // EXACT 9TH STAMP TRIGGER
           if (currentStamps === maxStamps) {
             msg.textContent = "🎉 Free Coffee Unlocked!";
             addBtn.disabled = true;
             runLoyaltyCelebration();
 
-            // AUTOMATIC RE-CYCLE RESET AFTER 8 SECONDS
-            resetTimer = setTimeout(() => {
+            setTimeout(() => {
               resetStampCard();
             }, 8000);
           }
@@ -1630,7 +1726,7 @@
 
     function resetStampCard() {
       currentStamps = 0;
-      const steps = lineRow.querySelectorAll('.stamp-line-step');
+      const steps = lineRow.querySelectorAll('.pb-stamp-line-step');
       steps.forEach(s => s.classList.remove('active'));
       msg.textContent = "0 of 9 stamps collected";
       stage.classList.remove('active');
@@ -1647,23 +1743,21 @@
       const cardW = card.clientWidth;
       const cardH = card.clientHeight;
 
-      // 1. Temporary Golden Balloons Pop
-      for (let i = 0; i < 6; i++) {
+      for (let i = 0; i < 5; i++) {
         const balloon = document.createElement('div');
-        balloon.className = 'golden-balloon';
-        balloon.style.left = `${Math.random() * (cardW - 60) + 30}px`;
+        balloon.className = 'pb-golden-balloon';
+        balloon.style.left = `${Math.random() * (cardW - 50) + 25}px`;
         balloon.style.animationDelay = `${i * 0.2}s`;
         tempEffects.appendChild(balloon);
       }
 
-      // 2. Realistic Flapping Flying Butterflies
-      const butterflyCount = 7;
+      const butterflyCount = 6;
       for (let i = 0; i < butterflyCount; i++) {
         const wrap = document.createElement('div');
-        wrap.className = 'butterfly-flyer-wrap';
+        wrap.className = 'pb-butterfly-flyer-wrap';
 
         const innerWings = document.createElement('span');
-        innerWings.className = 'butterfly-wings';
+        innerWings.className = 'pb-butterfly-wings';
         innerWings.textContent = '🦋';
         wrap.appendChild(innerWings);
 
@@ -1672,21 +1766,20 @@
         wrap.style.bottom = '10px';
 
         const mx = (Math.random() - 0.5) * (cardW * 0.45);
-        const my = -(Math.random() * (cardH * 0.45) + 40);
+        const my = -(Math.random() * (cardH * 0.45) + 30);
         const ex = mx + (Math.random() - 0.5) * (cardW * 0.35);
-        const ey = -(cardH + 60);
+        const ey = -(cardH + 50);
 
-        const duration = (Math.random() * 1.5 + 3.2).toFixed(2) + 's';
+        const duration = (Math.random() * 1.5 + 3.0).toFixed(2) + 's';
 
         wrap.style.setProperty('--mx', `${mx}px`);
         wrap.style.setProperty('--my', `${my}px`);
         wrap.style.setProperty('--ex', `${ex}px`);
         wrap.style.setProperty('--ey', `${ey}px`);
         wrap.style.setProperty('--duration', duration);
-        wrap.style.animationDelay = `${(i * 0.35).toFixed(2)}s`;
+        wrap.style.animationDelay = `${(i * 0.3).toFixed(2)}s`;
 
-        // Vary flapping speed per butterfly
-        innerWings.style.animationDuration = `${(Math.random() * 0.12 + 0.2).toFixed(2)}s`;
+        innerWings.style.animationDuration = `${(Math.random() * 0.12 + 0.18).toFixed(2)}s`;
 
         continuousButterflies.appendChild(wrap);
       }
@@ -1857,343 +1950,217 @@
     </div>
   </div>
 </section>
-<!-- REVIEW TRIGGER BUTTON -->
 <style>
-  /* FONTS IMPORT */
-  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Poppins:wght@300;400;500;600;700&display=swap');
-
-  /* SECTION & HEADER DESIGN */
+  /* Section Layout & Reserved Spacing */
   #testimonials {
-    background-color: #FBF8F3;
-    padding: 3.5rem 1.25rem;
-    font-family: 'Poppins', sans-serif;
-    color: #3A342E;
+    padding-top: 5rem;
+    padding-bottom: 9rem;
+    position: relative;
   }
 
   .testimonial-header-action {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    gap: 1rem;
     margin-bottom: 2.5rem;
   }
 
-  .eyebrow {
-    font-size: 0.8rem;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: #8B7A9E;
-    margin-bottom: 0.6rem;
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    font-weight: 500;
-  }
-
-  .eyebrow-icon {
-    width: 16px;
-    height: 16px;
-    fill: #C9A876;
-    display: inline-block;
-  }
-
-  .section-heading {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2.2rem, 5vw, 3.2rem);
-    font-style: italic;
-    color: #1E352B;
-    font-weight: 500;
-    margin: 0 0 0.6rem 0;
-    line-height: 1.1;
-  }
-
-  .section-sub {
-    max-width: 580px;
-    margin: 0 0 1.8rem 0;
-    color: rgba(58, 52, 46, 0.75);
-    font-size: 0.95rem;
-    font-weight: 300;
-    line-height: 1.5;
-  }
-
-  /* BUTTON STYLING */
   .btn-write-review {
-    background: #1E352B;
-    color: #FFFFFF;
+    background: linear-gradient(135deg, #4A5D4E 0%, #2E3A31 100%);
+    color: #FBF7EE;
     border: none;
-    padding: 0.8rem 2rem;
+    padding: 0.75rem 1.8rem;
     border-radius: 999px;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
     transition: all 0.3s ease;
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    min-height: 44px;
-    touch-action: manipulation;
   }
 
   .btn-write-review:hover {
-    background: #12221B;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
   }
 
-  /* CARDS GRID */
+  /* Testimonial Cards Layout Adjustment */
   .testimonial-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    max-width: 1180px;
-    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.8rem;
   }
 
   .testimonial-card {
-    background: #FFFFFF;
+    background: #FFFDF8;
     border-radius: 16px;
-    padding: 1.4rem;
-    border: 1px solid rgba(212, 175, 55, 0.25);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.03);
+    padding: 1.8rem;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.04);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: transform 0.3s ease;
   }
 
-  .testimonial-card.user-card {
-    border: 2px solid #D4AF37;
-    background: #FFFDF5;
+  .testimonial-card:hover {
+    transform: translateY(-4px);
   }
 
   .testimonial-card-img {
     width: 100%;
-    height: 160px;
+    height: 180px;
     object-fit: cover;
-    border-radius: 12px;
-    margin-bottom: 0.8rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
     border: 1px solid #E0D9CE;
   }
 
-  /* MODAL OVERLAY & CARD (FIXED NO-SCROLL FIT) */
+  /* Review Modal Styling */
   .review-modal-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.55);
-    backdrop-filter: blur(4px);
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
     display: none;
     align-items: center;
     justify-content: center;
-    z-index: 10000;
-    padding: 1rem;
+    z-index: 1000;
+    padding: 1.5rem;
+  }
+
+  .review-modal-overlay.active {
+    display: flex;
   }
 
   .review-modal {
-    background: #FFFDF9;
-    border-radius: 24px;
-    padding: 1.5rem 1.6rem 1.4rem;
+    background: #FFFDF8;
+    border-radius: 20px;
+    padding: 2.2rem;
     width: 100%;
-    max-width: 440px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    max-width: 480px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    border: 1px solid rgba(212, 175, 55, 0.3);
     position: relative;
-    box-sizing: border-box;
-    overflow: hidden; /* Scrollbar completely hidden */
+    max-height: 90vh;
+    overflow-y: auto;
   }
 
   .modal-close {
     position: absolute;
-    top: 1rem;
+    top: 1.2rem;
     right: 1.2rem;
     background: transparent;
     border: none;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     cursor: pointer;
-    color: #555555;
-    line-height: 1;
-    padding: 4px;
+    color: #666;
   }
 
-  .modal-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2rem;
-    color: #1E352B;
-    margin-top: 0;
-    margin-bottom: 0.6rem;
-    text-align: center;
-    font-weight: 500;
-  }
-
-  /* STAR RATING PICKER */
   .star-rating-picker {
     display: flex;
     justify-content: center;
     gap: 6px;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: #D4AF37;
     cursor: pointer;
-    margin-top: 0.2rem;
-    margin-bottom: 0.8rem;
-    user-select: none;
+    margin-bottom: 1.2rem;
   }
 
-  /* FORM INPUTS & LABELS */
   .review-form-group {
-    margin-bottom: 0.8rem;
+    margin-bottom: 1.1rem;
   }
 
   .review-form-group label {
     display: block;
     font-size: 0.85rem;
     font-weight: 600;
-    color: #1E352B;
-    margin-bottom: 0.35rem;
+    color: #4A5D4E;
+    margin-bottom: 0.4rem;
   }
 
-  .review-form-group input[type="text"],
-  .review-form-group textarea,
-  .file-input-wrapper {
-    width: 100%;
-    padding: 0.6rem 0.85rem;
-    border-radius: 12px;
-    border: 1px solid #E2DDD5;
-    background: #F9F8F6;
-    font-size: 0.9rem;
-    font-family: inherit;
-    color: #222222;
-    outline: none;
-    box-sizing: border-box;
-    transition: border-color 0.2s ease;
-  }
-
+  .review-form-group input,
   .review-form-group textarea {
-    resize: none;
-    height: 72px;
-  }
-
-  .review-form-group input[type="text"]:focus,
-  .review-form-group textarea:focus {
-    border-color: #1E352B;
-    background: #FFFFFF;
-  }
-
-  .file-input-wrapper {
-    display: flex;
-    align-items: center;
-    padding: 0.45rem 0.85rem;
-  }
-
-  .review-form-group input[type="file"] {
     width: 100%;
-    font-size: 0.85rem;
-    color: #555;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    border: 1px solid #E0D9CE;
+    background: #FAFAFA;
+    font-size: 0.92rem;
+    outline: none;
   }
 
-  /* ACTION BUTTONS */
   .modal-actions-row {
     display: flex;
     gap: 10px;
-    margin-top: 1.1rem;
+    margin-top: 1.2rem;
   }
 
   .btn-submit-review {
-    flex: 1.5;
-    background: #1E352B;
-    color: #FFFFFF;
+    flex: 2;
+    background: #4A5D4E;
+    color: #FFF;
     border: none;
-    padding: 0.75rem;
-    border-radius: 12px;
+    padding: 0.85rem;
+    border-radius: 10px;
     font-weight: 700;
-    font-size: 0.95rem;
     cursor: pointer;
-    min-height: 44px;
-    transition: background 0.2s ease;
-  }
-
-  .btn-submit-review:hover {
-    background: #13231C;
   }
 
   .btn-delete-review {
     flex: 1;
-    background: #8B2626;
-    color: #FFFFFF;
+    background: #A94442;
+    color: #FFF;
     border: none;
-    padding: 0.75rem;
-    border-radius: 12px;
-    font-weight: 700;
-    font-size: 0.95rem;
+    padding: 0.85rem;
+    border-radius: 10px;
+    font-weight: 600;
     cursor: pointer;
     display: none;
-    min-height: 44px;
-    transition: background 0.2s ease;
-  }
-
-  .btn-delete-review:hover {
-    background: #6D1B1B;
   }
 
   .img-validation-msg {
-    font-size: 0.75rem;
-    color: #8B2626;
-    margin-top: 0.25rem;
+    font-size: 0.78rem;
+    color: #C0392B;
+    margin-top: 0.3rem;
     display: none;
   }
 
-  /* MOBILE OPTIMIZATIONS (Fit screen without inner scrollbar) */
-  @media (max-width: 480px) {
-    .review-modal {
-      padding: 1.25rem 1.1rem 1.1rem;
-      border-radius: 18px;
-      max-height: 96vh;
-    }
-    .modal-title {
-      font-size: 1.7rem;
-      margin-bottom: 0.4rem;
-    }
-    .star-rating-picker {
-      font-size: 1.4rem;
-      margin-bottom: 0.6rem;
-    }
-    .review-form-group {
-      margin-bottom: 0.65rem;
-    }
-    .review-form-group textarea {
-      height: 60px;
-    }
+  .testimonial-card.user-card {
+    border: 2px solid #D4AF37;
+    background: #FFFDF5;
   }
 </style>
 
-<section id="testimonials">
-  <div class="testimonial-header-action">
-    <p class="eyebrow">
-      <svg class="eyebrow-icon" viewBox="0 0 100 90">
-        <path d="M50 45C40 20 15 10 5 25C-5 40 15 65 45 52C48 51 49 48 50 45Z"/>
-        <path d="M50 45C60 20 85 10 95 25C105 40 85 65 55 52C52 51 51 48 50 45Z"/>
-      </svg>
-      FROM OUR REGULARS
-    </p>
+<section class="pad reveal" id="testimonials">
+  <div class="container">
+    <div class="testimonial-header-action">
+      <p class="eyebrow"><svg viewBox="0 0 100 90"><use href="#butterfly-icon"></use></svg>From Our Regulars</p>
+      <h2 class="section-heading">What People Are Saying</h2>
+      <p class="section-sub">Warm words from those who make Papillon Brew their daily ritual.</p>
 
-    <h2 class="section-heading">What People Are Saying</h2>
-    <p class="section-sub">Warm words from those who make Papillon Brew their daily ritual.</p>
+      <button type="button" class="btn-write-review" id="openReviewModalBtn">
+        ✍️ <span id="reviewBtnText">Leave a Review</span>
+      </button>
+    </div>
 
-    <button type="button" class="btn-write-review" id="openReviewModalBtn">
-      ✍️ <span id="reviewBtnText">Leave a Review</span>
-    </button>
+    <!-- Review Grid (Auto-limited to 6) -->
+    <div class="testimonial-grid" id="testimonialGrid"></div>
   </div>
-
-  <div class="testimonial-grid" id="testimonialGrid"></div>
 </section>
 
-<!-- Review Modal Overlay -->
+<!-- Review Modal -->
 <div class="review-modal-overlay" id="reviewModalOverlay">
   <div class="review-modal">
-    <button type="button" class="modal-close" id="closeReviewModalBtn" aria-label="Close modal">&times;</button>
-    <h3 class="modal-title" id="modalHeading">Share Your Experience</h3>
+    <button type="button" class="modal-close" id="closeReviewModalBtn">&times;</button>
+    <h3 style="font-family:'Cormorant', serif; font-size: 1.8rem; color:#2E3A31; margin-bottom: 1rem;" id="modalHeading">Share Your Experience</h3>
     
     <form id="reviewForm">
-      <div style="text-align: center;">
-        <label style="font-size: 0.85rem; font-weight: 600; color: #1E352B;">Your Rating</label>
+      <div class="review-form-group" style="text-align: center;">
+        <label>Your Rating</label>
         <div class="star-rating-picker" id="starPicker">
           <span data-rating="1">★</span>
           <span data-rating="2">★</span>
@@ -2210,15 +2177,14 @@
 
       <div class="review-form-group">
         <label for="reviewerQuote">Your Review</label>
-        <textarea id="reviewerQuote" placeholder="Tell us about your favorite brew or experience..." required></textarea>
+        <textarea id="reviewerQuote" rows="3" placeholder="Tell us about your favorite brew or experience..." required></textarea>
       </div>
 
+      <!-- Optional Image Upload with Validation -->
       <div class="review-form-group">
         <label for="reviewerImg">Upload Photo (Optional - Coffee/Ambience only)</label>
-        <div class="file-input-wrapper">
-          <input type="file" id="reviewerImg" accept="image/jpeg, image/png, image/webp">
-        </div>
-        <p class="img-validation-msg" id="imgError">Please select a clear photo (Max 2MB).</p>
+        <input type="file" id="reviewerImg" accept="image/jpeg, image/png, image/webp">
+        <p class="img-validation-msg" id="imgError">Please select a clear photo of your coffee or ambience (Max 2MB).</p>
       </div>
 
       <div class="modal-actions-row">
@@ -2230,11 +2196,12 @@
 </div>
 
 <script>
-  (function initReviewSystem() {
+  (function initAdvancedReviewSystem() {
     const MAX_REVIEWS = 6;
     let currentRating = 5;
     let imageBase64 = null;
 
+    // Default Seed Reviews
     const defaultReviews = [
       { id: 1, name: "Ayesha K.", quote: "I came for the coffee and stayed for the quiet. The Silent Wings Table is my Sunday ritual now — no phone, just a book and the best chai in Bahawalpur.", rating: 5, img: null },
       { id: 2, name: "Bilal R.", quote: "My daughter and I did the Sip & Sketch morning last weekend and it might be the nicest two hours we've spent together in months.", rating: 5, img: null },
@@ -2255,6 +2222,7 @@
     const imgInput = document.getElementById('reviewerImg');
     const imgError = document.getElementById('imgError');
 
+    // Rating Picker
     stars.forEach((star, index) => {
       star.addEventListener('click', () => {
         currentRating = index + 1;
@@ -2268,6 +2236,7 @@
       });
     }
 
+    // Smart Image Check (Size + Basic Brightness/Validity Validation)
     imgInput.onchange = function(e) {
       const file = e.target.files[0];
       imgError.style.display = 'none';
@@ -2277,7 +2246,7 @@
         return;
       }
 
-      if (file.size > 2 * 1024 * 1024) {
+      if (file.size > 2 * 1024 * 1024) { // 2MB Limit
         imgError.textContent = "Image size too large. Please select under 2MB.";
         imgError.style.display = 'block';
         imgInput.value = "";
@@ -2289,6 +2258,7 @@
         const img = new Image();
         img.src = evt.target.result;
         img.onload = function() {
+          // Check pixel brightness to reject completely dark/pitch-black uploads
           const canvas = document.createElement('canvas');
           const ctx = canvas.getContext('2d');
           canvas.width = 50;
@@ -2301,8 +2271,8 @@
           }
           const brightness = colorSum / (50 * 50);
 
-          if (brightness < 15) {
-            imgError.textContent = "Image is too dark or unclear. Please upload a clear photo.";
+          if (brightness < 15) { // Reject pitch black images
+            imgError.textContent = "Image is too dark or unclear. Please upload a clear coffee photo.";
             imgError.style.display = 'block';
             imgInput.value = "";
             imageBase64 = null;
@@ -2314,16 +2284,13 @@
       reader.readAsDataURL(file);
     };
 
+    // Modal Control
     openBtn.onclick = () => {
-      modal.style.display = 'flex';
-      document.body.style.overflow = 'hidden';
+      modal.classList.add('active');
       checkUserReviewState();
     };
 
-    closeBtn.onclick = () => {
-      modal.style.display = 'none';
-      document.body.style.overflow = '';
-    };
+    closeBtn.onclick = () => modal.classList.remove('active');
 
     function checkUserReviewState() {
       const savedUser = localStorage.getItem('user_papillon_review');
@@ -2343,6 +2310,7 @@
       updateStarPickerUI();
     }
 
+    // Render Grid (Maintains Max 6 Cards Threshold)
     function renderReviews() {
       grid.innerHTML = '';
       let list = [...defaultReviews];
@@ -2351,12 +2319,13 @@
       if (savedUser) {
         const userData = JSON.parse(savedUser);
         userData.isUser = true;
-        list.unshift(userData);
+        list.unshift(userData); // Add user review to front
         btnText.textContent = "Edit / Delete Review";
       } else {
         btnText.textContent = "Leave a Review";
       }
 
+      // Auto-Cap at MAX_REVIEWS (6)
       if (list.length > MAX_REVIEWS) {
         list = list.slice(0, MAX_REVIEWS);
       }
@@ -2365,20 +2334,21 @@
         const card = document.createElement('div');
         card.className = `testimonial-card ${item.isUser ? 'user-card' : ''}`;
         
-        const imgHTML = item.img ? `<img src="${item.img}" class="testimonial-card-img" alt="Review photo">` : '';
+        const imgHTML = item.img ? `<img src="${item.img}" class="testimonial-card-img" alt="Coffee review photo">` : '';
 
         card.innerHTML = `
           <div>
             ${imgHTML}
-            <div style="color:#D4AF37; margin-bottom:0.4rem;">${'★'.repeat(item.rating)}</div>
-            <p style="margin: 0 0 0.8rem 0; font-style: italic; line-height: 1.5;">"${item.quote}"</p>
+            <div class="testimonial-stars" style="color:#D4AF37; margin-bottom:0.5rem;">${'★'.repeat(item.rating)}</div>
+            <p class="testimonial-quote">"${item.quote}"</p>
           </div>
-          <p style="margin: 0; font-weight: 600; font-size: 0.9rem;">— ${item.name} ${item.isUser ? '(Your Review)' : ''}</p>
+          <p class="testimonial-name" style="margin-top:1rem; font-weight:600;">— ${item.name} ${item.isUser ? '(Your Review)' : ''}</p>
         `;
         grid.appendChild(card);
       });
     }
 
+    // Form Submit
     reviewForm.onsubmit = (e) => {
       e.preventDefault();
       const name = document.getElementById('reviewerName').value.trim();
@@ -2394,22 +2364,21 @@
 
       localStorage.setItem('user_papillon_review', JSON.stringify(userReview));
       renderReviews();
-      modal.style.display = 'none';
-      document.body.style.overflow = '';
+      modal.classList.remove('active');
     };
 
+    // Delete Review Handler
     deleteBtn.onclick = () => {
       localStorage.removeItem('user_papillon_review');
       renderReviews();
-      modal.style.display = 'none';
-      document.body.style.overflow = '';
+      modal.classList.remove('active');
     };
 
+    // Initial Load
     updateStarPickerUI();
     renderReviews();
   })();
 </script>
-
 
 <style>
   #order {
